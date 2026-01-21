@@ -5,11 +5,6 @@ section {
   margin: 0;
   padding-inline: 6%;
   background-color: rgba(40, 46, 51, 1);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 40px;
-  
 }
 
 h1,
@@ -19,14 +14,24 @@ h5 {
   color: rgba(248, 245, 237, 1);
   margin: 0;
   cursor: default;
+  white-space: nowrap;
+}
+
+.heroContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: clamp(8px, 4vw, 60px);
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .heroImageContainer {
-  margin-top: 120px;
+  margin-top: clamp(110px, 8vw, 120px);
   position: relative;
   width: clamp(240px, 60vw, 580px);
   max-width: 580px;
-  cursor: pointer;
 
   .portraitImage {
     position: absolute;
@@ -61,7 +66,7 @@ h5 {
 }
 
 .heroIntroContainer {
-  margin-top: 120px;
+  margin-top: clamp(0px, 8vw, 120px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +80,7 @@ h5 {
     font-size: clamp(1.2rem, 3vw, 2.5rem);
   }
   .arrowDown {
-    margin-top: 10rem;
+    margin-top: clamp(0px, 12vw, 200px);
     position: relative;
     width: 38px;
     height: 89px;
@@ -123,11 +128,11 @@ h5 {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    margin-bottom: 0;
 
     .imgContainer {
       position: relative;
       display: inline-block;
-
       > img {
         position: relative;
         z-index: 1;
@@ -172,6 +177,7 @@ h5 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
+    gap: clamp(8px, 1vw, 20px);
+
   }
 }
