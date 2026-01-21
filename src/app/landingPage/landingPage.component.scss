@@ -25,6 +25,7 @@ h5 {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: -95px;
 }
 
 .heroImageContainer {
@@ -36,7 +37,7 @@ h5 {
   display: flex;
   align-items: flex-end;
 
-  .portraitImage {
+  .portraitBackground {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -45,27 +46,39 @@ h5 {
     transform: rotate(-45deg);
     transform-origin: center;
     transition: opacity 200ms ease-in-out;
+    
   }
 
-  .portraitImage--default {
+  .portraitBackground--default {
     opacity: 1;
     z-index: 1;
   }
 
-  .portraitImage--hover {
+  .portraitBackground--hover {
     opacity: 0;
     z-index: 2;
   }
 
   &:hover {
-    .portraitImage--default {
+    .portraitBackground--default {
       opacity: 0;
     }
 
-    .portraitImage--hover {
+    .portraitBackground--hover {
       opacity: 1;
     }
   }
+}
+
+.portraitImage {
+  width: 95%;
+  height: auto;
+  display: block;
+  z-index: 3;
+  position: relative;
+  top: -80px;
+  filter: brightness(1.2);
+  filter: drop-shadow(8px 32px 16px rgba(40, 46, 51, 0.5));
 }
 
 .heroIntroContainer {
