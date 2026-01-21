@@ -1,0 +1,134 @@
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 104px;
+  background-color: rgb(148, 187, 214);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  > .navContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+    margin-left: 6%;
+    margin-right: 6%;
+
+    > .navLinks {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      > a {
+        text-decoration: none;
+        font-size: clamp(0.8rem, 3vw, 1.8rem);
+        color: rgba(40, 46, 51, 1);
+        transition: all 125ms ease-in-out;
+        &:hover {
+          color: rgba(248, 245, 237, 1);
+        }
+        &:active {
+          color: rgba(248, 245, 237, 1);
+        }
+      }
+    }
+  }
+}
+
+h4,
+h5 {
+  margin: 0;
+}
+
+.heroLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  cursor: pointer;
+  &:hover > .imgContainer > img {
+    transform: scaleX(1.2);
+  }
+  &:hover > h4 {
+    text-shadow: 1px 1px 1px rgba(41, 45, 51, 0.5);
+  }
+  &:hover > h5 {
+    text-shadow: 1px 1px 1px rgba(41, 45, 51, 0.5);
+  }
+  &:active > .imgContainer > img {
+    transform: scaleX(1);
+  }
+  &:active > h4 {
+    text-shadow: 1px 1px 1px rgba(41, 45, 51, 0);
+  }
+  &:active > h5 {
+    text-shadow: 1px 1px 1px rgba(41, 45, 51, 0);
+  }
+
+  .imgContainer {
+    position: relative;
+    display: inline-block;
+    > img {
+      position: relative;
+      z-index: 1;
+      height: 32px;
+      width: 52px;
+      object-fit: contain;
+      transition: all 200ms ease-in-out;
+    }
+
+    .curly_braces_logo {
+      position: absolute;
+      top: -3px;
+      bottom: 0;
+      left: 50%;
+      width: 60%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+  }
+
+  > h4 {
+    font-weight: smaller;
+    font-size: 1em;
+    scale: scaleY(2);
+    color: rgba(248, 245, 237, 1);
+    transition: all 200ms ease-in-out;
+  }
+  > h5 {
+    font-weight: 100;
+    font-size: 1em;
+    color: rgba(40, 46, 51, 1);
+    transition: all 200ms ease-in-out;
+  }
+}
+
+.languages {
+  display: flex;
+  gap: 20px;
+  > span {
+    font-size: clamp(0.8rem, 2.5vw, 1.3rem);
+    font-weight: 400;
+    color: rgba(40, 46, 51, 1);
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+    &:hover {
+      color: rgba(248, 245, 237, 1);
+    }
+    &:active {
+      color: rgba(248, 245, 237, 1);
+    }
+  }
+}
