@@ -1,5 +1,5 @@
 section {
-  height: 500vh;
+  height: 100vh;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
@@ -196,4 +196,19 @@ h5 {
     gap: clamp(8px, 1vw, 20px);
 
   }
+}
+
+.socialIcon {
+  transition: opacity 150ms ease;
+  cursor: pointer;
+}
+
+.socialIcon.mail:hover {
+  content: url('/assets/icons/social/mail_hover_blue.png');
+}
+.socialIcon.github:hover {
+  content: url('/assets/icons/social/github_hover_blue.png');
+}
+.socialIcon.linkedin:hover {
+  content: url('/assets/icons/social/linkedin_hover_blue.png');
 }

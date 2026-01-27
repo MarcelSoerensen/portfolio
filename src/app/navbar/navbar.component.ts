@@ -9,5 +9,15 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+   activeSection = '';
+   selectedLanguage = 'de';
+
+    setActiveSection(section: string) {
+        this.activeSection = section;
+    }
+
+    setLanguage(language: string) {
+        this.selectedLanguage = language;
+    }
 
 }
