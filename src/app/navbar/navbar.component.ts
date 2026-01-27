@@ -6,18 +6,17 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-   activeSection = '';
-   selectedLanguage = 'de';
+  activeSection = '';
+  selectedLanguage = 'de';
 
-    setActiveSection(section: string) {
-        this.activeSection = section;
-    }
+  setActiveSection(section: string) {
+    this.activeSection = section;
+  }
 
-    setLanguage(language: string) {
-        this.selectedLanguage = language;
-    }
-
+  setLanguage(language: string) {
+    this.selectedLanguage = language;
+  }
 }

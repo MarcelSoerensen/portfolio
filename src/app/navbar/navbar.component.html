@@ -1,6 +1,6 @@
 <nav>
   <div class="navContent">
-    <div class="heroLogo">
+    <a href="#topSection" (click)="activeSection = ''" class="heroLogo">
       <div class="imgContainer">
         <img src="assets/icons/logo_vector_dark.svg" alt="" />
         <div class="curly_braces_logo">
@@ -10,13 +10,13 @@
       </div>
       <h4 class="fontAnta">M.Sörensen</h4>
       <h5 class="fontJosefin">developer</h5>
-    </div>
+    </a>
     <div class="navLinks">
       <a
         class="navLink fontJosefin"
         [ngClass]="{ active: activeSection === 'whyme' }"
         (click)="setActiveSection('whyme')"
-        href="#aboutMeSection"
+        href="#whyMeSection"
         >Why me</a
       >
       <a
