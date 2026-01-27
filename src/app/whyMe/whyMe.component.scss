@@ -3,4 +3,17 @@ section {
   width: 100%;
   margin: 0;
   background-color: rgba(40, 46, 51, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 104px;
+}
+
+h1 {
+  color: rgb(148, 187, 214, 1);
+  margin: 0;
+  font-size: 52px;
+  font-weight: 400;
+  cursor: default;
+  white-space: nowrap;
 }

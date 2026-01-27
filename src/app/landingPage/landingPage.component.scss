@@ -1,4 +1,6 @@
 section {
+  display: block;
+  position: relative;
   height: calc(100vh  - 104px);
   width: 100%;
   box-sizing: border-box;
@@ -17,15 +19,19 @@ h5 {
 }
 
 .heroContainer{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -90px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: clamp(8px, 4vw, 60px);
   height: auto;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: -95px;
 }
 
 .heroImageContainer {
@@ -82,10 +88,10 @@ h5 {
 }
 
 .heroIntroContainer {
-  margin-top: clamp(0px, 8vw, 120px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   margin-right: 6%;
   > h1 {
     margin-top: 2rem;
@@ -98,10 +104,10 @@ h5 {
   }
   .arrowDown {
     margin-top: clamp(0px, 12vw, 200px);
-    bottom: 3.5vw;
+    bottom: 5vw;
     position: relative;
-    width: 38px;
-    height: 89px;
+    width: clamp(24px, 3.5vw, 38px);
+    height: clamp(40px, 10vw, 89px);
     cursor: pointer;
 
     .arrowDown__img {
