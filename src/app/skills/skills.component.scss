@@ -1,8 +1,9 @@
 section {
   width: 100%;
+  height: 500%;
   margin: 0;
   background-color: rgba(40, 46, 51, 1);
-  scroll-margin-top: 32px;
+  scroll-margin-top: 136px;
 }
 
 h1 {
@@ -15,55 +16,45 @@ h1 {
   white-space: nowrap;
 }
 
-.whyMeContainer {
+.skillsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
   width: 100%;
-  padding-top: 104px;
   padding-bottom: 104px;
   max-width: 1440px;
   gap: clamp(20px, 3vw, 50px);
   margin-left: auto;
   margin-right: auto;
 
-
-  >.whyMeContent {
+  > .skillsContent {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
     text-align: center;
-    margin-left: 15%;
+    width: 100%;
     gap: 32px;
 
-    >.myLocation {
+    > .currentSkills {
       width: 50%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 6px;
-      >img {
-        width: 74px;
-        height: 63px;
-      }
-      >p {
-        white-space: nowrap;
-        font-size: 30px;
-        margin: 0;
-        color: rgba(248, 245, 237, 1);
-      }
-      >.iAm {
-        color: rgba(148, 187, 214, 1);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-left: 15%;
+      > img {
+        width: auto;
+        height: 100px;
       }
     }
 
-    >.myDescription {
+    > .currentlyLearning {
+        display: flex;
+        justify-content: flex-end;
       width: 50%;
       margin-right: 15%;
-      >p {
+      > p {
         font-size: 18px;
         margin: 0;
         color: rgba(248, 245, 237, 1);
