@@ -33,15 +33,17 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
     text-align: center;
     width: 100%;
     gap: 32px;
 
     > .currentSkills {
-      width: 50%;
+      width: 409px;
+      height: 404px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      gap: 10px;
       margin-left: 15%;
       > img {
         width: auto;
@@ -50,15 +52,21 @@ h1 {
     }
 
     > .currentlyLearning {
-        display: flex;
-        justify-content: flex-end;
-      width: 50%;
+      display: flex;
+      align-items: center;
+      background-image: url("/assets/backgrounds/bg_skill_default.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right center;
+      height: 380px;
+      width: 380px;
       margin-right: 15%;
       > p {
         font-size: 18px;
         margin: 0;
         color: rgba(248, 245, 237, 1);
-        text-align: left;
+        text-align: center;
+        width: 100%;
       }
     }
   }
