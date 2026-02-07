@@ -53,20 +53,44 @@ h1 {
 
     > .currentlyLearning {
       display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
       background-image: url("/assets/backgrounds/bg_skill_default.png");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: right center;
       height: 380px;
       width: 380px;
+      gap: 6%;
       margin-right: 15%;
       > p {
         font-size: 18px;
+        font-weight: 300;
         margin: 0;
         color: rgba(248, 245, 237, 1);
         text-align: center;
-        width: 100%;
+        width: 70%;
+      }
+      > .currentlyLearningSymbols {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        > .currentlyLearningSymbol {
+          > img {
+            width: auto;
+            height: 32px;
+          }
+          > p {
+            margin: 0;
+            color: rgba(248, 245, 237, 1);
+            font-size: 14px;
+            font-weight: 300;
+            text-align: center;
+          }
+        }
       }
     }
   }
