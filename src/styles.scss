@@ -82,3 +82,13 @@ body {
   font-weight: 700;
   src: url('./assets/fonts/josefin-sans-v34-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+h1 {
+  color: rgba(148, 187, 214, 1);
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 52px;
+  font-weight: 400;
+  cursor: default;
+  white-space: nowrap;
+}

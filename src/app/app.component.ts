@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { LandingPageComponent } from './landingPage/landingPage.component';
 import { WhyMeComponent } from './whyMe/whyMe.component';
 import { SkillsComponent } from './skills/skills.component';
+import { MyProjectsComponent } from './myProjects/myProjects.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { SkillsComponent } from './skills/skills.component';
     LandingPageComponent,
     WhyMeComponent,
     SkillsComponent,
+    MyProjectsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
