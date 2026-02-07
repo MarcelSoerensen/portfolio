@@ -1,7 +1,7 @@
 section {
   display: block;
   position: relative;
-  height: calc(100vh  - 104px);
+  height: calc(100vh - 104px);
   width: 100%;
   box-sizing: border-box;
   margin: 0;
@@ -17,7 +17,7 @@ h5 {
   white-space: nowrap;
 }
 
-.heroContainer{
+.heroContainer {
   position: absolute;
   left: 0;
   right: 0;
@@ -50,8 +50,7 @@ h5 {
     display: block;
     transform: rotate(-45deg);
     transform-origin: center;
-    transition: opacity 200ms ease-in-out;
-    
+    transition: all 300ms ease-in-out;
   }
 
   .portraitBackground--default {
@@ -101,40 +100,6 @@ h5 {
     font-weight: 300;
     font-size: clamp(1.2rem, 3vw, 2.5rem);
   }
-  .arrowDown {
-    margin-top: clamp(0px, 12vw, 200px);
-    bottom: 5vw;
-    position: relative;
-    width: clamp(24px, 3.5vw, 38px);
-    height: clamp(40px, 10vw, 89px);
-    cursor: pointer;
-
-    .arrowDown__img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: opacity 150ms ease-in-out;
-    }
-
-    .arrowDown__img--default {
-      opacity: 1;
-    }
-
-    .arrowDown__img--hover {
-      opacity: 0;
-    }
-
-    &:hover {
-      .arrowDown__img--default {
-        opacity: 0;
-      }
-
-      .arrowDown__img--hover {
-        opacity: 1;
-      }
-    }
-  }
 }
 
 .heroIntroFirstRow {
@@ -163,8 +128,8 @@ h5 {
         object-fit: contain;
         transition: transform 200ms ease-in-out;
         &:hover {
-        transform: scaleX(1.2);
-      }
+          transform: scaleX(1.2);
+        }
       }
 
       .curly_braces_logo {
@@ -199,7 +164,6 @@ h5 {
     flex-direction: column;
     justify-content: space-between;
     gap: clamp(8px, 1vw, 20px);
-
   }
 }
 
@@ -209,26 +173,87 @@ h5 {
   height: 32px;
   display: inline-block;
   cursor: pointer;
+
+  > .socialIconImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 125ms ease;
+    display: block;
+  }
+
+  > .socialIconImg--default {
+    opacity: 1;
+  }
+
+  > .socialIconImg--hover {
+    opacity: 0;
+  }
+
+  &:hover {
+    .socialIconImg--default {
+      opacity: 0;
+    }
+
+    > .socialIconImg--hover {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    .socialIconImg--default {
+      opacity: 1;
+    }
+
+    > .socialIconImg--hover {
+      opacity: 0;
+    }
+  }
 }
 
-.socialIcon img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 125ms ease;
-  display: block;
-}
+.arrowDown {
+    margin-top: clamp(0px, 12vw, 200px);
+    bottom: 5vw;
+    position: relative;
+    width: clamp(24px, 3.5vw, 38px);
+    height: clamp(40px, 10vw, 89px);
+    cursor: pointer;
 
-.socialIcon .hover {
-  opacity: 0;
-}
+    >.arrowDownImg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: opacity 150ms ease-in-out;
+    }
 
-.socialIcon:hover .default {
-  opacity: 0;
-}
+    >.arrowDownImg--default {
+      opacity: 1;
+    }
 
-.socialIcon:hover .hover {
-  opacity: 1;
-}
+    > .arrowDownImg--hover {
+      opacity: 0;
+    }
+
+    &:hover {
+      .arrowDownImg--default {
+        opacity: 0;
+      }
+
+      .arrowDownImg--hover {
+        opacity: 1;
+      }
+    }
+    
+    &:active {
+      .arrowDownImg--default {
+        opacity: 1;
+      }
+
+      .arrowDownImg--hover {
+        opacity: 0;
+      }
+    }
+  }

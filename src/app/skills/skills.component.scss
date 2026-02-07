@@ -45,14 +45,47 @@ section {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-image: url("/assets/backgrounds/bg_skill_default.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: right center;
+      position: relative;
       height: 380px;
       width: 380px;
       gap: 6%;
       margin-right: 15%;
+
+      > .currentlyLearningBackground {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: auto;
+        display: block;
+        pointer-events: none;
+        transition: all 300ms ease-in-out;
+      }
+
+      > .currentlyLearningBackground--default {
+        opacity: 1;
+        z-index: 1;
+      }
+
+      > .currentlyLearningBackground--hover {
+        opacity: 0;
+        z-index: 2;
+      }
+
+      &:hover {
+        > .currentlyLearningBackground--default {
+          opacity: 0;
+        }
+
+        > .currentlyLearningBackground--hover {
+          opacity: 1;
+        }
+      }
+
+      > :not(.currentlyLearningBackground) {
+        position: relative;
+        z-index: 3;
+      }
+
       > p {
         font-size: 18px;
         font-weight: 300;
