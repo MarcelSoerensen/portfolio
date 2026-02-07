@@ -1,0 +1,34 @@
+<div class="colleaguesFeedback">
+      <h2 class="fontJosefin">Need a teamplayer? Here what my colleagues said about me</h2>
+
+      <div class="feedbackCards" aria-label="Colleague feedback">
+        <div class="feedbackCard" *ngFor="let f of colleagueFeedbacks">
+          <img
+            class="feedbackCardBackground feedbackCardBackground--default"
+            [src]="f.backgroundDefaultSrc"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="feedbackCardBackground feedbackCardBackground--hover"
+            [src]="f.backgroundHoverSrc"
+            alt=""
+            aria-hidden="true"
+          />
+
+          <div class="feedbackCardContent fontJosefin">
+            <div class="feedbackCardName">{{ f.name }}</div>
+            <div class="feedbackCardProject">
+              Project <span class="feedbackCardProjectValue">{{ f.project }}</span>
+            </div>
+            <div class="feedbackCardQuote">“{{ f.quote }}”</div>
+            <a
+              class="feedbackCardLink"
+              [href]="f.linkedinUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>

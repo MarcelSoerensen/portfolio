@@ -1,0 +1,121 @@
+ .colleaguesFeedback {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	> h2 {
+		margin: 72px 0 72px 0;
+		color: rgba(148, 187, 214, 1);
+		font-weight: 300;
+		font-size: 28px;
+		text-align: center;
+	}
+}
+
+.feedbackCards {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+
+.feedbackCard {
+	position: relative;
+	flex: 1;
+	min-width: 260px;
+	max-width: 400px;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	border-radius: 30px;
+	overflow: hidden;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.feedbackCardBackground {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: contain;
+	object-position: center;
+	pointer-events: none;
+	transition: all 300ms ease-in-out;
+}
+
+.feedbackCardBackground--default {
+	opacity: 1;
+	z-index: 1;
+}
+
+.feedbackCardBackground--hover {
+	opacity: 0;
+	z-index: 2;
+}
+
+.feedbackCard:hover {
+	.feedbackCardBackground--default {
+		opacity: 0;
+	}
+
+	.feedbackCardBackground--hover {
+		opacity: 1;
+	}
+}
+
+.feedbackCardContent {
+	position: relative;
+	z-index: 3;
+	width: 72%;
+	padding: 0 18px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	text-align: center;
+}
+
+.feedbackCardName {
+	color: rgba(248, 245, 237, 1);
+	font-size: 26px;
+	font-weight: 400;
+}
+
+.feedbackCardProject {
+	color: rgba(248, 245, 237, 1);
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.feedbackCardProjectValue {
+	color: rgba(148, 187, 214, 1);
+	font-weight: 400;
+}
+
+.feedbackCardQuote {
+	color: rgba(248, 245, 237, 1);
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.4;
+	margin-top: 6px;
+}
+
+.feedbackCardLink {
+	align-self: center;
+	margin-top: 16px;
+	color: rgba(148, 187, 214, 1);
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 300;
+	border-bottom: 1px solid rgba(148, 187, 214, 0.7);
+	transition: opacity 125ms ease-in-out;
+}
+
+.feedbackCardLink:hover {
+	opacity: 0.8;
+}

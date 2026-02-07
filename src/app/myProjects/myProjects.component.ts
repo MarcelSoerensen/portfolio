@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ColleagueFeedbackComponent } from "../colleagueFeedback/colleagueFeedback.component";
 
 type Technology = {
   name: string;
@@ -33,7 +34,7 @@ type Project = {
 @Component({
   selector: 'app-my-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ColleagueFeedbackComponent],
   templateUrl: './myProjects.component.html',
   styleUrls: ['./myProjects.component.scss']
 })

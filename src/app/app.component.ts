@@ -5,6 +5,7 @@ import { LandingPageComponent } from './landingPage/landingPage.component';
 import { WhyMeComponent } from './whyMe/whyMe.component';
 import { SkillsComponent } from './skills/skills.component';
 import { MyProjectsComponent } from './myProjects/myProjects.component';
+import { ColleagueFeedbackComponent } from './colleagueFeedback/colleagueFeedback.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { MyProjectsComponent } from './myProjects/myProjects.component';
     WhyMeComponent,
     SkillsComponent,
     MyProjectsComponent,
+    ColleagueFeedbackComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
