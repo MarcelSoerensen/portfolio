@@ -1,6 +1,110 @@
 <section id="myProjectsSection">
   <div class="myProjectsContainer">
     <h1 class="fontAnta">My Projects</h1>
-    <div class="myProjectsContent"></div>
+    <div class="myProjectsContent">
+      <div class="tabs" role="tablist" aria-label="Projects">
+        <button
+          *ngFor="let project of projects; let i = index"
+          type="button"
+          class="tab"
+          [class.active]="i === activeIndex"
+          (click)="setActiveProject(i)"
+          role="tab"
+          [attr.aria-selected]="i === activeIndex"
+        >
+          <span class="tabLabel fontJosefin">{{ project.tabLabel }}</span>
+        </button>
+      </div>
+
+      <div class="card" role="tabpanel">
+        <div class="cardBody">
+          <div class="details fontJosefin">
+            <div class="block">
+              <div class="aboutRow">
+                <img
+                  class="infoRowIcon"
+                  src="/assets/icons/point.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <h3>{{ activeProject.aboutTitle }}</h3>
+                <span class="duration"
+                  >{{ activeProject.durationLabel }}
+                  {{ activeProject.duration }}</span
+                >
+              </div>
+              <p>{{ activeProject.about }}</p>
+            </div>
+
+            <div class="block fontJosefin">
+              <div class="infoRow">
+                <img
+                  class="infoRowIcon"
+                  src="/assets/icons/point.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <h3>{{ activeProject.organisationTitle }}</h3>
+              </div>
+              <p>{{ activeProject.organisation }}</p>
+            </div>
+
+            <div class="block">
+              <div class="infoRow">
+                <img
+                  class="infoRowIcon"
+                  src="/assets/icons/point.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <h3>{{ activeProject.takeawaysTitle }}</h3>
+              </div>
+              <p>{{ activeProject.takeaways }}</p>
+            </div>
+          </div>
+
+          <div class="side fontJosefin">
+            <div class="block technologiesBlock">
+              <h3>{{ activeProject.technologiesTitle }}</h3>
+              <div class="techIcons">
+                <img
+                  *ngFor="let t of activeProject.technologies"
+                  class="techIcon"
+                  [src]="t.iconSrc"
+                  [alt]="t.name"
+                  [title]="t.name"
+                />
+              </div>
+            </div>
+
+            <div class="cover">
+              <img
+                [src]="activeProject.cover.src"
+                [alt]="activeProject.cover.alt"
+              />
+            </div>
+
+            <div class="projectLinks" aria-label="Project links">
+              <a
+                class="projectBtn projectBtnLive"
+                [class.disabled]="!activeProject.liveUrl"
+                [attr.aria-disabled]="!activeProject.liveUrl"
+                [attr.href]="activeProject.liveUrl || null"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live Test</a>
+              <a
+                class="projectBtn projectBtnGithub"
+                [class.disabled]="!activeProject.githubUrl"
+                [attr.aria-disabled]="!activeProject.githubUrl"
+                [attr.href]="activeProject.githubUrl || null"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
