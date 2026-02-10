@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { LandingPageComponent } from './landingPage/landingPage.component';
-import { WhyMeComponent } from './whyMe/whyMe.component';
-import { SkillsComponent } from './skills/skills.component';
-import { MyProjectsComponent } from './myProjects/myProjects.component';
-import { ColleagueFeedbackComponent } from './colleagueFeedback/colleagueFeedback.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +12,8 @@ import { ColleagueFeedbackComponent } from './colleagueFeedback/colleagueFeedbac
     CommonModule,
     RouterOutlet,
     LandingPageComponent,
-    WhyMeComponent,
-    SkillsComponent,
-    MyProjectsComponent,
-    ColleagueFeedbackComponent
+    FooterComponent,
+    NavbarComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

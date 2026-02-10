@@ -1,0 +1,100 @@
+footer {
+  width: 100vw;
+  height: 214px;
+  background-color: rgb(148, 187, 214);
+  z-index: 1000;
+  color: rgba(61, 75, 84, 1);
+}
+
+a {
+  text-decoration: none;
+  color: rgba(61, 75, 84, 1);
+}
+
+.footer-content {
+  max-width: 1440px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  > .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+
+    > a {
+      font-size: 20px;
+      font-weight: 400;
+      transition: all 125ms ease-in-out;
+      &:hover {
+        color: rgba(248, 245, 237, 1);
+      }
+      &:active {
+        color: rgba(61, 75, 84, 1);
+      }
+    }
+    > p {
+      font-size: 20px;
+      font-weight: 300;
+      margin: 0;
+    }
+  }
+
+  > .footer-socials {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.socialIcon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  cursor: pointer;
+
+  > .socialIconImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 125ms ease;
+    display: block;
+  }
+
+  > .socialIconImg--default {
+    opacity: 1;
+  }
+
+  > .socialIconImg--hover {
+    opacity: 0;
+  }
+
+  &:hover {
+    .socialIconImg--default {
+      opacity: 0;
+    }
+
+    > .socialIconImg--hover {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    .socialIconImg--default {
+      opacity: 1;
+    }
+
+    > .socialIconImg--hover {
+      opacity: 0;
+    }
+  }
+}

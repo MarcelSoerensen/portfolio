@@ -1,0 +1,74 @@
+.profile-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  cursor: pointer;
+  text-decoration: none;
+
+  h4,
+  h5 {
+    margin: 0;
+  }
+  &:hover > .imgContainer > img {
+    transform: scaleX(1.2);
+  }
+  &:hover > h4 {
+    text-shadow: 1px 1px 1px rgba(41, 45, 51, 0.2);
+  }
+  &:hover > h5 {
+    text-shadow: 1px 1px 1px rgba(41, 45, 51, 0.2);
+  }
+  &:active > .imgContainer > img {
+    transform: scaleX(1);
+  }
+  &:active > h4 {
+    text-shadow: 1px 1px 1px rgba(41, 45, 51, 0);
+  }
+  &:active > h5 {
+    text-shadow: 1px 1px 1px rgba(41, 45, 51, 0);
+  }
+
+  .imgContainer {
+    position: relative;
+    display: inline-block;
+    > img {
+      position: relative;
+      z-index: 1;
+      height: 32px;
+      width: 52px;
+      object-fit: contain;
+      transition: all 200ms ease-in-out;
+    }
+
+    .curly_braces_logo {
+      position: absolute;
+      top: -3px;
+      bottom: 0;
+      left: 50%;
+      width: 60%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+  }
+
+  > h4 {
+    font-weight: smaller;
+    font-size: 1em;
+    scale: scaleY(2);
+    color: rgba(248, 245, 237, 1);
+    transition: all 200ms ease-in-out;
+  }
+
+  > h5 {
+    font-weight: 100;
+    font-size: 1em;
+    color: rgba(40, 46, 51, 1);
+    transition: all 200ms ease-in-out;
+  }
+}
