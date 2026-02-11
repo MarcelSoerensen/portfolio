@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [],
+  imports: [TranslocoModule],
   templateUrl: './legalNotice.component.html',
   styleUrl: './legalNotice.component.scss'
 })
