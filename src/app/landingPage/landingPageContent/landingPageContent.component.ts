@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { WhyMeComponent } from '../../whyMe/whyMe.component';
 import { SkillsComponent } from '../../skills/skills.component';
 import { MyProjectsComponent } from '../../myProjects/myProjects.component';
+import { ContactformComponent } from '../../contactform/contactform.component';
 @Component({
   selector: 'app-content',
   standalone: true,
@@ -10,7 +11,8 @@ import { MyProjectsComponent } from '../../myProjects/myProjects.component';
     CommonModule,
     WhyMeComponent,
     SkillsComponent,
-    MyProjectsComponent
+    MyProjectsComponent,
+    ContactformComponent
   ],
   templateUrl: './landingPageContent.component.html',
   styleUrls: ['./landingPageContent.component.scss']
