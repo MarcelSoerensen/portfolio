@@ -1,4 +1,98 @@
 {
+  "navbar": {
+    "whyMe": "Warum ich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+
+  "whyMe": {
+    "title": "Warum ich",
+    "iAm": "Ich bin",
+    "location": "in Berlin..|",
+    "description": "Ich bin ein leidenschaftlicher Frontend Developer mit einem starken Fokus auf die Entwicklung ansprechender und benutzerfreundlicher Webanwendungen. Mit einem guten Auge für Design und dem Anspruch an sauberen, effizienten Code möchte ich digitale Erlebnisse schaffen, die sowohl Nutzerbedürfnisse als auch Business-Ziele erfüllen."
+  },
+
+  "skills": {
+    "title": "Skills",
+    "currentlyLearning": "Ich lerne gerade",
+    "description": "Ich bilde mich aktuell als Backend Developer weiter, um nach Abschluss als Full Stack Developer arbeiten zu können."
+  },
+
+  "myProjects": {
+    "title": "Meine Projekte",
+    "tabsAriaLabel": "Projekte",
+    "durationLabel": "Dauer:",
+    "aboutTitle": "Über das Projekt",
+    "organisationTitle": "Wie ich meinen Arbeitsprozess organisiert habe",
+    "takeawaysTitle": "Meine Team-Erfahrung",
+    "technologiesTitle": "Technologien",
+    "liveTest": "Live Test",
+    "github": "GitHub",
+    "projects": {
+      "project1": {
+        "tabLabel": "1. Projekt",
+        "title": "Team-Chat App",
+        "duration": "4 Wochen",
+        "about": "Eine Slack-inspirierte Team-Chat-App mit Fokus auf schnelle Zusammenarbeit: Echtzeit-Nachrichten, Channels und eine klare, ablenkungsfreie UI.",
+        "organisation": "Ich habe die App in wiederverwendbare Komponenten aufgeteilt (Navbar, Channel-Liste, Nachrichtenliste, Composer) und Features in kleine, gut testbare Module gegliedert. Klare Benennungen, konsistente Ordnerstruktur und kleine Aufgaben-Pakete haben die Wartbarkeit verbessert.",
+        "takeaways": "Wir waren ein Team von 3 Personen. Ich habe die Chat-UI (Nachrichtenliste + Composer), die Channel-Navigation und das State-Handling für den Channel-Wechsel umgesetzt. Durch kurze Abstimmungen und schnelle Review-Zyklen lief die Zusammenarbeit sehr flüssig."
+      },
+      "project2": {
+        "tabLabel": "2. Projekt",
+        "title": "Kanban Task Board",
+        "duration": "2 Wochen",
+        "about": "Ein leichtgewichtiges Kanban-Board zur Aufgabenverwaltung mit Spalten, Drag & Drop, schnellen Änderungen und einer Übersicht, die auch bei vielen Cards lesbar bleibt.",
+        "organisation": "Ich bin mit einem klaren Datenmodell gestartet (Board → Spalten → Cards) und habe die UI aus kleinen Komponenten aufgebaut. Logik habe ich aus den Templates in Methoden ausgelagert, was Refactorings deutlich einfacher gemacht hat.",
+        "takeaways": "Ich habe gelernt, UI-State sauber zu modellieren (ausgewählte Card, gefilterte Ansicht, Edit-Mode) und Komponenten fokussiert zu halten. Außerdem hat es meine CSS-Struktur (Spacing, wiederverwendbare Klassen) und mein TypeScript-Typing verbessert."
+      },
+      "project3": {
+        "tabLabel": "3. Projekt",
+        "title": "Recipe Finder",
+        "duration": "3 Wochen",
+        "about": "Eine Rezept-Such-App, mit der Nutzer Gerichte nach Zutaten entdecken, Details ansehen und Favoriten speichern können. Fokus: Klarheit, Geschwindigkeit und eine freundliche UI.",
+        "organisation": "Wir haben die App in Features geschnitten (Suche, Detail, Favoriten) und früh Namenskonventionen abgestimmt. API-Calls haben wir in einem Service gebündelt, um Duplikate zu vermeiden.",
+        "takeaways": "Wir waren ein Team von 2 Personen. Ich habe die Search- und Results-UI gebaut und den API-Service integriert, während mein Teampartner Routing und die Favoriten-Ansicht übernommen hat. Pair-Debugging und kurze Code-Reviews haben geholfen, konsistent zu bleiben."
+      },
+      "project4": {
+        "tabLabel": "4. Projekt",
+        "title": "Portfolio Website",
+        "duration": "1 Woche",
+        "about": "Eine responsive Portfolio-Website, um Projekte, Skills und Kontaktinfos mit klarer Navigation, smooth scrolling und konsistentem Styling zu präsentieren.",
+        "organisation": "Ich habe ein kleines Designsystem (Farben, Abstände, Typografie) erstellt und Komponenten wiederverwendet (Navbar, Sections, Cards). Ich bin in kleinen Schritten iteriert und habe Styles modular gehalten, um Seiteneffekte zu vermeiden.",
+        "takeaways": "Ich habe meine Responsive-Layout-Skills (Flex/Grid + clamp) verbessert und gelernt, CSS-\"Drift\" durch konsistente Abstände und wiederverwendbare Klassen zu vermeiden. Außerdem wurde ich besser darin, Sections für Accessibility und Lesbarkeit zu strukturieren."
+      }
+    }
+  },
+
+  "colleagueFeedback": {
+    "title": "Du brauchst einen Teamplayer? Das sagen meine Kollegen über mich",
+    "ariaLabel": "Feedback von Kollegen",
+    "projectLabel": "Projekt",
+    "linkedinLabel": "LinkedIn",
+    "items": {
+      "feedback1": {
+        "name": "Name des Kollegen",
+        "project": "Team-Chat App",
+        "quote": "Marcel ist extrem zuverlässig, kommuniziert klar und liefert UI schnell, ohne Qualität zu verlieren. Ein super Teammate bei Reviews und Debugging."
+      },
+      "feedback2": {
+        "name": "Name des Kollegen",
+        "project": "Recipe Finder",
+        "quote": "Er übernimmt Verantwortung, strukturiert Aufgaben sauber und bleibt auch unter Druck ruhig. Die Zusammenarbeit war sehr angenehm und Übergaben waren immer klar."
+      },
+      "feedback3": {
+        "name": "Name des Kollegen",
+        "project": "Gruppenprojekt",
+        "quote": "Marcel ist proaktiv und sehr detailorientiert. Er erkennt Edge Cases früh und verbessert die UX mit smarten, einfachen Lösungen."
+      }
+    }
+  },
+
+  "footer": {
+    "legalNotice": "Impressum"
+  },
+
   "legalNotice": {
     "title": "Impressum",
     "imprintTitle": "Impressum",

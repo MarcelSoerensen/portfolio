@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslocoModule } from '@jsverse/transloco';
 
 type ColleagueFeedback = {
-  name: string;
-  project: string;
-  quote: string;
+  nameKey: string;
+  projectKey: string;
+  quoteKey: string;
   linkedinUrl: string;
   backgroundDefaultSrc: string;
   backgroundHoverSrc: string;
@@ -13,7 +14,7 @@ type ColleagueFeedback = {
 @Component({
   selector: 'app-colleague-feedback',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslocoModule],
   templateUrl: './colleagueFeedback.component.html',
   styleUrls: ['./colleagueFeedback.component.scss']
 })
@@ -21,28 +22,25 @@ export class ColleagueFeedbackComponent {
 
   colleagueFeedbacks: ColleagueFeedback[] = [
     {
-      name: 'Colleague Name',
-      project: 'Team Chat App',
-      quote:
-        'Marcel is highly reliable, communicates clearly, and delivers UI work fast without sacrificing quality. Great teammate in reviews and debugging.',
+      nameKey: 'colleagueFeedback.items.feedback1.name',
+      projectKey: 'colleagueFeedback.items.feedback1.project',
+      quoteKey: 'colleagueFeedback.items.feedback1.quote',
       linkedinUrl: 'https://www.linkedin.com/in/colleague-1/',
       backgroundDefaultSrc: '/assets/backgrounds/bg_reference_default.png',
       backgroundHoverSrc: '/assets/backgrounds/bg_reference_hover.png',
     },
     {
-      name: 'Colleague Name',
-      project: 'Recipe Finder',
-      quote:
-        'He takes ownership, keeps tasks structured, and stays calm under pressure. Collaboration felt smooth and the handoffs were always clean.',
+      nameKey: 'colleagueFeedback.items.feedback2.name',
+      projectKey: 'colleagueFeedback.items.feedback2.project',
+      quoteKey: 'colleagueFeedback.items.feedback2.quote',
       linkedinUrl: 'https://www.linkedin.com/in/colleague-2/',
       backgroundDefaultSrc: '/assets/backgrounds/bg_reference_default.png',
       backgroundHoverSrc: '/assets/backgrounds/bg_reference_hover.png',
     },
     {
-      name: 'Colleague Name',
-      project: 'Group Project',
-      quote:
-        'Marcel is proactive and detail-oriented. He spots edge cases early and improves the overall UX with smart, simple solutions.',
+      nameKey: 'colleagueFeedback.items.feedback3.name',
+      projectKey: 'colleagueFeedback.items.feedback3.project',
+      quoteKey: 'colleagueFeedback.items.feedback3.quote',
       linkedinUrl: 'https://www.linkedin.com/in/colleague-3/',
       backgroundDefaultSrc: '/assets/backgrounds/bg_reference_default.png',
       backgroundHoverSrc: '/assets/backgrounds/bg_reference_hover.png',

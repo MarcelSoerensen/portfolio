@@ -1,8 +1,8 @@
-<section id="myProjectsSection">
+<section id="myProjectsSection" *transloco="let translate">
   <div class="myProjectsContainer">
-    <h1 class="fontAnta">My Projects</h1>
+    <h1 class="fontAnta">{{ translate('myProjects.title') }}</h1>
     <div class="myProjectsContent">
-      <div class="tabs" role="tablist" aria-label="Projects">
+      <div class="tabs" role="tablist" [attr.aria-label]="translate('myProjects.tabsAriaLabel')">
         <button
           *ngFor="let project of projects; let i = index"
           type="button"
@@ -12,7 +12,7 @@
           role="tab"
           [attr.aria-selected]="i === activeIndex"
         >
-          <span class="tabLabel fontJosefin">{{ project.tabLabel }}</span>
+          <span class="tabLabel fontJosefin">{{ translate(project.tabLabelKey) }}</span>
         </button>
       </div>
 
@@ -27,13 +27,13 @@
                   alt=""
                   aria-hidden="true"
                 />
-                <h3>{{ activeProject.aboutTitle }}</h3>
+                <h3>{{ translate('myProjects.aboutTitle') }}</h3>
                 <span class="duration"
-                  >{{ activeProject.durationLabel }}
-                  {{ activeProject.duration }}</span
+                  >{{ translate('myProjects.durationLabel') }}
+                  {{ translate(activeProject.durationKey) }}</span
                 >
               </div>
-              <p>{{ activeProject.about }}</p>
+              <p>{{ translate(activeProject.aboutKey) }}</p>
             </div>
 
             <div class="block fontJosefin">
@@ -44,9 +44,9 @@
                   alt=""
                   aria-hidden="true"
                 />
-                <h3>{{ activeProject.organisationTitle }}</h3>
+                <h3>{{ translate('myProjects.organisationTitle') }}</h3>
               </div>
-              <p>{{ activeProject.organisation }}</p>
+              <p>{{ translate(activeProject.organisationKey) }}</p>
             </div>
 
             <div class="block">
@@ -57,15 +57,15 @@
                   alt=""
                   aria-hidden="true"
                 />
-                <h3>{{ activeProject.takeawaysTitle }}</h3>
+                <h3>{{ translate('myProjects.takeawaysTitle') }}</h3>
               </div>
-              <p>{{ activeProject.takeaways }}</p>
+              <p>{{ translate(activeProject.takeawaysKey) }}</p>
             </div>
           </div>
 
           <div class="side fontJosefin">
             <div class="block technologiesBlock">
-              <h3>{{ activeProject.technologiesTitle }}</h3>
+              <h3>{{ translate('myProjects.technologiesTitle') }}</h3>
               <div class="techIcons">
                 <img
                   *ngFor="let t of activeProject.technologies"
@@ -92,7 +92,7 @@
                 [attr.href]="activeProject.liveUrl || null"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Live Test</a>
+                >{{ translate('myProjects.liveTest') }}</a>
               <a
                 class="projectBtn projectBtnGithub"
                 [class.disabled]="!activeProject.githubUrl"
@@ -100,7 +100,7 @@
                 [attr.href]="activeProject.githubUrl || null"
                 target="_blank"
                 rel="noopener noreferrer"
-                >GitHub</a>
+                >{{ translate('myProjects.github') }}</a>
             </div>
           </div>
         </div>

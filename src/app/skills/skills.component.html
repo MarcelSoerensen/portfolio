@@ -1,6 +1,6 @@
-<section id="skillsSection">
+<section id="skillsSection" *transloco="let translate">
   <div class="skillsContainer">
-    <h1 class="fontAnta">Skills</h1>
+    <h1 class="fontAnta">{{ translate('skills.title') }}</h1>
     <div class="skillsContent">
       <div class="currentSkills">
         <img src="/assets/icons/skills/angular_skill.png" alt="" />
@@ -27,7 +27,7 @@
           alt=""
           aria-hidden="true"
         />
-        <p>I am currently learning</p>
+        <p>{{ translate('skills.currentlyLearning') }}</p>
         <div class="currentlyLearningSymbols">
           <div class="currentlyLearningSymbol fontJosefin">
             <img src="/assets/icons/skills/python.png" alt="" />
@@ -38,10 +38,7 @@
             <p>Django</p>
           </div>
         </div>
-        <p>
-          I am currently pursuing further training as a backend developer, which
-          will enable me to work as a full stack developer upon completion.
-        </p>
+        <p>{{ translate('skills.description') }}</p>
       </div>
     </div>
   </div>

@@ -1,20 +1,14 @@
-<section id="whyMeSection">
+<section id="whyMeSection" *transloco="let translate">
   <div class="whyMeContainer">
-    <h1 class="fontAnta">Why Me</h1>
+    <h1 class="fontAnta">{{ translate('whyMe.title') }}</h1>
     <div class="whyMeContent">
       <div class="myLocation">
         <img src="/assets/icons/location.png" alt="" />
-        <p class="iAm fontJosefin">I am</p>
-        <p class="fontJosefin">located in Berlin..|</p>
+        <p class="iAm fontJosefin">{{ translate('whyMe.iAm') }}</p>
+        <p class="fontJosefin">{{ translate('whyMe.location') }}</p>
       </div>
       <div class="myDescription">
-        <p class="fontJosefin">
-          I am a passionate frontend developer with a strong focus on creating
-          engaging and user-friendly web applications. With a keen eye for
-          design and a commitment to clean, efficient code, I strive to deliver
-          exceptional digital experiences that meet both user needs and business
-          goals.
-        </p>
+        <p class="fontJosefin">{{ translate('whyMe.description') }}</p>
       </div>
     </div>
   </div>

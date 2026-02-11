@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileLogoComponent } from '../profileLogo/profileLogo.component';
-import { TranslocoService } from '@jsverse/transloco';
+import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, ProfileLogoComponent],
+  imports: [CommonModule, ProfileLogoComponent, TranslocoModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })

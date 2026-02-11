@@ -1,4 +1,4 @@
-<nav>
+<nav *transloco="let translate">
   <div class="navContent">
     <app-profile-logo></app-profile-logo>
     <div class="navLinks">
@@ -7,28 +7,28 @@
         [ngClass]="{ active: activeSection === 'whyme' }"
         (click)="setActiveSection('whyme')"
         href="#whyMeSection"
-        >Why me</a
+        >{{ translate('navbar.whyMe') }}</a
       >
       <a
         class="navLink fontJosefin"
         [ngClass]="{ active: activeSection === 'skills' }"
         (click)="setActiveSection('skills')"
         href="#skillsSection"
-        >Skills</a
+        >{{ translate('navbar.skills') }}</a
       >
       <a
         class="navLink fontJosefin"
         [ngClass]="{ active: activeSection === 'projects' }"
         (click)="setActiveSection('projects')"
         href="#myProjectsSection"
-        >Projects</a
+        >{{ translate('navbar.projects') }}</a
       >
       <a
         class="navLink fontJosefin"
         [ngClass]="{ active: activeSection === 'contact' }"
         (click)="setActiveSection('contact')"
         href="#contactSection"
-        >Contact</a
+        >{{ translate('navbar.contact') }}</a
       >
     </div>
     <div class="languages">
