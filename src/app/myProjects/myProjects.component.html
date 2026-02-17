@@ -86,7 +86,7 @@
 
             <div class="project-links" aria-label="Project links">
               <a
-                class="project-button project-button-live"
+                class="base-button base-button-filled"
                 [class.disabled]="!activeProject.liveUrl"
                 [attr.aria-disabled]="!activeProject.liveUrl"
                 [attr.href]="activeProject.liveUrl || null"
@@ -94,7 +94,7 @@
                 rel="noopener noreferrer"
                 >{{ translate('myProjects.liveTest') }}</a>
               <a
-                class="project-button project-button-github"
+                class="base-button base-button-outline"
                 [class.disabled]="!activeProject.githubUrl"
                 [attr.aria-disabled]="!activeProject.githubUrl"
                 [attr.href]="activeProject.githubUrl || null"
