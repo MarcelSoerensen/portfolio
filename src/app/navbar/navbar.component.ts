@@ -12,7 +12,7 @@ import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 })
 export class NavbarComponent {
   activeSection = '';
-  selectedLanguage = 'de';
+  selectedLanguage = 'en';
 
   constructor(private translocoService: TranslocoService) {
     this.translocoService.setActiveLang(this.selectedLanguage);
