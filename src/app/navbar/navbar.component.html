@@ -1,50 +1,52 @@
 <nav *transloco="let translate">
-  <div class="nav-content">
-    <app-profile-logo></app-profile-logo>
-    <div class="nav-links">
-      <a
-        class="nav-link font-josefin"
-        [ngClass]="{ active: activeSection === 'whyme' }"
-        (click)="setActiveSection('whyme')"
-        href="#whyMeSection"
-        >{{ translate('navbar.whyMe') }}</a
-      >
-      <a
-        class="nav-link font-josefin"
-        [ngClass]="{ active: activeSection === 'skills' }"
-        (click)="setActiveSection('skills')"
-        href="#skillsSection"
-        >{{ translate('navbar.skills') }}</a
-      >
-      <a
-        class="nav-link font-josefin"
-        [ngClass]="{ active: activeSection === 'projects' }"
-        (click)="setActiveSection('projects')"
-        href="#myProjectsSection"
-        >{{ translate('navbar.projects') }}</a
-      >
-      <a
-        class="nav-link font-josefin"
-        [ngClass]="{ active: activeSection === 'contact' }"
-        (click)="setActiveSection('contact')"
-        href="#contactSection"
-        >{{ translate('navbar.contact') }}</a
-      >
-    </div>
-    <div class="languages">
-      <span
-        class="language font-josefin"
-        [ngClass]="{ active: selectedLanguage === 'de' }"
-        (click)="setLanguage('de')"
-      >
-        DE</span
-      >
-      <span
-        class="language font-josefin"
-        [ngClass]="{ active: selectedLanguage === 'en' }"
-        (click)="setLanguage('en')"
-        >EN</span
-      >
+  <div class="nav-container">
+    <div class="nav-content">
+      <app-profile-logo></app-profile-logo>
+      <div class="nav-links">
+        <a
+          class="nav-link font-josefin"
+          [ngClass]="{ active: activeSection === 'whyme' }"
+          (click)="setActiveSection('whyme')"
+          href="#whyMeSection"
+          >{{ translate("navbar.whyMe") }}</a
+        >
+        <a
+          class="nav-link font-josefin"
+          [ngClass]="{ active: activeSection === 'skills' }"
+          (click)="setActiveSection('skills')"
+          href="#skillsSection"
+          >{{ translate("navbar.skills") }}</a
+        >
+        <a
+          class="nav-link font-josefin"
+          [ngClass]="{ active: activeSection === 'projects' }"
+          (click)="setActiveSection('projects')"
+          href="#myProjectsSection"
+          >{{ translate("navbar.projects") }}</a
+        >
+        <a
+          class="nav-link font-josefin"
+          [ngClass]="{ active: activeSection === 'contact' }"
+          (click)="setActiveSection('contact')"
+          href="#contactSection"
+          >{{ translate("navbar.contact") }}</a
+        >
+      </div>
+      <div class="languages">
+        <span
+          class="language font-josefin"
+          [ngClass]="{ active: selectedLanguage === 'de' }"
+          (click)="setLanguage('de')"
+        >
+          DE</span
+        >
+        <span
+          class="language font-josefin"
+          [ngClass]="{ active: selectedLanguage === 'en' }"
+          (click)="setLanguage('en')"
+          >EN</span
+        >
+      </div>
     </div>
   </div>
 </nav>

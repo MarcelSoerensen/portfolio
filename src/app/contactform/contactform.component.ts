@@ -6,8 +6,17 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './contactform.component.html',
-  styleUrl: './contactform.component.scss'
+  styleUrl: './contactform.component.scss',
 })
 export class ContactformComponent {
+  contactData = {
+    name: '',
+    email: '',
+    message: '',
+    privacyChecked: false,
+  };
 
+  onSubmit() {
+    console.log(this.contactData);
+  }
 }

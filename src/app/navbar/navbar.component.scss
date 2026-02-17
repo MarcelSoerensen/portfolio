@@ -1,43 +1,47 @@
 nav {
   position: sticky;
   top: 0px;
-  width: 100%;
+  width: 100vw;
   height: 104px;
   background-color: rgb(148, 187, 214);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+}
 
-  > .nav-content {
+.nav-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 6%;
+  margin-right: 6%;
+  > a {
+    text-decoration: none;
+  }
+
+  > .nav-links {
+    width: 60%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1440px;
     box-sizing: border-box;
-    margin-left: 6%;
-    margin-right: 6%;
     > a {
-        text-decoration: none;
-    }
-
-    > .nav-links {
-      width: 60%;
-      display: flex;
-      justify-content: space-between;
-      box-sizing: border-box;
-      > a {
-        text-decoration: none;
-        font-size: clamp(0.8rem, 3vw, 1.8rem);
-        color: rgba(40, 46, 51, 1);
-        transition: all 125ms ease-in-out;
-        &:hover {
-          color: rgba(248, 245, 237, 1);
-        }
-        &:active {
-          color: rgba(248, 245, 237, 1);
-        }
+      text-decoration: none;
+      font-size: clamp(0.8rem, 3vw, 1.8rem);
+      color: rgba(40, 46, 51, 1);
+      transition: all 125ms ease-in-out;
+      &:hover {
+        color: rgba(248, 245, 237, 1);
+      }
+      &:active {
+        color: rgba(248, 245, 237, 1);
       }
     }
   }
@@ -47,14 +51,14 @@ nav {
   position: relative;
   z-index: 1;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     width: 180px;
     height: 60px;
     transform: translate(-50%, -50%);
-    background-image: url('/assets/icons/ellipse.png');
+    background-image: url("/assets/icons/ellipse.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -64,23 +68,23 @@ nav {
 }
 
 .language.active {
-    position: relative;
-    z-index: 1;
-    &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 50px;
-        height: 32px;
-        transform: translate(-50%, -50%);
-        background-image: url('/assets/icons/ellipse.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        z-index: -1;
-        pointer-events: none;
-    }
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 32px;
+    transform: translate(-50%, -50%);
+    background-image: url("/assets/icons/ellipse.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+  }
 }
 
 h4,

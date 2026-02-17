@@ -67,26 +67,45 @@
     </div>
 
     <div class="contact-form-fields">
-      <form action="">
+      <form (ngSubmit)="onSubmit()">
         <div class="contact-form-first-row">
           <div class="input-field-layout">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" />
+            <input
+              [(ngModel)]="contactData.name"
+              type="text"
+              id="name"
+              name="name"
+            />
           </div>
           <div class="input-field-layout">
             <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" />
+            <input
+              [(ngModel)]="contactData.email"
+              type="email"
+              id="email"
+              name="email"
+            />
           </div>
         </div>
         <div class="contact-form-first-row">
           <div class="input-field-layout">
             <label for="message">Your Message</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea
+              [(ngModel)]="contactData.message"
+              id="message"
+              name="message"
+            ></textarea>
           </div>
         </div>
         <div class="contact-form-third-row">
           <label class="privacy-checkbox">
-            <input type="checkbox" class="privacy-checkbox-input" />
+            <input
+              [(ngModel)]="contactData.privacyChecked"
+              name="privacyChecked"
+              type="checkbox"
+              class="privacy-checkbox-input"
+            />
             <span class="privacy-checkbox-custom">
               <img
                 class="privacy-checkbox-img privacy-checkbox-img--default"
