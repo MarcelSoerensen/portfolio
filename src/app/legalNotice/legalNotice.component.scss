@@ -8,6 +8,19 @@ section {
   scroll-margin-top: 104px;
 }
 
+.legal-notice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 104px;
+  max-width: 1440px;
+  gap: clamp(20px, 3vw, 50px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .legal-notice-content {
   max-width: 1440px;
   margin-left: 6%;
@@ -15,7 +28,7 @@ section {
 }
 
 h2 {
-  color: rgba(156, 186, 211,1);
+  color: rgba(156, 186, 211, 1);
 }
 
 p,
@@ -25,8 +38,8 @@ li {
   font-weight: 300;
 }
 
-a{
-  color: rgba(156, 186, 211,1);;
+a {
+  color: rgba(156, 186, 211, 1);
   text-decoration: none;
   &:hover {
     color: rgba(156, 186, 211, 0.5);
@@ -35,4 +48,3 @@ a{
     color: rgba(156, 186, 211, 1);
   }
 }
-
