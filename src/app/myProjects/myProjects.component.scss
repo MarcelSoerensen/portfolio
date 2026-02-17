@@ -5,7 +5,7 @@ section {
   scroll-margin-top: 136px;
 }
 
-.myProjectsContainer {
+.my-projects-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,7 @@ section {
   margin-left: auto;
   margin-right: auto;
 
-  .myProjectsContent {
+  .my-projects-content {
     width: 100%;
     box-sizing: border-box;
     padding-left: 6%;
@@ -45,13 +45,13 @@ section {
   font-size: clamp(18px, 2.2vw, 30px);
   transition: all 125ms ease-in-out;
 
-  > .tabLabel {
+  > .tab-label {
     display: inline-block;
     cursor: pointer;
     transition: all 125ms ease-in-out;
   }
 
-  > .tabLabel:hover {
+  > .tab-label:hover {
     color: rgba(248, 245, 237, 1);
   }
 
@@ -81,7 +81,7 @@ section {
   z-index: -1;
 }
 
-.cardBody {
+.card-body {
   position: relative;
   display: flex;
   gap: 32px;
@@ -113,14 +113,14 @@ section {
   }
 }
 
-.projectLinks {
+.project-links {
   max-width: 360px;
   display: flex;
   gap: 30px;
   justify-content: center;
 }
 
-.projectBtn {
+.project-button {
   width: auto;
   height: 48px;
   padding: 0 30px 0 30px;
@@ -136,7 +136,7 @@ section {
   transition: all 125ms ease-in-out;
 }
 
-.projectBtnLive {
+.project-button-live {
   background: rgba(148, 187, 214, 1);
   color: rgba(47, 56, 63, 1);
   transition: all 125ms ease-in-out;
@@ -148,7 +148,7 @@ section {
   }
 }
 
-.projectBtnGithub {
+.project-button-github {
   border-color: rgba(148, 187, 214, 1);
   color: rgba(148, 187, 214, 1);
   transition: all 125ms ease-in-out;
@@ -160,7 +160,7 @@ section {
   }
 }
 
-.projectBtn.disabled {
+.project-button.disabled {
   opacity: 0.35;
   pointer-events: none;
 }
@@ -177,7 +177,7 @@ section {
 }
 
 .block {
-  > .infoRow {
+  > .info-row {
     position: relative;
     display: flex;
     align-items: baseline;
@@ -186,7 +186,7 @@ section {
     flex-wrap: wrap;
   }
 
-  .infoRowIcon {
+  .info-row-icon {
     position: absolute;
     left: -48px;
     width: 29px;
@@ -194,11 +194,11 @@ section {
     object-fit: contain;
   }
 
-  .infoRow h3 {
+  .info-row h3 {
     margin: 0 0 8px 0;
   }
 
-  .aboutRow {
+  .about-row {
     position: relative;
     display: flex;
     align-items: baseline;
@@ -231,7 +231,7 @@ section {
   }
 }
 
-.subBlock {
+.sub-block {
   h4 {
     margin: 10px 0 6px 0;
     color: rgba(248, 245, 237, 1);
@@ -240,7 +240,7 @@ section {
   }
 }
 
-.technologiesBlock {
+.technologies-block {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -252,7 +252,7 @@ section {
   }
 }
 
-.techIcons {
+.tech-icons {
   display: flex;
   justify-content: center;
   gap: 24px;

@@ -1,7 +1,7 @@
 <section id="myProjectsSection" *transloco="let translate">
-  <div class="myProjectsContainer">
-    <h1 class="fontAnta">{{ translate('myProjects.title') }}</h1>
-    <div class="myProjectsContent">
+  <div class="my-projects-container">
+    <h1 class="font-anta">{{ translate('myProjects.title') }}</h1>
+    <div class="my-projects-content">
       <div class="tabs" role="tablist" [attr.aria-label]="translate('myProjects.tabsAriaLabel')">
         <button
           *ngFor="let project of projects; let i = index"
@@ -12,17 +12,17 @@
           role="tab"
           [attr.aria-selected]="i === activeIndex"
         >
-          <span class="tabLabel fontJosefin">{{ translate(project.tabLabelKey) }}</span>
+          <span class="tab-label font-josefin">{{ translate(project.tabLabelKey) }}</span>
         </button>
       </div>
 
       <div class="card" role="tabpanel">
-        <div class="cardBody">
-          <div class="details fontJosefin">
+        <div class="card-body">
+          <div class="details font-josefin">
             <div class="block">
-              <div class="aboutRow">
+              <div class="about-row">
                 <img
-                  class="infoRowIcon"
+                  class="info-row-icon"
                   src="/assets/icons/point.png"
                   alt=""
                   aria-hidden="true"
@@ -36,10 +36,10 @@
               <p>{{ translate(activeProject.aboutKey) }}</p>
             </div>
 
-            <div class="block fontJosefin">
-              <div class="infoRow">
+            <div class="block font-josefin">
+              <div class="info-row">
                 <img
-                  class="infoRowIcon"
+                  class="info-row-icon"
                   src="/assets/icons/point.png"
                   alt=""
                   aria-hidden="true"
@@ -50,9 +50,9 @@
             </div>
 
             <div class="block">
-              <div class="infoRow">
+              <div class="info-row">
                 <img
-                  class="infoRowIcon"
+                  class="info-row-icon"
                   src="/assets/icons/point.png"
                   alt=""
                   aria-hidden="true"
@@ -63,13 +63,13 @@
             </div>
           </div>
 
-          <div class="side fontJosefin">
-            <div class="block technologiesBlock">
+          <div class="side font-josefin">
+            <div class="block technologies-block">
               <h3>{{ translate('myProjects.technologiesTitle') }}</h3>
-              <div class="techIcons">
+              <div class="tech-icons">
                 <img
                   *ngFor="let t of activeProject.technologies"
-                  class="techIcon"
+                  class="tech-icon"
                   [src]="t.iconSrc"
                   [alt]="t.name"
                   [title]="t.name"
@@ -84,9 +84,9 @@
               />
             </div>
 
-            <div class="projectLinks" aria-label="Project links">
+            <div class="project-links" aria-label="Project links">
               <a
-                class="projectBtn projectBtnLive"
+                class="project-button project-button-live"
                 [class.disabled]="!activeProject.liveUrl"
                 [attr.aria-disabled]="!activeProject.liveUrl"
                 [attr.href]="activeProject.liveUrl || null"
@@ -94,7 +94,7 @@
                 rel="noopener noreferrer"
                 >{{ translate('myProjects.liveTest') }}</a>
               <a
-                class="projectBtn projectBtnGithub"
+                class="project-button project-button-github"
                 [class.disabled]="!activeProject.githubUrl"
                 [attr.aria-disabled]="!activeProject.githubUrl"
                 [attr.href]="activeProject.githubUrl || null"

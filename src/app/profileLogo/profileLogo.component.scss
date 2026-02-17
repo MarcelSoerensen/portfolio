@@ -11,7 +11,7 @@
   h5 {
     margin: 0;
   }
-  &:hover > .imgContainer > img {
+  &:hover > .img-container > img {
     transform: scaleX(1.2);
   }
   &:hover > h4 {
@@ -20,7 +20,7 @@
   &:hover > h5 {
     text-shadow: 1px 1px 1px rgba(41, 45, 51, 0.2);
   }
-  &:active > .imgContainer > img {
+  &:active > .img-container > img {
     transform: scaleX(1);
   }
   &:active > h4 {
@@ -30,7 +30,7 @@
     text-shadow: 1px 1px 1px rgba(41, 45, 51, 0);
   }
 
-  .imgContainer {
+  .img-container {
     position: relative;
     display: inline-block;
     > img {
@@ -42,7 +42,7 @@
       transition: all 200ms ease-in-out;
     }
 
-    .curly_braces_logo {
+    .curly-braces-logo {
       position: absolute;
       top: -3px;
       bottom: 0;

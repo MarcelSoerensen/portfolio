@@ -5,7 +5,7 @@ section {
   scroll-margin-top: 136px;
 }
 
-.skillsContainer {
+.skills-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +18,7 @@ section {
   margin-left: auto;
   margin-right: auto;
 
-  > .skillsContent {
+  > .skills-content {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -27,7 +27,7 @@ section {
     width: 100%;
     gap: 32px;
 
-    > .currentSkills {
+    > .current-skills {
       width: 409px;
       height: 404px;
       display: grid;
@@ -40,7 +40,7 @@ section {
       }
     }
 
-    > .currentlyLearning {
+    > .currently-learning {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -51,7 +51,7 @@ section {
       gap: 6%;
       margin-right: 15%;
 
-      > .currentlyLearningBackground {
+      > .currently-learning-background {
         position: absolute;
         inset: 0;
         width: 100%;
@@ -61,27 +61,27 @@ section {
         transition: all 300ms ease-in-out;
       }
 
-      > .currentlyLearningBackground--default {
+      > .currently-learning-background--default {
         opacity: 1;
         z-index: 1;
       }
 
-      > .currentlyLearningBackground--hover {
+      > .currently-learning-background--hover {
         opacity: 0;
         z-index: 2;
       }
 
       &:hover {
-        > .currentlyLearningBackground--default {
+        > .currently-learning-background--default {
           opacity: 0;
         }
 
-        > .currentlyLearningBackground--hover {
+        > .currently-learning-background--hover {
           opacity: 1;
         }
       }
 
-      > :not(.currentlyLearningBackground) {
+      > :not(.currently-learning-background) {
         position: relative;
         z-index: 3;
       }
@@ -94,13 +94,13 @@ section {
         text-align: center;
         width: 70%;
       }
-      > .currentlyLearningSymbols {
+      > .currently-learning-symbols {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 16px;
-        > .currentlyLearningSymbol {
+        > .currently-learning-symbol {
           > img {
             width: auto;
             height: 32px;

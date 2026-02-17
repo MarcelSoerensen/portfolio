@@ -1,30 +1,30 @@
-<div class="colleaguesFeedback" *transloco="let translate">
-  <h2 class="fontJosefin">{{ translate('colleagueFeedback.title') }}</h2>
+<div class="colleagues-feedback" *transloco="let translate">
+  <h2 class="font-josefin">{{ translate('colleagueFeedback.title') }}</h2>
 
-  <div class="feedbackCards" [attr.aria-label]="translate('colleagueFeedback.ariaLabel')">
-    <div class="feedbackCard" *ngFor="let feedback of colleagueFeedbacks">
+  <div class="feedback-cards" [attr.aria-label]="translate('colleagueFeedback.ariaLabel')">
+    <div class="feedback-card" *ngFor="let feedback of colleagueFeedbacks">
       <img
-        class="feedbackCardBackground feedbackCardBackground--default"
+        class="feedback-card-background feedback-card-background--default"
         [src]="feedback.backgroundDefaultSrc"
         alt=""
         aria-hidden="true"
       />
       <img
-        class="feedbackCardBackground feedbackCardBackground--hover"
+        class="feedback-card-background feedback-card-background--hover"
         [src]="feedback.backgroundHoverSrc"
         alt=""
         aria-hidden="true"
       />
 
-      <div class="feedbackCardContent fontJosefin">
-        <div class="feedbackCardName">{{ translate(feedback.nameKey) }}</div>
-        <div class="feedbackCardProject">
+      <div class="feedback-card-content font-josefin">
+        <div class="feedback-card-name">{{ translate(feedback.nameKey) }}</div>
+        <div class="feedback-card-project">
           {{ translate('colleagueFeedback.projectLabel') }}
-          <span class="feedbackCardProjectValue">{{ translate(feedback.projectKey) }}</span>
+          <span class="feedback-card-project-value">{{ translate(feedback.projectKey) }}</span>
         </div>
-        <div class="feedbackCardQuote">“{{ translate(feedback.quoteKey) }}”</div>
+        <div class="feedback-card-quote">“{{ translate(feedback.quoteKey) }}”</div>
         <a
-          class="feedbackCardLink"
+          class="feedback-card-link"
           [href]="feedback.linkedinUrl"
           target="_blank"
           rel="noopener noreferrer"

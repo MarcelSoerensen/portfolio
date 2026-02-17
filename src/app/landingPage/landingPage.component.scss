@@ -17,7 +17,7 @@ h5 {
   white-space: nowrap;
 }
 
-.heroContainer {
+.hero-container {
   position: absolute;
   left: 0;
   right: 0;
@@ -33,7 +33,7 @@ h5 {
   margin-right: auto;
 }
 
-.heroImageContainer {
+.hero-image-container {
   margin-top: clamp(160px, 8vw, 120px);
   margin-left: 6%;
   position: relative;
@@ -42,7 +42,7 @@ h5 {
   display: flex;
   align-items: flex-end;
 
-  .portraitBackground {
+  .portrait-background {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -53,28 +53,28 @@ h5 {
     transition: all 300ms ease-in-out;
   }
 
-  .portraitBackground--default {
+  .portrait-background--default {
     opacity: 1;
     z-index: 1;
   }
 
-  .portraitBackground--hover {
+  .portrait-background--hover {
     opacity: 0;
     z-index: 2;
   }
 
   &:hover {
-    .portraitBackground--default {
+    .portrait-background--default {
       opacity: 0;
     }
 
-    .portraitBackground--hover {
+    .portrait-background--hover {
       opacity: 1;
     }
   }
 }
 
-.portraitImage {
+.portrait-image {
   width: 95%;
   height: auto;
   display: block;
@@ -85,7 +85,7 @@ h5 {
   filter: drop-shadow(8px 32px 16px rgba(40, 46, 51, 0.5));
 }
 
-.heroIntroContainer {
+.hero-intro-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,22 +102,22 @@ h5 {
   }
 }
 
-.heroIntroFirstRow {
+.hero-intro-first-row {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  .heroFreeSpace {
+  .hero-free-space {
     width: 30px;
   }
-  .heroLogo {
+  .hero-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     margin-bottom: 0;
 
-    .imgContainer {
+    .img-container {
       position: relative;
       display: inline-block;
       > img {
@@ -132,7 +132,7 @@ h5 {
         }
       }
 
-      .curly_braces_logo {
+      .curly-braces-logo {
         position: absolute;
         top: -2px;
         bottom: 0;
@@ -158,7 +158,7 @@ h5 {
       color: rgba(148, 187, 214, 1);
     }
   }
-  .heroSocials {
+  .hero-socials {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -167,14 +167,14 @@ h5 {
   }
 }
 
-.socialIcon {
+.social-icon {
   position: relative;
   width: 32px;
   height: 32px;
   display: inline-block;
   cursor: pointer;
 
-  > .socialIconImg {
+  > .social-icon-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -184,36 +184,36 @@ h5 {
     display: block;
   }
 
-  > .socialIconImg--default {
+  > .social-icon-img--default {
     opacity: 1;
   }
 
-  > .socialIconImg--hover {
+  > .social-icon-img--hover {
     opacity: 0;
   }
 
   &:hover {
-    .socialIconImg--default {
+    .social-icon-img--default {
       opacity: 0;
     }
 
-    > .socialIconImg--hover {
+    > .social-icon-img--hover {
       opacity: 1;
     }
   }
 
   &:active {
-    .socialIconImg--default {
+    .social-icon-img--default {
       opacity: 1;
     }
 
-    > .socialIconImg--hover {
+    > .social-icon-img--hover {
       opacity: 0;
     }
   }
 }
 
-.arrowDown {
+.arrow-down {
     margin-top: clamp(0px, 12vw, 200px);
     bottom: 5vw;
     position: relative;
@@ -221,7 +221,7 @@ h5 {
     height: clamp(40px, 10vw, 89px);
     cursor: pointer;
 
-    >.arrowDownImg {
+    >.arrow-down-img {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -229,30 +229,30 @@ h5 {
       transition: opacity 150ms ease-in-out;
     }
 
-    >.arrowDownImg--default {
+    >.arrow-down-img--default {
       opacity: 1;
     }
 
-    > .arrowDownImg--hover {
+    > .arrow-down-img--hover {
       opacity: 0;
     }
 
     &:hover {
-      .arrowDownImg--default {
+      .arrow-down-img--default {
         opacity: 0;
       }
 
-      .arrowDownImg--hover {
+      .arrow-down-img--hover {
         opacity: 1;
       }
     }
     
     &:active {
-      .arrowDownImg--default {
+      .arrow-down-img--default {
         opacity: 1;
       }
 
-      .arrowDownImg--hover {
+      .arrow-down-img--hover {
         opacity: 0;
       }
     }

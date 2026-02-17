@@ -9,7 +9,7 @@ nav {
   justify-content: center;
   z-index: 1000;
 
-  > .navContent {
+  > .nav-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,7 +22,7 @@ nav {
         text-decoration: none;
     }
 
-    > .navLinks {
+    > .nav-links {
       width: 60%;
       display: flex;
       justify-content: space-between;
@@ -43,7 +43,7 @@ nav {
   }
 }
 
-.navLink.active {
+.nav-link.active {
   position: relative;
   z-index: 1;
   &::before {
@@ -88,14 +88,14 @@ h5 {
   margin: 0;
 }
 
-.heroLogo {
+.hero-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 0;
   cursor: pointer;
-  &:hover > .imgContainer > img {
+  &:hover > .img-container > img {
     transform: scaleX(1.2);
   }
   &:hover > h4 {
@@ -104,7 +104,7 @@ h5 {
   &:hover > h5 {
     text-shadow: 1px 1px 1px rgba(41, 45, 51, 0.2);
   }
-  &:active > .imgContainer > img {
+  &:active > .img-container > img {
     transform: scaleX(1);
   }
   &:active > h4 {
@@ -114,7 +114,7 @@ h5 {
     text-shadow: 1px 1px 1px rgba(41, 45, 51, 0);
   }
 
-  .imgContainer {
+  .img-container {
     position: relative;
     display: inline-block;
     > img {
@@ -126,7 +126,7 @@ h5 {
       transition: all 200ms ease-in-out;
     }
 
-    .curly_braces_logo {
+    .curly-braces-logo {
       position: absolute;
       top: -3px;
       bottom: 0;

@@ -1,7 +1,7 @@
 {
   "navbar": {
     "whyMe": "Warum ich",
-    "skills": "Skills",
+    "skills": "Kenntnisse",
     "projects": "Projekte",
     "contact": "Kontakt"
   },
@@ -14,7 +14,7 @@
   },
 
   "skills": {
-    "title": "Skills",
+    "title": "Kenntnisse",
     "currentlyLearning": "Ich lerne gerade",
     "description": "Ich bilde mich aktuell als Backend Developer weiter, um nach Abschluss als Full Stack Developer arbeiten zu können."
   },

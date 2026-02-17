@@ -1,4 +1,4 @@
- .colleaguesFeedback {
+ .colleagues-feedback {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -13,7 +13,7 @@
 	}
 }
 
-.feedbackCards {
+.feedback-cards {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -21,7 +21,7 @@
 	flex-wrap: wrap;
 }
 
-.feedbackCard {
+.feedback-card {
 	position: relative;
 	flex: 1;
 	min-width: 260px;
@@ -36,7 +36,7 @@
 	justify-content: center;
 }
 
-.feedbackCardBackground {
+.feedback-card-background {
 	position: absolute;
 	inset: 0;
 	width: 100%;
@@ -48,27 +48,27 @@
 	transition: all 300ms ease-in-out;
 }
 
-.feedbackCardBackground--default {
+.feedback-card-background--default {
 	opacity: 1;
 	z-index: 1;
 }
 
-.feedbackCardBackground--hover {
+.feedback-card-background--hover {
 	opacity: 0;
 	z-index: 2;
 }
 
-.feedbackCard:hover {
-	.feedbackCardBackground--default {
+.feedback-card:hover {
+	.feedback-card-background--default {
 		opacity: 0;
 	}
 
-	.feedbackCardBackground--hover {
+	.feedback-card-background--hover {
 		opacity: 1;
 	}
 }
 
-.feedbackCardContent {
+.feedback-card-content {
 	position: relative;
 	z-index: 3;
 	width: 72%;
@@ -80,24 +80,24 @@
 	text-align: center;
 }
 
-.feedbackCardName {
+.feedback-card-name {
 	color: rgba(248, 245, 237, 1);
 	font-size: 26px;
 	font-weight: 400;
 }
 
-.feedbackCardProject {
+.feedback-card-project {
 	color: rgba(248, 245, 237, 1);
 	font-size: 18px;
 	font-weight: 300;
 }
 
-.feedbackCardProjectValue {
+.feedback-card-project-value {
 	color: rgba(148, 187, 214, 1);
 	font-weight: 400;
 }
 
-.feedbackCardQuote {
+.feedback-card-quote {
 	color: rgba(248, 245, 237, 1);
 	font-size: 18px;
 	font-weight: 300;
@@ -105,7 +105,7 @@
 	margin-top: 6px;
 }
 
-.feedbackCardLink {
+.feedback-card-link {
 	align-self: center;
 	margin-top: 16px;
 	color: rgba(148, 187, 214, 1);
@@ -116,6 +116,6 @@
 	transition: opacity 125ms ease-in-out;
 }
 
-.feedbackCardLink:hover {
+.feedback-card-link:hover {
 	opacity: 0.8;
 }

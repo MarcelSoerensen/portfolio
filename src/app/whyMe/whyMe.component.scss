@@ -5,7 +5,7 @@ section {
   scroll-margin-top: 32px;
 }
 
-.whyMeContainer {
+.why-me-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +20,7 @@ section {
   margin-right: auto;
 
 
-  >.whyMeContent {
+  >.why-me-content {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -29,7 +29,7 @@ section {
     margin-left: 15%;
     gap: 32px;
 
-    >.myLocation {
+    >.my-location {
       width: 50%;
       display: flex;
       flex-direction: row;
@@ -45,12 +45,12 @@ section {
         margin: 0;
         color: rgba(248, 245, 237, 1);
       }
-      >.iAm {
+      >.i-am {
         color: rgba(148, 187, 214, 1);
       }
     }
 
-    >.myDescription {
+    >.my-description {
       width: 50%;
       margin-right: 15%;
       >p {
