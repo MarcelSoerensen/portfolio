@@ -1,0 +1,182 @@
+.contact-form-fields {
+  margin-left: 15%;
+  margin-right: 15%;
+  color: rgba(235, 237, 234, 1);
+
+  > form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.contact-form-first-row {
+  display: flex;
+  gap: 16px;
+}
+
+.input-field-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  > label {
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(148, 187, 214, 1);
+    transition: color 0.2s;
+  }
+
+  > label.input-error {
+    color: #ff4d4f;
+  }
+
+  > input,
+  > textarea {
+    width: 100%;
+    padding: 8px 24px;
+    font-size: 16px;
+    font-weight: 300;
+    border: 1px solid rgba(148, 187, 214, 1);
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(235, 237, 234, 1);
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    &::placeholder {
+      color: rgba(235, 237, 234, 0.7);
+    }
+  }
+
+  > input.input-error {
+    border-color: #ff4d4f;
+  }
+
+  > input {
+    height: 64px;
+    &:focus {
+      background-color: rgba(52, 63, 71, 1);
+    }
+  }
+
+  > textarea {
+    height: 164px;
+    padding-top: 24px;
+    resize: none;
+    &:focus {
+      background-color: rgba(52, 63, 71, 1);
+    }
+  }
+}
+
+.contact-form-third-row {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  margin-top: 8px;
+}
+
+.contact-form-fourth-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -32px;
+}
+
+.privacy-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+}
+
+.privacy-checkbox-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.privacy-checkbox-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  right: 0;
+  bottom: 0;
+  transition: all 150ms ease-in-out;
+  pointer-events: none;
+}
+
+
+.privacy-checkbox-img--default {
+  opacity: 1;
+}
+.privacy-checkbox-img--hover {
+  opacity: 0;
+}
+.privacy-checkbox-img--checked {
+  opacity: 0;
+}
+.privacy-checkbox-img--error {
+  opacity: 0;
+}
+.privacy-checkbox:hover .privacy-checkbox-img--hover {
+  opacity: 1;
+}
+.privacy-checkbox:hover .privacy-checkbox-img--default {
+  opacity: 0;
+}
+
+.privacy-checkbox-input:checked
+  + .privacy-checkbox-custom
+  .privacy-checkbox-img--default {
+  opacity: 0;
+}
+.privacy-checkbox-input:checked
+  + .privacy-checkbox-custom
+  .privacy-checkbox-img--checked {
+  opacity: 1;
+}
+
+.privacy-checkbox.error .privacy-checkbox-img--error {
+  opacity: 1;
+}
+.privacy-checkbox.error .privacy-checkbox-img--default {
+  opacity: 0;
+}
+.privacy-checkbox.error .privacy-checkbox-img--hover {
+  opacity: 0;
+}
+.privacy-checkbox.error .privacy-checkbox-img--checked {
+  opacity: 0;
+}
+
+.privacy-checkbox-text {
+  font-size: 14px;
+  color: rgba(235, 237, 234, 1);
+  user-select: none;
+}
+
+.privacy-link {
+  color: rgb(148, 187, 214);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 150ms;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.input-error {
+  border-color: rgba(211, 87, 65, 1)!important;
+  color: rgba(211, 87, 65, 1)!important;
+}

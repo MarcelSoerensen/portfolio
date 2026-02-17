@@ -66,71 +66,7 @@
       </div>
     </div>
 
-    <div class="contact-form-fields">
-      <form (ngSubmit)="onSubmit()">
-        <div class="contact-form-first-row">
-          <div class="input-field-layout">
-            <label for="name">Your Name</label>
-            <input
-              [(ngModel)]="contactData.name"
-              type="text"
-              id="name"
-              name="name"
-            />
-          </div>
-          <div class="input-field-layout">
-            <label for="email">Your Email</label>
-            <input
-              [(ngModel)]="contactData.email"
-              type="email"
-              id="email"
-              name="email"
-            />
-          </div>
-        </div>
-        <div class="contact-form-first-row">
-          <div class="input-field-layout">
-            <label for="message">Your Message</label>
-            <textarea
-              [(ngModel)]="contactData.message"
-              id="message"
-              name="message"
-            ></textarea>
-          </div>
-        </div>
-        <div class="contact-form-third-row">
-          <label class="privacy-checkbox">
-            <input
-              [(ngModel)]="contactData.privacyChecked"
-              name="privacyChecked"
-              type="checkbox"
-              class="privacy-checkbox-input"
-            />
-            <span class="privacy-checkbox-custom">
-              <img
-                class="privacy-checkbox-img privacy-checkbox-img--default"
-                src="assets/icons/controls/checkbox_default.png"
-                alt="Checkbox default"
-              />
-              <img
-                class="privacy-checkbox-img privacy-checkbox-img--checked"
-                src="assets/icons/controls/checkbox_checked.png"
-                alt="Checkbox checked"
-              />
-            </span>
-          </label>
-          <span class="privacy-checkbox-text">
-            I've read the
-            <a href="#" class="privacy-link">privacy policy</a> and agree to the
-            processing of my data as outlined.
-          </span>
-        </div>
-        <div class="contact-form-fourth-row">
-          <button type="submit" class="base-button base-button-outline">
-            Send
-          </button>
-        </div>
-      </form>
-    </div>
+      <app-contact-form></app-contact-form>
+    
   </div>
 </section>

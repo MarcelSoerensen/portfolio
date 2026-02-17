@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { WhyMeComponent } from '../../whyMe/whyMe.component';
 import { SkillsComponent } from '../../skills/skills.component';
 import { MyProjectsComponent } from '../../myProjects/myProjects.component';
-import { ContactformComponent } from '../../contactform/contactform.component';
+import { ContactMeComponent } from '../../contactMe/contactMe.component';
 @Component({
   selector: 'app-content',
   standalone: true,
@@ -12,7 +12,7 @@ import { ContactformComponent } from '../../contactform/contactform.component';
     WhyMeComponent,
     SkillsComponent,
     MyProjectsComponent,
-    ContactformComponent
+    ContactMeComponent
   ],
   templateUrl: './landingPageContent.component.html',
   styleUrls: ['./landingPageContent.component.scss']

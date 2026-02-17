@@ -1,0 +1,89 @@
+<div class="contact-form-fields">
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <div class="contact-form-first-row">
+      <div class="input-field-layout">
+        <label for="name" [class.input-error]="!name.valid && name.touched">
+          {{
+            !name.valid && name.touched 
+            ? "Your name is required" : "Your Name"
+          }}
+        </label>
+        <input #name="ngModel" [(ngModel)]="contactData.name"
+          type="text" id="name" name="name" required
+          [class.input-error]="!name.valid && name.touched"
+        />
+      </div>
+      <div class="input-field-layout">
+        <label for="email" [class.input-error]="!email.valid && email.touched">
+          {{
+            !email.valid && email.touched 
+            ? "Your email is required" : "Your email"
+          }}
+        </label>
+        <input #email="ngModel" [(ngModel)]="contactData.email"
+          type="email" id="email" name="email" required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          [class.input-error]="!email.valid && email.touched"
+        />
+      </div>
+    </div>
+    <div class="contact-form-first-row">
+      <div class="input-field-layout">
+        <label
+          for="message"
+          [class.input-error]="!message.valid && message.touched"
+        >
+          {{
+            !message.valid && message.touched
+              ? "Your message is required" : "Your message"
+          }}
+        </label>
+        <textarea #message="ngModel" [(ngModel)]="contactData.message"
+          id="message" name="message" required
+          [class.input-error]="!message.valid && message.touched"
+        ></textarea>
+      </div>
+    </div>
+    <div class="contact-form-third-row">
+      <label class="privacy-checkbox" [class.error]="privacyError && !contactData.privacyChecked">
+        <input [(ngModel)]="contactData.privacyChecked"
+          name="privacyChecked" type="checkbox"
+          class="privacy-checkbox-input"
+          (change)="privacyError = false"
+        />
+        <span class="privacy-checkbox-custom">
+          <img
+            class="privacy-checkbox-img privacy-checkbox-img--default"
+            src="assets/icons/controls/checkbox_default.svg"
+            alt="Checkbox default"
+          />
+          <img
+            class="privacy-checkbox-img privacy-checkbox-img--hover"
+            src="assets/icons/controls/checkbox_hover.svg"
+            alt="Checkbox hover"
+          />
+          <img
+            class="privacy-checkbox-img privacy-checkbox-img--checked"
+            src="assets/icons/controls/checkbox_checked.svg"
+            alt="Checkbox checked"
+          />
+          <img
+            class="privacy-checkbox-img privacy-checkbox-img--error"
+            src="assets/icons/controls/checkbox_error.svg"
+            alt="Checkbox error"
+          />
+        </span>
+      </label>
+      <span class="privacy-checkbox-text">
+        I've read the
+        <a href="#" class="privacy-link">privacy policy</a> and agree to the
+        processing of my data as outlined.
+      </span>
+    </div>
+    <div class="contact-form-fourth-row">
+      <button type="submit" class="base-button base-button-outline">
+        Send
+      </button>
+    </div>
+  </form>
+</div>
