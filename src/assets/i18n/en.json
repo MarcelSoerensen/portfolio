@@ -10,8 +10,10 @@
     "title": "Why Me",
     "iAm": "I am",
     "location": "located in Berlin..|",
-    "description": "I am a passionate frontend developer with a strong focus on creating engaging and user-friendly web applications. With a keen eye for design and a commitment to clean, efficient code, I strive to deliver exceptional digital experiences that meet both user needs and business goals."
+    "description": "I am a passionate frontend developer with a strong focus on creating engaging and user-friendly web applications. With a keen eye for design and a commitment to clean, efficient code, I strive to deliver exceptional digital experiences that meet both user needs and business goals.",
+    "letsTalk": "Let's talk"
   },
+
   "skills": {
     "title": "Skills",
     "currentlyLearning": "I am currently learning",
@@ -86,6 +88,28 @@
         "quote": "Marcel is proactive and detail-oriented. He spots edge cases early and improves the overall UX with smart, simple solutions."
       }
     }
+  },
+
+  "contactMe": {
+    "title": "Contact me",
+    "intro": "I’m happy to connect about job offers and exciting project opportunities. I work collaboratively, with a high level of accuracy and a clear goal-oriented mindset, and I have a strong eye for clean, aesthetic, user-friendly interfaces. I’m highly motivated and continuously improving — feel free to reach out via email or phone!",
+    "mail": "E-mail: marcel.soerensen@icloud.com",
+    "phone": "Phone: +49 176 310 55 989"
+  },
+
+  "contactForm": {
+    "nameLabel": "Your Name",
+    "nameRequired": "Your name is required",
+    "emailLabel": "Your email",
+    "emailRequired": "Your email is required",
+    "emailInvalid": "Please enter a valid email",
+    "messageLabel": "Your message",
+    "messageRequired": "Your message is required",
+    "privacyTextLeft": "I've read the ",
+    "privacyLink": "privacy policy",
+    "privacyTextRight": " and agree to the processing of my data as outlined.",
+    "privacyRequired": "Please accept the privacy policy.",
+    "send": "Send"
   },
 
   "footer": {

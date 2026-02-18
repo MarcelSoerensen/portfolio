@@ -1,14 +1,21 @@
 <section id="whyMeSection" *transloco="let translate">
   <div class="why-me-container">
-    <h1 class="font-anta">{{ translate('whyMe.title') }}</h1>
+    <h1 class="font-anta">{{ translate("whyMe.title") }}</h1>
     <div class="why-me-content">
       <div class="my-location">
         <img src="/assets/icons/location.svg" alt="" />
-        <p class="i-am font-josefin">{{ translate('whyMe.iAm') }}</p>
-        <p class="font-josefin">{{ translate('whyMe.location') }}</p>
+        <p class="i-am font-josefin">{{ translate("whyMe.iAm") }}</p>
+        <p class="font-josefin">{{ translate("whyMe.location") }}</p>
       </div>
       <div class="my-description">
-        <p class="font-josefin">{{ translate('whyMe.description') }}</p>
+        <p class="font-josefin">{{ translate("whyMe.description") }}</p>
+        <div class="button-container">
+          <a href="#contactSection">
+            <button class="font-josefin base-button base-button-outline">
+              {{ translate("whyMe.letsTalk") }}
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   </div>

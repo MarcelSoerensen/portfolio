@@ -1,11 +1,17 @@
-<div class="contact-form-fields">
+<div class="contact-form-fields" *transloco="let translate">
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="contact-form-first-row">
       <div class="input-field-layout">
-        <label for="name" [class.input-error]="!name.valid && (name.touched || contactForm.submitted)">
+        <label
+          for="name"
+          [class.input-error]="
+            !name.valid && (name.touched || contactForm.submitted)
+          "
+        >
           {{
             !name.valid && (name.touched || contactForm.submitted)
-            ? "Your name is required" : "Your Name"
+              ? translate("contactForm.nameRequired")
+              : translate("contactForm.nameLabel")
           }}
         </label>
         <div class="input-icon-wrapper">
@@ -16,17 +22,31 @@
             id="name"
             name="name"
             required
-            [class.input-error]="!name.valid && (name.touched || contactForm.submitted)"
+            [class.input-error]="
+              !name.valid && (name.touched || contactForm.submitted)
+            "
           />
-          <img class="done-icon" src="assets/icons/controls/done_.png" alt="done"
-            [class.visible]="name.valid && contactData.name" />
+          <img
+            class="done-icon"
+            src="assets/icons/controls/done_.png"
+            alt="done"
+            [class.visible]="name.valid && contactData.name"
+          />
         </div>
       </div>
       <div class="input-field-layout">
-        <label for="email" [class.input-error]="!email.valid && (email.touched || contactForm.submitted)">
+        <label
+          for="email"
+          [class.input-error]="
+            !email.valid && (email.touched || contactForm.submitted)
+          "
+        >
           {{
             !email.valid && (email.touched || contactForm.submitted)
-            ? "Your email is required" : "Your email"
+              ? !email.value
+                ? translate("contactForm.emailRequired")
+                : translate("contactForm.emailInvalid")
+              : translate("contactForm.emailLabel")
           }}
         </label>
         <div class="input-icon-wrapper">
@@ -38,10 +58,16 @@
             name="email"
             required
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-            [class.input-error]="!email.valid && (email.touched || contactForm.submitted)"
+            [class.input-error]="
+              !email.valid && (email.touched || contactForm.submitted)
+            "
           />
-          <img class="done-icon" src="assets/icons/controls/done_.png" alt="done"
-            [class.visible]="email.valid && contactData.email" />
+          <img
+            class="done-icon"
+            src="assets/icons/controls/done_.png"
+            alt="done"
+            [class.visible]="email.valid && contactData.email"
+          />
         </div>
       </div>
     </div>
@@ -49,11 +75,14 @@
       <div class="input-field-layout">
         <label
           for="message"
-          [class.input-error]="!message.valid && (message.touched || contactForm.submitted)"
+          [class.input-error]="
+            !message.valid && (message.touched || contactForm.submitted)
+          "
         >
           {{
             !message.valid && (message.touched || contactForm.submitted)
-            ? "Your message is required" : "Your message"
+              ? translate("contactForm.messageRequired")
+              : translate("contactForm.messageLabel")
           }}
         </label>
         <div class="input-icon-wrapper">
@@ -63,10 +92,16 @@
             id="message"
             name="message"
             required
-            [class.input-error]="!message.valid && (message.touched || contactForm.submitted)"
+            [class.input-error]="
+              !message.valid && (message.touched || contactForm.submitted)
+            "
           ></textarea>
-          <img class="done-icon" src="assets/icons/controls/done_.png" alt="done"
-            [class.visible]="message.valid && contactData.message" />
+          <img
+            class="done-icon"
+            src="assets/icons/controls/done_.png"
+            alt="done"
+            [class.visible]="message.valid && contactData.message"
+          />
         </div>
       </div>
     </div>
@@ -106,25 +141,28 @@
         </span>
       </label>
       <div class="privacy-checkbox-text">
-        <span>
-          I've read the
-          <a href="#" class="privacy-link">privacy policy</a> 
-          and agree to the processing of my data as outlined.
-        </span>
+        <div>
+          <span [innerHTML]="translate('contactForm.privacyTextLeft')"></span>
+          <a href="#" class="privacy-link">
+            {{ translate("contactForm.privacyLink") }}</a
+          >
+          <span [innerHTML]="translate('contactForm.privacyTextRight')"></span>
+        </div>
         <label
           class="privacy-error-label"
           [class.input-error]="privacyError && !contactData.privacyChecked"
         >
           {{
             privacyError && !contactData.privacyChecked
-            ? "Please accept the privacy policy." : ""
+              ? translate("contactForm.privacyRequired")
+              : ""
           }}
         </label>
       </div>
     </div>
     <div class="contact-form-fourth-row">
       <button type="submit" class="base-button base-button-outline">
-        Send
+        {{ translate("contactForm.send") }}
       </button>
     </div>
   </form>

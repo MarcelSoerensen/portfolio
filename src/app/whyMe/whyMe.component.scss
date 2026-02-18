@@ -5,6 +5,10 @@ section {
   scroll-margin-top: 32px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .why-me-container {
   display: flex;
   flex-direction: column;
@@ -19,46 +23,49 @@ section {
   margin-left: auto;
   margin-right: auto;
 
-
-  >.why-me-content {
+  > .why-me-content {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
     text-align: center;
     margin-left: 15%;
+    margin-right: 15%;
     gap: 32px;
 
-    >.my-location {
+    > .my-location {
       width: 50%;
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 6px;
-      >img {
+      > img {
         width: 74px;
         height: 63px;
       }
-      >p {
+      > p {
         white-space: nowrap;
         font-size: 30px;
         margin: 0;
         color: rgba(248, 245, 237, 1);
       }
-      >.i-am {
+      > .i-am {
         color: rgba(148, 187, 214, 1);
       }
     }
 
-    >.my-description {
+    > .my-description {
       width: 50%;
-      margin-right: 15%;
-      >p {
+      > p {
         font-size: 18px;
         font-weight: 300;
         margin: 0;
         color: rgba(248, 245, 237, 1);
         text-align: left;
+      }
+      > .button-container {
+        display: flex;
+        justify-content: flex-end;
       }
     }
   }

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, TranslocoModule],
   templateUrl: './contactForm.component.html',
   styleUrls: ['./contactForm.component.scss']
 })

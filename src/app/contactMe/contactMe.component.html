@@ -1,8 +1,8 @@
-<section id="contactSection">
+<section id="contactSection" *transloco="let translate">
   <div class="contact-container font-josefin">
     <div class="contact-first-row">
       <div class="freespace"></div>
-      <h1 class="font-anta">Contact me</h1>
+      <h1 class="font-anta">{{ translate('contactMe.title') }}</h1>
       <a class="arrow-up" aria-label="Scroll up" href="#topSection">
         <img
           class="arrow-up-img arrow-up-img--default"
@@ -19,11 +19,7 @@
     <div class="contact-intro">
       <div class="contact-intro-text">
         <p>
-          I’m happy to connect about job offers and exciting project
-          opportunities. I work collaboratively, with a high level of accuracy
-          and a clear goal-oriented mindset, and I have a strong eye for clean,
-          aesthetic, user-friendly interfaces. I’m highly motivated and
-          continuously improving — feel free to reach out via email or phone
+          {{ translate('contactMe.intro') }}
         </p>
       </div>
       <div class="contact-methods">
@@ -41,9 +37,9 @@
                 alt=""
               />
             </span>
-            <span class="contact-method-text"
-              >E-mail: marcel.soerensen&#64;icloud.com</span
-            >
+            <span class="contact-method-text">
+              {{ translate('contactMe.mail') }}
+            </span>
           </a>
         </div>
         <div class="contact-method contact-method--phone">
@@ -60,13 +56,14 @@
                 alt=""
               />
             </span>
-            <span class="contact-method-text">Phone: +49 176 310 55 989</span>
+            <span class="contact-method-text">
+              {{ translate('contactMe.phone') }}
+            </span>
           </a>
         </div>
       </div>
     </div>
 
-      <app-contact-form></app-contact-form>
-    
+    <app-contact-form></app-contact-form>
   </div>
 </section>

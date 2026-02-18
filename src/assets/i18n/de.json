@@ -10,7 +10,8 @@
     "title": "Warum ich",
     "iAm": "Ich lebe",
     "location": "in Berlin..|",
-    "description": "Ich bin ein leidenschaftlicher Frontend Developer mit einem starken Fokus auf die Entwicklung ansprechender und benutzerfreundlicher Webanwendungen. Mit einem guten Auge für Design und dem Anspruch an sauberen, effizienten Code möchte ich digitale Erlebnisse schaffen, die sowohl Nutzerbedürfnisse als auch Business-Ziele erfüllen."
+    "description": "Ich bin ein leidenschaftlicher Frontend Developer mit einem starken Fokus auf die Entwicklung ansprechender und benutzerfreundlicher Webanwendungen. Mit einem guten Auge für Design und dem Anspruch an sauberen, effizienten Code möchte ich digitale Erlebnisse schaffen, die sowohl Nutzerbedürfnisse als auch Business-Ziele erfüllen.",
+    "letsTalk": "Lass uns reden"
   },
 
   "skills": {
@@ -87,6 +88,28 @@
         "quote": "Marcel ist proaktiv und sehr detailorientiert. Er erkennt Edge Cases früh und verbessert die UX mit smarten, einfachen Lösungen."
       }
     }
+  },
+
+  "contactMe": {
+    "title": "Kontakt aufnehmen",
+    "intro": "Ich freue mich über Jobangebote und spannende Projektmöglichkeiten. Ich arbeite kollaborativ, sehr genau und zielorientiert und habe ein gutes Auge für saubere, ästhetische, benutzerfreundliche Oberflächen. Ich bin hoch motiviert und entwickle mich ständig weiter – gerne per E-Mail oder Telefon melden!",
+    "mail": "E-Mail: marcel.soerensen@icloud.com",
+    "phone": "Telefon: +49 176 310 55 989"
+  },
+
+  "contactForm": {
+    "nameLabel": "Dein Name",
+    "nameRequired": "Name ist erforderlich",
+    "emailLabel": "Deine E-Mail",
+    "emailRequired": "E-Mail ist erforderlich",
+    "emailInvalid": "Bitte gib eine gültige E-Mail ein",
+    "messageLabel": "Deine Nachricht",
+    "messageRequired": "Nachricht ist erforderlich",
+    "privacyTextLeft": "Ich habe die ",
+    "privacyLink": "Datenschutzerklärung",
+    "privacyTextRight": " gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "privacyRequired": "Bitte akzeptiere die Datenschutzerklärung.",
+    "send": "Senden"
   },
 
   "footer": {
