@@ -2,52 +2,83 @@
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="contact-form-first-row">
       <div class="input-field-layout">
-        <label for="name" [class.input-error]="!name.valid && name.touched">
+        <label for="name" [class.input-error]="!name.valid && (name.touched || contactForm.submitted)">
           {{
-            !name.valid && name.touched 
+            !name.valid && (name.touched || contactForm.submitted)
             ? "Your name is required" : "Your Name"
           }}
         </label>
-        <input #name="ngModel" [(ngModel)]="contactData.name"
-          type="text" id="name" name="name" required
-          [class.input-error]="!name.valid && name.touched"
-        />
+        <div class="input-icon-wrapper">
+          <input
+            #name="ngModel"
+            [(ngModel)]="contactData.name"
+            type="text"
+            id="name"
+            name="name"
+            required
+            [class.input-error]="!name.valid && (name.touched || contactForm.submitted)"
+          />
+          <img class="done-icon" src="assets/icons/controls/done_.png" alt="done"
+            [class.visible]="name.valid && contactData.name" />
+        </div>
       </div>
       <div class="input-field-layout">
-        <label for="email" [class.input-error]="!email.valid && email.touched">
+        <label for="email" [class.input-error]="!email.valid && (email.touched || contactForm.submitted)">
           {{
-            !email.valid && email.touched 
+            !email.valid && (email.touched || contactForm.submitted)
             ? "Your email is required" : "Your email"
           }}
         </label>
-        <input #email="ngModel" [(ngModel)]="contactData.email"
-          type="email" id="email" name="email" required
-          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-          [class.input-error]="!email.valid && email.touched"
-        />
+        <div class="input-icon-wrapper">
+          <input
+            #email="ngModel"
+            [(ngModel)]="contactData.email"
+            type="email"
+            id="email"
+            name="email"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            [class.input-error]="!email.valid && (email.touched || contactForm.submitted)"
+          />
+          <img class="done-icon" src="assets/icons/controls/done_.png" alt="done"
+            [class.visible]="email.valid && contactData.email" />
+        </div>
       </div>
     </div>
     <div class="contact-form-first-row">
       <div class="input-field-layout">
         <label
           for="message"
-          [class.input-error]="!message.valid && message.touched"
+          [class.input-error]="!message.valid && (message.touched || contactForm.submitted)"
         >
           {{
-            !message.valid && message.touched
-              ? "Your message is required" : "Your message"
+            !message.valid && (message.touched || contactForm.submitted)
+            ? "Your message is required" : "Your message"
           }}
         </label>
-        <textarea #message="ngModel" [(ngModel)]="contactData.message"
-          id="message" name="message" required
-          [class.input-error]="!message.valid && message.touched"
-        ></textarea>
+        <div class="input-icon-wrapper">
+          <textarea
+            #message="ngModel"
+            [(ngModel)]="contactData.message"
+            id="message"
+            name="message"
+            required
+            [class.input-error]="!message.valid && (message.touched || contactForm.submitted)"
+          ></textarea>
+          <img class="done-icon" src="assets/icons/controls/done_.png" alt="done"
+            [class.visible]="message.valid && contactData.message" />
+        </div>
       </div>
     </div>
     <div class="contact-form-third-row">
-      <label class="privacy-checkbox" [class.error]="privacyError && !contactData.privacyChecked">
-        <input [(ngModel)]="contactData.privacyChecked"
-          name="privacyChecked" type="checkbox"
+      <label
+        class="privacy-checkbox"
+        [class.error]="privacyError && !contactData.privacyChecked"
+      >
+        <input
+          [(ngModel)]="contactData.privacyChecked"
+          name="privacyChecked"
+          type="checkbox"
           class="privacy-checkbox-input"
           (change)="privacyError = false"
         />
@@ -74,11 +105,22 @@
           />
         </span>
       </label>
-      <span class="privacy-checkbox-text">
-        I've read the
-        <a href="#" class="privacy-link">privacy policy</a> and agree to the
-        processing of my data as outlined.
-      </span>
+      <div class="privacy-checkbox-text">
+        <span>
+          I've read the
+          <a href="#" class="privacy-link">privacy policy</a> 
+          and agree to the processing of my data as outlined.
+        </span>
+        <label
+          class="privacy-error-label"
+          [class.input-error]="privacyError && !contactData.privacyChecked"
+        >
+          {{
+            privacyError && !contactData.privacyChecked
+            ? "Please accept the privacy policy." : ""
+          }}
+        </label>
+      </div>
     </div>
     <div class="contact-form-fourth-row">
       <button type="submit" class="base-button base-button-outline">
