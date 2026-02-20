@@ -9,7 +9,10 @@
   "whyMe": {
     "title": "Why Me",
     "iAm": "I am",
-    "location": "located in Berlin..|",
+    "located": "located in Berlin",
+    "remote": "open to remote",
+    "relocade": "open to relocate",
+    "tripplePoint": " ...",
     "description": "I am a passionate frontend developer with a strong focus on creating engaging and user-friendly web applications. With a keen eye for design and a commitment to clean, efficient code, I strive to deliver exceptional digital experiences that meet both user needs and business goals.",
     "letsTalk": "Let's talk"
   },
@@ -105,9 +108,7 @@
     "emailInvalid": "Please enter a valid email",
     "messageLabel": "Your message",
     "messageRequired": "Your message is required",
-    "privacyTextLeft": "I've read the ",
-    "privacyLink": "privacy policy",
-    "privacyTextRight": " and agree to the processing of my data as outlined.",
+    "privacyText": "I've read the <a href='#' class='privacy-link'>privacy policy</a> and agree to the processing of my data as outlined.",
     "privacyRequired": "Please accept the privacy policy.",
     "send": "Send"
   },
@@ -137,4 +138,5 @@
     "questionsLine": "For any questions or notices, please contact us at",
     "dateLine": "Date: February 11, 2026"
   }
+  
 }

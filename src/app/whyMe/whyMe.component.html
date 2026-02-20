@@ -2,10 +2,38 @@
   <div class="why-me-container">
     <h1 class="font-anta">{{ translate("whyMe.title") }}</h1>
     <div class="why-me-content">
-      <div class="my-location">
-        <img src="/assets/icons/location.svg" alt="" />
-        <p class="i-am font-josefin">{{ translate("whyMe.iAm") }}</p>
-        <p class="font-josefin">{{ translate("whyMe.location") }}</p>
+      <div class="my-status">
+        <img
+          [src]="iconSrc"
+          alt=""
+          [class.icon-visible]="iconVisible"
+          [class.icon-hidden]="!iconVisible"
+        />
+        <p class="font-josefin my-status-typing">
+
+          <ng-container *ngIf="!iAmText && !myStatusText && !tripplePointText">
+            <span
+              *ngIf="cursorVisible"
+              class="typing-cursor"
+              [class.blink]="cursorBlink">|
+            </span>
+            <span class="i-am">{{ iAmText }}</span>
+            <span>{{ myStatusText }}</span>
+            <span class="tripplepoint">{{ tripplePointText }}</span>
+          </ng-container>
+
+          <ng-container *ngIf="iAmText || myStatusText || tripplePointText">
+            <span class="i-am">{{ iAmText }}</span>
+            <span>{{ myStatusText }}</span>  
+            <span class="tripplepoint">{{ tripplePointText }}</span>
+            <span
+              *ngIf="cursorVisible"
+              class="typing-cursor"
+              [class.blink]="cursorBlink">|
+            </span>
+          </ng-container>
+          
+        </p>
       </div>
       <div class="my-description">
         <p class="font-josefin">{{ translate("whyMe.description") }}</p>

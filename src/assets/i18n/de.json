@@ -9,8 +9,11 @@
   "whyMe": {
     "title": "Warum ich",
     "iAm": "Ich lebe",
-    "location": "in Berlin..|",
-    "description": "Ich bin ein leidenschaftlicher Frontend Developer mit einem starken Fokus auf die Entwicklung ansprechender und benutzerfreundlicher Webanwendungen. Mit einem guten Auge für Design und dem Anspruch an sauberen, effizienten Code möchte ich digitale Erlebnisse schaffen, die sowohl Nutzerbedürfnisse als auch Business-Ziele erfüllen.",
+    "located": "in Berlin",
+    "remote": "offen für mobiles Arbeiten",
+    "relocade": "bereit meinen Standort zu wechseln",
+    "tripplePoint": " ...",
+    "description": "Ich bin ein leidenschaftlicher Frontend Developer mit einem starken Fokus auf die Entwicklung ansprechender und benutzerfreundlicher Webanwendungen. Mit einem guten Auge für Design und dem Anspruch an saubere, effiziente Code möchte ich digitale Erlebnisse schaffen, die sowohl Nutzerbedürfnisse als auch Business-Ziele erfüllen.",
     "letsTalk": "Lass uns reden"
   },
 

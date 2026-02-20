@@ -33,21 +33,47 @@ a {
     margin-right: 15%;
     gap: 32px;
 
-    > .my-location {
+    > .my-status {
       width: 50%;
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 6px;
+
       > img {
         width: 74px;
         height: 63px;
+        opacity: 0;
+        transition: opacity 1s;
+        &.icon-visible {
+          opacity: 1;
+        }
+        &.icon-hidden {
+          opacity: 0;
+        }
       }
-      > p {
+      > p, &-typing {
+        display: flex;
+        align-items: center;
+        gap: 6px;
         white-space: nowrap;
         font-size: 30px;
         margin: 0;
         color: rgba(248, 245, 237, 1);
+
+        .i-am, .tripplepoint, .typing-cursor {
+          color: rgba(148, 187, 214, 1);
+        }
+        .tripplepoint {
+          margin-left: 6px;
+        }
+        .typing-cursor {
+          opacity: 1;
+          transition: opacity 0.2s;
+          &.blink {
+            opacity: 0;
+          }
+        }
       }
       > .i-am {
         color: rgba(148, 187, 214, 1);
