@@ -112,7 +112,9 @@
     "privacyLink": "Datenschutzerklärung",
     "privacyTextRight": " gelesen und stimme der Verarbeitung meiner Daten zu.",
     "privacyRequired": "Bitte akzeptiere die Datenschutzerklärung.",
-    "send": "Senden"
+    "send": "Senden",
+    "successMessage": "Nachricht erfolgreich gesendet!",
+    "errorMessage": "Fehler beim Senden der Nachricht."
   },
 
   "footer": {

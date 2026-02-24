@@ -1,6 +1,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 
@@ -8,11 +9,14 @@ import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule, TranslocoModule],
+  imports: [CommonModule, FormsModule, TranslocoModule],
   templateUrl: './contactForm.component.html',
   styleUrls: ['./contactForm.component.scss']
 })
 export class ContactFormComponent {
+    mailStatus: 'success' | 'error' | null = null;
+    mailStatusText: string = '';
+    mailStatusTimeout: any;
   constructor(private http: HttpClient, private translocoService: TranslocoService) {}
 
   contactData: {
@@ -55,14 +59,26 @@ export class ContactFormComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.showMailStatus('success', this.translocoService.translate('contactForm.successMessage') || 'Nachricht erfolgreich gesendet!');
           },
           error: (error) => {
             console.error(error);
+            this.showMailStatus('error', this.translocoService.translate('contactForm.errorMessage') || 'Fehler beim Senden!');
           },
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+      this.showMailStatus('success', this.translocoService.translate('contactForm.successMessage') || 'Nachricht erfolgreich gesendet!');
     }
   }
-}
+
+  showMailStatus(status: 'success' | 'error', text: string) {
+    this.mailStatus = status;
+    this.mailStatusText = text;
+    clearTimeout(this.mailStatusTimeout);
+    this.mailStatusTimeout = setTimeout(() => {
+      this.mailStatus = null;
+    }, 3000);
+  }
+  }

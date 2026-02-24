@@ -1,4 +1,7 @@
 <div class="contact-form-fields" *transloco="let translate">
+    <div *ngIf="mailStatus" class="mail-status-box" [ngClass]="mailStatus">
+      <p>{{ mailStatusText }}</p>
+    </div>
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="contact-form-first-row">
       <div class="input-field-layout">

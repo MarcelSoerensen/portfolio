@@ -1,3 +1,61 @@
+.mail-status-box {
+  position: fixed;
+  left: 50vw;
+  top: calc(20% + 260px);
+  min-width: 180px;
+  max-width: 90vw;
+  min-height: 40px;
+  z-index: 9999;
+  background: rgba(156, 186, 211, 0.7);
+  border-radius: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  padding: 8px 24px;
+  border: 1px solid rgba(148, 187, 214, 1);
+  animation: slideInOutRight 3s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(100vw, 0);
+  > p {
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: rgba(40, 46, 51, 1);
+    text-align: center;
+    white-space: pre-line;
+    word-break: break-word;
+  }
+}
+
+
+@keyframes slideInOutRight {
+  0% {
+    transform: translate(100vw, 0);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100vw, 0);
+    opacity: 0;
+  }
+}
+
+.mail-status-box.success {
+  border: 1px solid rgba(148, 187, 214, 1);
+}
+
+.mail-status-box.error {
+  border: 1px solid #c62828;
+}
+
 .contact-form-fields {
   margin-left: 15%;
   margin-right: 15%;
