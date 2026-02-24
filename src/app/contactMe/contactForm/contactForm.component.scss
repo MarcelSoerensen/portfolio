@@ -1,11 +1,11 @@
 .mail-status-box {
-  position: fixed;
-  left: 50vw;
-  top: calc(20% + 260px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
   min-width: 180px;
-  max-width: 90vw;
+  max-width: 90%;
   min-height: 40px;
-  z-index: 9999;
+  z-index: 99;
   background: rgba(156, 186, 211, 0.7);
   border-radius: 30px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
@@ -15,7 +15,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translate(100vw, 0);
+  transform: translate(100vw, -50%);
+  transform-origin: center center;
+  pointer-events: none;
   > p {
     margin: 0;
     font-family: "Josefin Sans", sans-serif;
@@ -31,19 +33,19 @@
 
 @keyframes slideInOutRight {
   0% {
-    transform: translate(100vw, 0);
+    transform: translate(100vw, -50%);
     opacity: 0;
   }
   20% {
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     opacity: 1;
   }
   80% {
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     opacity: 1;
   }
   100% {
-    transform: translate(100vw, 0);
+    transform: translate(100vw, -50%);
     opacity: 0;
   }
 }

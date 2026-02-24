@@ -1,8 +1,6 @@
 <div class="contact-form-fields" *transloco="let translate">
-    <div *ngIf="mailStatus" class="mail-status-box" [ngClass]="mailStatus">
-      <p>{{ mailStatusText }}</p>
-    </div>
-  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" style="position: relative;">
+    
     <div class="contact-form-first-row">
       <div class="input-field-layout">
         <label
@@ -88,7 +86,7 @@
               : translate("contactForm.messageLabel")
           }}
         </label>
-        <div class="input-icon-wrapper">
+        <div class="input-icon-wrapper" style="position: relative;">
           <textarea
             #message="ngModel"
             [(ngModel)]="contactData.message"
@@ -105,6 +103,9 @@
             alt="done"
             [class.visible]="message.valid && contactData.message"
           />
+          <div *ngIf="mailStatus" class="mail-status-box" [ngClass]="mailStatus">
+            <p>{{ mailStatusText }}</p>
+          </div>
         </div>
       </div>
     </div>
