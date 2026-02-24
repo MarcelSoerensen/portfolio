@@ -96,7 +96,7 @@
   "contactMe": {
     "title": "Contact me",
     "intro": "I’m happy to connect about job offers and exciting project opportunities. I work collaboratively, with a high level of accuracy and a clear goal-oriented mindset, and I have a strong eye for clean, aesthetic, user-friendly interfaces. I’m highly motivated and continuously improving — feel free to reach out via email or phone!",
-    "mail": "E-mail: marcel.soerensen@icloud.com",
+    "mail": "E-mail: contact@marcel-soerensen.com",
     "phone": "Phone: +49 176 310 55 989"
   },
 
@@ -108,7 +108,9 @@
     "emailInvalid": "Please enter a valid email",
     "messageLabel": "Your message",
     "messageRequired": "Your message is required",
-    "privacyText": "I've read the <a href='#' class='privacy-link'>privacy policy</a> and agree to the processing of my data as outlined.",
+    "privacyTextLeft": "I've read the ",
+    "privacyLink": "privacy policy",
+    "privacyTextRight": " and agree to the processing of my data as outlined.",
     "privacyRequired": "Please accept the privacy policy.",
     "send": "Send"
   },
