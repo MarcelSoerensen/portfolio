@@ -15,6 +15,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $email = $params->email;
             $name = $params->name;
             $message = $params->message;
+            $language = isset($params->language) ? $params->language : 'de';
     
             $recipient = 'contact@marcel-soerensen.com';  
             $subject = "Contact From <$email>";
@@ -27,6 +28,19 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $headers[] = "From: noreply@mywebsite.com";
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
+            if ($language === 'en') {
+                $confirmSubject = "Your message has been received";
+                $confirmMessage = "Hello $name,<br><br>Thank you for your message! I will get back to you as soon as possible.<br><br>Best regards<br><br>Marcel Sörensen";
+            } else {
+                $confirmSubject = "Nachricht erhalten";
+                $confirmMessage = "Hallo $name,<br><br>Vielen Dank für die Nachricht! Ich werde mich so schnell wie möglich zurückmelden.<br><br>Freundliche Grüße<br><br>Marcel Sörensen";
+            }
+            $confirmHeaders = array();
+            $confirmHeaders[] = 'MIME-Version: 1.0';
+            $confirmHeaders[] = 'Content-type: text/html; charset=utf-8';
+            $confirmHeaders[] = "From: contact@marcel-soerensen.com";
+
+            mail($email, $confirmSubject, $confirmMessage, implode("\r\n", $confirmHeaders));
             break;
         default:
             header("Allow: POST", true, 405);

@@ -1,7 +1,8 @@
+
 import { HttpClient } from '@angular/common/http';
-import { Component, inject} from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { TranslocoModule } from '@jsverse/transloco';
+import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 
 
 @Component({
@@ -12,10 +13,15 @@ import { TranslocoModule } from '@jsverse/transloco';
   styleUrls: ['./contactForm.component.scss']
 })
 export class ContactFormComponent {
+  constructor(private http: HttpClient, private translocoService: TranslocoService) {}
 
-  http = inject(HttpClient);
-
-  contactData = {
+  contactData: {
+    name: string;
+    email: string;
+    message: string;
+    privacyChecked: boolean;
+    language?: string;
+  } = {
     name: '',
     email: '',
     message: '',
@@ -38,6 +44,7 @@ export class ContactFormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
+    this.contactData.language = this.translocoService.getActiveLang();
     if (!this.contactData.privacyChecked) {
       this.privacyError = true;
       return;
