@@ -118,14 +118,14 @@
   },
 
   "footer": {
-    "legalNotice": "Impressum"
+    "legalNotice": "Impressum",
+    "privacyPolicy": "Datenschutzerklärung"
   },
 
   "legalNotice": {
     "title": "Impressum",
     "imprintTitle": "Impressum",
     "exploringTitle": "Kontakt",
-    "emailLabel": "E-Mail",
     "acceptanceTitle": "Akzeptanz der Bedingungen",
     "acceptanceText": "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Bedingungen sowie alle Richtlinien, Leitlinien oder Änderungen an, die Ihnen von Zeit zu Zeit vorgelegt werden können. Wir, die aufgeführten Studierenden, können die Bedingungen jederzeit ohne vorherige Ankündigung aktualisieren oder ändern.",
     "scopeTitle": "Geltungsbereich und Eigentum am Produkt",
@@ -141,5 +141,36 @@
     "indemnityText": "Sie erklären sich damit einverstanden, uns, die aufgeführten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, Organe, Vertreter und Mitarbeitenden von sämtlichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Anwaltskosten) freizustellen und schadlos zu halten, die aus Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen dieses Impressum entstehen oder damit zusammenhängen.",
     "questionsLine": "Bei Fragen oder Hinweisen kontaktieren Sie uns bitte unter",
     "dateLine": "Datum: 11. Februar 2026"
+  },
+
+  "privacyPolice": {
+    "title": "Datenschutzhinweise",
+    "responsibleTitle": "Verantwortlicher",
+    "phoneLabel": "Tel:",
+    "rightsTitle": "Ihre Betroffenenrechte",
+    "right1": "Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO)",
+    "right2": "Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO)",
+    "right3": "Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO)",
+    "right4": "Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen (Art. 18 DSGVO)",
+    "right5": "Widerspruch gegen die Verarbeitung Ihrer Daten bei uns (Art. 21 DSGVO)",
+    "right6": "Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben (Art. 20 DSGVO)",
+    "withdrawal": "Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.",
+    "authority": "Beschwerden können Sie an die zuständige Aufsichtsbehörde richten: Liste der Aufsichtsbehörden.",
+    "processingTitle": "Verarbeitungstätigkeiten",
+    "logfilesTitle": "Erfassung allgemeiner Informationen beim Besuch unserer Website",
+    "logfile1": "Sicherstellung eines problemlosen Verbindungsaufbaus der Website",
+    "logfile2": "Sicherstellung einer reibungslosen Nutzung der Website",
+    "logfile3": "Sicherstellung und Auswertung der Systemsicherheit und -stabilität, insbesondere zur Missbrauchserkennung",
+    "logfile4": "Zur technisch fehlerfreien Darstellung und Optimierung der Website",
+    "logfilesDuration": "Server-Logfiles werden maximal 7 Tage gespeichert.",
+    "contactTitle": "Kontaktaufnahme",
+    "contact1": "Die im Kontaktformular eingegebenen Daten werden zum Zweck der individuellen Kommunikation mit Ihnen verarbeitet.",
+    "contact2": "Die Daten werden nach Bearbeitung gelöscht.",
+    "objectionTitle": "Information über Ihr Widerspruchsrecht nach Art. 21 DSGVO",
+    "objectionText": "Sie haben das Recht, jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen.",
+    "objectionContact": "Marcel Sörensen, Schloßallee 45, 13156 Berlin,",
+    "questionsTitle": "Fragen zum Datenschutz",
+    "questionsText": "Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an den oben genannten Verantwortlichen.",
+    "footer": "Diese Datenschutzerklärung wurde mit Hilfe der activeMind AG erstellt."
   }
 }

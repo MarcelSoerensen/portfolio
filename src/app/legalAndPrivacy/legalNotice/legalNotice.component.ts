@@ -6,7 +6,7 @@ import { TranslocoModule } from '@jsverse/transloco';
   standalone: true,
   imports: [TranslocoModule],
   templateUrl: './legalNotice.component.html',
-  styleUrl: './legalNotice.component.scss'
+  styleUrls: ['./legalNotice.component.scss', '../legalAndPrivacy.scss']
 })
 export class LegalNoticeComponent {
 

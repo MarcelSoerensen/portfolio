@@ -11,7 +11,7 @@ import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
   standalone: true,
   imports: [CommonModule, FormsModule, TranslocoModule],
   templateUrl: './contactForm.component.html',
-  styleUrls: ['./contactForm.component.scss']
+  styleUrls: ['./contactForm.component.scss', './mailStatusBox.scss'],
 })
 export class ContactFormComponent {
     mailStatus: 'success' | 'error' | null = null;

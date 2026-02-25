@@ -109,23 +109,23 @@
     "messageLabel": "Your message",
     "messageRequired": "Your message is required",
     "privacyTextLeft": "I've read the ",
-    "privacyLink": "privacy policy",
+    "privacyLink": "Privacy Policy",
     "privacyTextRight": " and agree to the processing of my data as outlined.",
-    "privacyRequired": "Please accept the privacy policy.",
+    "privacyRequired": "Please accept the Privacy Policy.",
     "send": "Send",
     "successMessage": "Message sent successfully!",
     "errorMessage": "Error sending message."
   },
 
   "footer": {
-    "legalNotice": "Legal Notice"
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy"
   },
 
   "legalNotice": {
     "title": "Legal Notice",
     "imprintTitle": "Imprint",
     "exploringTitle": "Exploring the Board",
-    "emailLabel": "Email",
     "acceptanceTitle": "Acceptance of terms",
     "acceptanceText": "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.",
     "scopeTitle": "Scope and ownership of the product",
@@ -141,6 +141,36 @@
     "indemnityText": "You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.",
     "questionsLine": "For any questions or notices, please contact us at",
     "dateLine": "Date: February 11, 2026"
-  }
+  },
   
+  "privacyPolice": {
+    "title": "Privacy Policy",
+    "responsibleTitle": "Responsible",
+    "phoneLabel": "Phone:",
+    "rightsTitle": "Your Rights",
+    "right1": "Information about your stored data and its processing (Art. 15 GDPR)",
+    "right2": "Correction of incorrect personal data (Art. 16 GDPR)",
+    "right3": "Deletion of your stored data (Art. 17 GDPR)",
+    "right4": "Restriction of data processing if we are not allowed to delete your data due to legal obligations (Art. 18 GDPR)",
+    "right5": "Objection to the processing of your data (Art. 21 GDPR)",
+    "right6": "Data portability if you have consented to data processing or have concluded a contract with us (Art. 20 GDPR)",
+    "withdrawal": "You can revoke your consent at any time with effect for the future.",
+    "authority": "Complaints can be addressed to the competent supervisory authority: List of authorities.",
+    "processingTitle": "Processing Activities",
+    "logfilesTitle": "Collection of general information when visiting our website",
+    "logfile1": "Ensuring a trouble-free connection to the website",
+    "logfile2": "Ensuring smooth use of the website",
+    "logfile3": "Ensuring and evaluating system security and stability, especially for abuse detection",
+    "logfile4": "For technically error-free presentation and optimization of the website",
+    "logfilesDuration": "Server log files are stored for a maximum of 7 days.",
+    "contactTitle": "Contact",
+    "contact1": "The data entered in the contact form is processed for the purpose of individual communication with you.",
+    "contact2": "The data will be deleted after processing.",
+    "objectionTitle": "Information about your right to object under Art. 21 GDPR",
+    "objectionText": "You have the right to object to the processing of your personal data at any time.",
+    "objectionContact": "Marcel Sörensen, Schloßallee 45, 13156 Berlin,",
+    "questionsTitle": "Questions about data protection",
+    "questionsText": "If you have any questions about data protection, please send us an email to the responsible person mentioned above.",
+    "footer": "This privacy policy was created with the help of activeMind AG."
+  }
 }
