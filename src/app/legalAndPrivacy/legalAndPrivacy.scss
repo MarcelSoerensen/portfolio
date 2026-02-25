@@ -3,8 +3,6 @@ section {
   margin: 0;
   box-sizing: border-box;
   background-color: rgba(40, 46, 51, 1);
-  padding-top: 104px;
-  padding-bottom: 104px;
   scroll-margin-top: 104px;
 }
 
@@ -14,6 +12,7 @@ section {
   align-items: flex-start;
   height: 100%;
   width: 100%;
+  padding-top: 104px;
   padding-bottom: 104px;
   max-width: 1440px;
   gap: clamp(20px, 3vw, 50px);
