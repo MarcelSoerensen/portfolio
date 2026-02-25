@@ -1,0 +1,6 @@
+<div [ngClass]="{'privacy-overlay': true, 'show': visible}">
+  <div class="privacy-overlay-content">
+    <button class="privacy-overlay-close" (click)="close()" aria-label="Schließen">&times;</button>
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { PrivacyOverlayComponent } from '../../legalAndPrivacy/privacyPoliceOverlay/privacyOverlay.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
@@ -9,7 +10,7 @@ import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslocoModule],
+  imports: [CommonModule, FormsModule, TranslocoModule, PrivacyOverlayComponent],
   templateUrl: './contactForm.component.html',
   styleUrls: ['./contactForm.component.scss', './mailStatusBox.scss'],
 })
@@ -17,6 +18,7 @@ export class ContactFormComponent {
     mailStatus: 'success' | 'error' | null = null;
     mailStatusText: string = '';
     mailStatusTimeout: any;
+    privacyOverlayVisible = false;
   constructor(private http: HttpClient, private translocoService: TranslocoService) {}
 
   contactData: {
