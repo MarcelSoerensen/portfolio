@@ -28,32 +28,36 @@
     "tabsAriaLabel": "Projects",
     "durationLabel": "Duration:",
     "aboutTitle": "About the project",
-    "organisationTitle": "How I have organised my work process",
-    "takeawaysTitle": "What I have learned",
     "technologiesTitle": "Technologies",
     "liveTest": "Live Test",
     "github": "GitHub",
     "projects": {
       "project1": {
         "tabLabel": "Mad Scientist",
-        "title": "Team Chat App",
+        "title": "Jump & Run Game",
         "duration": "ca. 3 Months",
+        "organisationTitle": "How I have organised my work process",
+        "takeawaysTitle": "What I have learnt",
         "about": "An action-packed jump-and-run set in a secret energy laboratory that must be defended against enemy attacks.",
         "organisation": "I broke the project down into clearly defined steps, tested and refactored regularly, and kept the growing codebase under control through short feedback loops and a consistent folder and class structure.",
         "takeaways": "Built a modular, object-oriented JavaScript architecture with clearly separated responsibilities and gained hands-on experience with timing and state management, collision detection, keyboard events, and structured handling of assets and the DOM/canvas in a larger codebase."
       },
       "project2": {
-        "tabLabel": "2. Project",
-        "title": "Kanban Task Board",
-        "duration": "2 Weeks",
+        "tabLabel": "Join",
+        "title": "Kanban Board",
+        "duration": "ca. 3 Months",
+        "organisationTitle": "How we have organised our work process",
+        "takeawaysTitle": "My group work experience",
         "about": "A lightweight Kanban board to manage tasks with columns, drag & drop, quick edits, and an overview that stays readable even with many cards.",
-        "organisation": "I started with a clear data model (board → columns → cards) and built the UI from small components. I used consistent naming and kept logic out of templates by moving it into helper methods, which made refactoring painless.",
-        "takeaways": "I learned how to model UI state cleanly (selected card, filtered view, edit mode) and how to keep components focused. It also improved my CSS structure (spacing system, reusable classes) and TypeScript typing for predictable code."
+        "organisation": "We organised our work with weekly team meetings and a shared Kanban board, where we broke the project into small tasks, assigned clear responsibilities, and worked in short iterations to implement, test and refine each feature.",
+        "takeaways": "I learned to coordinate closely with three other developers, align on shared coding patterns, and give and receive concise, constructive feedback on each other’s work."
       },
       "project3": {
         "tabLabel": "3. Project",
         "title": "Recipe Finder",
         "duration": "3 Weeks",
+        "organisationTitle": "How we have organised our work process",
+        "takeawaysTitle": "My group work experience",
         "about": "A recipe search app that lets users discover meals by ingredients, view details, and save favorites. The focus is on clarity, speed, and a friendly UI.",
         "organisation": "We split the app into feature slices (search, detail, favorites) and aligned on naming conventions early. I documented component responsibilities and kept API calls in one service to avoid duplication.",
         "takeaways": "We worked in a team of 2. I built the search + results UI and integrated the API service, while my teammate handled routing and the favorites view. Pair debugging and quick code reviews helped us stay consistent."
@@ -62,6 +66,8 @@
         "tabLabel": "4. Project",
         "title": "Portfolio Website",
         "duration": "1 Week",
+        "organisationTitle": "How I have organised my work process",
+        "takeawaysTitle": "What I have learnt",
         "about": "A responsive portfolio website to present my projects, skills, and contact information with clear navigation, smooth scrolling, and consistent styling.",
         "organisation": "I created a small design system (colors, spacing, typography) and reused components (navbar, sections, cards). I iterated in small steps and kept styles modular to avoid side effects across sections.",
         "takeaways": "I improved my responsive layout skills (flex/grid + clamp) and learned to avoid “CSS drift” by using consistent spacing and reusable class patterns. I also got better at structuring sections for accessibility and readability."

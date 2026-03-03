@@ -28,8 +28,6 @@
     "tabsAriaLabel": "Projekte",
     "durationLabel": "Dauer:",
     "aboutTitle": "Über das Projekt",
-    "organisationTitle": "Wie ich meinen Arbeitsprozess organisiert habe",
-    "takeawaysTitle": "Was ich gelernt habe",
     "technologiesTitle": "Technologien",
     "liveTest": "Live Test",
     "github": "GitHub",
@@ -38,22 +36,28 @@
         "tabLabel": "Mad Scientist",
         "title": "Mad Scientist",
         "duration": "ca. 3 Monate",
+        "organisationTitle": "Wie ich meinen Arbeitsprozess organisiert habe",
+        "takeawaysTitle": "Was ich gelernt habe",
         "about": "Ein actiongeladenes Jump-&-Run im Setting eines geheimen Energielabors, das gegen feindliche Angriffe verteidigt wird.",
         "organisation": "Ich habe das Projekt in klar abgegrenzte Schritte gegliedert, regelmäßig getestet und refaktoriert und die wachsende Codebasis durch kurze Feedback‑Schleifen sowie eine konsistente Ordner‑ und Klassenstruktur im Griff behalten.",
         "takeaways": "Umsetzung einer modularen, objektorientierten JavaScript‑Architektur mit klar getrennten Verantwortlichkeiten und praktischer Erfahrung mit Zeitsteuerung, Zustandsverwaltung, Kollisionserkennung, Tastatur‑Events sowie strukturiertem Umgang mit Assets und DOM/Canvas in einem größeren Code‑Projekt."
       },
       "project2": {
-        "tabLabel": "2. Projekt",
-        "title": "Kanban Task Board",
-        "duration": "2 Wochen",
+        "tabLabel": "Join",
+        "title": "Kanban Board",
+        "duration": "ca. 3 Monate",
+        "organisationTitle": "Wie wir unseren Arbeitsprozess organisiert haben",
+        "takeawaysTitle": "Was ich gelernt habe",
         "about": "Ein leichtgewichtiges Kanban-Board zur Aufgabenverwaltung mit Spalten, Drag & Drop, schnellen Änderungen und einer Übersicht, die auch bei vielen Cards lesbar bleibt.",
-        "organisation": "Ich bin mit einem klaren Datenmodell gestartet (Board → Spalten → Cards) und habe die UI aus kleinen Komponenten aufgebaut. Logik habe ich aus den Templates in Methoden ausgelagert, was Refactorings deutlich einfacher gemacht hat.",
-        "takeaways": "Ich habe gelernt, UI-State sauber zu modellieren (ausgewählte Card, gefilterte Ansicht, Edit-Mode) und Komponenten fokussiert zu halten. Außerdem hat es meine CSS-Struktur (Spacing, wiederverwendbare Klassen) und mein TypeScript-Typing verbessert."
+        "organisation": "Wir organisierten unsere Arbeit durch wöchentliche Team-Meetings und ein gemeinsames Kanban-Board, auf dem wir das Projekt in kleine Aufgaben unterteilten, klare Verantwortlichkeiten vergaben und in kurzen Iterationen jede Funktion implementierten, testeten und verfeinerten.",
+        "takeaways": "Ich habe gelernt, mich eng mit drei weiteren Entwicklern abzustimmen, gemeinsame Code-Konventionen einzuhalten und präzises, konstruktives Feedback zur Arbeit der anderen zu geben und anzunehmen."
       },
       "project3": {
         "tabLabel": "3. Projekt",
         "title": "Recipe Finder",
         "duration": "3 Wochen",
+        "organisationTitle": "Wie wir unseren Arbeitsprozess organisiert haben",
+        "takeawaysTitle": "Meine Erfahrung in der Gruppenarbeit",
         "about": "Eine Rezept-Such-App, mit der Nutzer Gerichte nach Zutaten entdecken, Details ansehen und Favoriten speichern können. Fokus: Klarheit, Geschwindigkeit und eine freundliche UI.",
         "organisation": "Wir haben die App in Features geschnitten (Suche, Detail, Favoriten) und früh Namenskonventionen abgestimmt. API-Calls haben wir in einem Service gebündelt, um Duplikate zu vermeiden.",
         "takeaways": "Wir waren ein Team von 2 Personen. Ich habe die Search- und Results-UI gebaut und den API-Service integriert, während mein Teampartner Routing und die Favoriten-Ansicht übernommen hat. Pair-Debugging und kurze Code-Reviews haben geholfen, konsistent zu bleiben."
@@ -62,6 +66,8 @@
         "tabLabel": "4. Projekt",
         "title": "Portfolio Website",
         "duration": "1 Woche",
+        "organisationTitle": "Wie ich meinen Arbeitsprozess organisiert habe",
+        "takeawaysTitle": "Was ich gelernt habe",
         "about": "Eine responsive Portfolio-Website, um Projekte, Skills und Kontaktinfos mit klarer Navigation, smooth scrolling und konsistentem Styling zu präsentieren.",
         "organisation": "Ich habe ein kleines Designsystem (Farben, Abstände, Typografie) erstellt und Komponenten wiederverwendet (Navbar, Sections, Cards). Ich bin in kleinen Schritten iteriert und habe Styles modular gehalten, um Seiteneffekte zu vermeiden.",
         "takeaways": "Ich habe meine Responsive-Layout-Skills (Flex/Grid + clamp) verbessert und gelernt, CSS-\"Drift\" durch konsistente Abstände und wiederverwendbare Klassen zu vermeiden. Außerdem wurde ich besser darin, Sections für Accessibility und Lesbarkeit zu strukturieren."
