@@ -29,18 +29,18 @@
     "durationLabel": "Duration:",
     "aboutTitle": "About the project",
     "organisationTitle": "How I have organised my work process",
-    "takeawaysTitle": "My group work experience",
+    "takeawaysTitle": "What I have learned",
     "technologiesTitle": "Technologies",
     "liveTest": "Live Test",
     "github": "GitHub",
     "projects": {
       "project1": {
-        "tabLabel": "1. Project",
+        "tabLabel": "Mad Scientist",
         "title": "Team Chat App",
-        "duration": "4 Weeks",
-        "about": "A Slack-inspired team chat app focused on fast collaboration: real-time messaging, channels, and a clean, distraction-free UI.",
-        "organisation": "I broke the app into reusable components (navbar, channel list, message list, composer) and kept features in small, testable modules. Clear naming, consistent folder structure, and short PR-sized tasks helped keep the codebase maintainable.",
-        "takeaways": "We were a team of 3. I implemented the chat UI (message list + composer), channel navigation, and state handling for switching channels. We coordinated via daily standups and short review cycles, which kept the collaboration smooth."
+        "duration": "ca. 3 Months",
+        "about": "An action-packed jump-and-run set in a secret energy laboratory that must be defended against enemy attacks.",
+        "organisation": "I broke the project down into clearly defined steps, tested and refactored regularly, and kept the growing codebase under control through short feedback loops and a consistent folder and class structure.",
+        "takeaways": "Built a modular, object-oriented JavaScript architecture with clearly separated responsibilities and gained hands-on experience with timing and state management, collision detection, keyboard events, and structured handling of assets and the DOM/canvas in a larger codebase."
       },
       "project2": {
         "tabLabel": "2. Project",

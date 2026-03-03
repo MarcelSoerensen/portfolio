@@ -29,18 +29,18 @@
     "durationLabel": "Dauer:",
     "aboutTitle": "Über das Projekt",
     "organisationTitle": "Wie ich meinen Arbeitsprozess organisiert habe",
-    "takeawaysTitle": "Meine Team-Erfahrung",
+    "takeawaysTitle": "Was ich gelernt habe",
     "technologiesTitle": "Technologien",
     "liveTest": "Live Test",
     "github": "GitHub",
     "projects": {
       "project1": {
-        "tabLabel": "1. Projekt",
-        "title": "Team-Chat App",
-        "duration": "4 Wochen",
-        "about": "Eine Slack-inspirierte Team-Chat-App mit Fokus auf schnelle Zusammenarbeit: Echtzeit-Nachrichten, Channels und eine klare, ablenkungsfreie UI.",
-        "organisation": "Ich habe die App in wiederverwendbare Komponenten aufgeteilt (Navbar, Channel-Liste, Nachrichtenliste, Composer) und Features in kleine, gut testbare Module gegliedert. Klare Benennungen, konsistente Ordnerstruktur und kleine Aufgaben-Pakete haben die Wartbarkeit verbessert.",
-        "takeaways": "Wir waren ein Team von 3 Personen. Ich habe die Chat-UI (Nachrichtenliste + Composer), die Channel-Navigation und das State-Handling für den Channel-Wechsel umgesetzt. Durch kurze Abstimmungen und schnelle Review-Zyklen lief die Zusammenarbeit sehr flüssig."
+        "tabLabel": "Mad Scientist",
+        "title": "Mad Scientist",
+        "duration": "ca. 3 Monate",
+        "about": "Ein actiongeladenes Jump-&-Run im Setting eines geheimen Energielabors, das gegen feindliche Angriffe verteidigt wird.",
+        "organisation": "Ich habe das Projekt in klar abgegrenzte Schritte gegliedert, regelmäßig getestet und refaktoriert und die wachsende Codebasis durch kurze Feedback‑Schleifen sowie eine konsistente Ordner‑ und Klassenstruktur im Griff behalten.",
+        "takeaways": "Umsetzung einer modularen, objektorientierten JavaScript‑Architektur mit klar getrennten Verantwortlichkeiten und praktischer Erfahrung mit Zeitsteuerung, Zustandsverwaltung, Kollisionserkennung, Tastatur‑Events sowie strukturiertem Umgang mit Assets und DOM/Canvas in einem größeren Code‑Projekt."
       },
       "project2": {
         "tabLabel": "2. Projekt",
@@ -70,7 +70,7 @@
   },
 
   "colleagueFeedback": {
-    "title": "Du brauchst einen Teamplayer? Das sagen meine Kollegen über mich",
+    "title": "Teamplayer gesucht? Das sagen meine Kollegen über mich",
     "ariaLabel": "Feedback von Kollegen",
     "projectLabel": "Projekt",
     "linkedinLabel": "LinkedIn",
