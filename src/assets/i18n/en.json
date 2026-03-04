@@ -53,24 +53,24 @@
         "takeaways": "I learned to coordinate closely with three other developers, align on shared coding patterns, and give and receive concise, constructive feedback on each other’s work."
       },
       "project3": {
-        "tabLabel": "3. Project",
-        "title": "Recipe Finder",
-        "duration": "3 Weeks",
-        "organisationTitle": "How we have organised our work process",
-        "takeawaysTitle": "My group work experience",
-        "about": "A recipe search app that lets users discover meals by ingredients, view details, and save favorites. The focus is on clarity, speed, and a friendly UI.",
-        "organisation": "We split the app into feature slices (search, detail, favorites) and aligned on naming conventions early. I documented component responsibilities and kept API calls in one service to avoid duplication.",
-        "takeaways": "We worked in a team of 2. I built the search + results UI and integrated the API service, while my teammate handled routing and the favorites view. Pair debugging and quick code reviews helped us stay consistent."
-      },
-      "project4": {
-        "tabLabel": "4. Project",
-        "title": "Portfolio Website",
-        "duration": "1 Week",
+        "tabLabel": "Pokedex",
+        "title": "Pokemon Card App",
+        "duration": "ca. 3 Weeks",
         "organisationTitle": "How I have organised my work process",
         "takeawaysTitle": "What I have learnt",
-        "about": "A responsive portfolio website to present my projects, skills, and contact information with clear navigation, smooth scrolling, and consistent styling.",
-        "organisation": "I created a small design system (colors, spacing, typography) and reused components (navbar, sections, cards). I iterated in small steps and kept styles modular to avoid side effects across sections.",
-        "takeaways": "I improved my responsive layout skills (flex/grid + clamp) and learned to avoid “CSS drift” by using consistent spacing and reusable class patterns. I also got better at structuring sections for accessibility and readability."
+        "about": "Minimalist Pokémon card app, one of my first projects – focusing on custom UI design and integration with the public Pokémon API.",
+        "organisation": "First, I analysed the API structure, then implemented the integration, mapped the data and adapted the UI components.",
+        "takeaways": "Clean integration of an external API, implementation of a search feature and mapping the data into reusable components, plus using Bootstrap and more refined CSS for clear, consistent, responsive designs."
+      },
+      "project4": {
+        "tabLabel": "Ongoing Project",
+        "title": "Coming Soon...",
+        "duration": "",
+        "organisationTitle": "",
+        "takeawaysTitle": "",
+        "about": "",
+        "organisation": "",
+        "takeaways": ""
       }
     }
   },

@@ -53,24 +53,24 @@
         "takeaways": "Ich habe gelernt, mich eng mit drei weiteren Entwicklern abzustimmen, gemeinsame Code-Konventionen einzuhalten und präzises, konstruktives Feedback zur Arbeit der anderen zu geben und anzunehmen."
       },
       "project3": {
-        "tabLabel": "3. Projekt",
-        "title": "Recipe Finder",
-        "duration": "3 Wochen",
-        "organisationTitle": "Wie wir unseren Arbeitsprozess organisiert haben",
-        "takeawaysTitle": "Meine Erfahrung in der Gruppenarbeit",
-        "about": "Eine Rezept-Such-App, mit der Nutzer Gerichte nach Zutaten entdecken, Details ansehen und Favoriten speichern können. Fokus: Klarheit, Geschwindigkeit und eine freundliche UI.",
-        "organisation": "Wir haben die App in Features geschnitten (Suche, Detail, Favoriten) und früh Namenskonventionen abgestimmt. API-Calls haben wir in einem Service gebündelt, um Duplikate zu vermeiden.",
-        "takeaways": "Wir waren ein Team von 2 Personen. Ich habe die Search- und Results-UI gebaut und den API-Service integriert, während mein Teampartner Routing und die Favoriten-Ansicht übernommen hat. Pair-Debugging und kurze Code-Reviews haben geholfen, konsistent zu bleiben."
-      },
-      "project4": {
-        "tabLabel": "4. Projekt",
-        "title": "Portfolio Website",
-        "duration": "1 Woche",
+        "tabLabel": "Pokedex",
+        "title": "Pokemon Card App",
+        "duration": "ca. 3 Wochen",
         "organisationTitle": "Wie ich meinen Arbeitsprozess organisiert habe",
         "takeawaysTitle": "Was ich gelernt habe",
-        "about": "Eine responsive Portfolio-Website, um Projekte, Skills und Kontaktinfos mit klarer Navigation, smooth scrolling und konsistentem Styling zu präsentieren.",
-        "organisation": "Ich habe ein kleines Designsystem (Farben, Abstände, Typografie) erstellt und Komponenten wiederverwendet (Navbar, Sections, Cards). Ich bin in kleinen Schritten iteriert und habe Styles modular gehalten, um Seiteneffekte zu vermeiden.",
-        "takeaways": "Ich habe meine Responsive-Layout-Skills (Flex/Grid + clamp) verbessert und gelernt, CSS-\"Drift\" durch konsistente Abstände und wiederverwendbare Klassen zu vermeiden. Außerdem wurde ich besser darin, Sections für Accessibility und Lesbarkeit zu strukturieren."
+        "about": "Minimalistische Pokémon-Karten-App, eines meiner ersten Projekte – mit Fokus auf eigenes UI-Design und Anbindung an die öffentliche Pokemon API.",
+        "organisation": "Zunächst habe ich die API-Struktur analysiert, dann die Anbindung umgesetzt, die Daten integriert und die UI-Komponenten darauf abgestimmt.",
+        "takeaways": "Sauberes Einbinden einer externen API, Aufbau einer Suchfunktion und Überführung der Daten in wiederverwendbare Komponenten sowie der Einsatz von Bootstrap und ein verfeinerter Umgang mit CSS für klare, konsistente, responsive Designs."
+      },
+      "project4": {
+        "tabLabel": "Laufendes Projekt",
+        "title": "kommt bald...",
+        "duration": "laufend",
+        "organisationTitle": "",
+        "takeawaysTitle": "",
+        "about": "",
+        "organisation": "",
+        "takeaways": ""
       }
     }
   },
