@@ -12,29 +12,30 @@
           role="tab"
           [attr.aria-selected]="i === activeIndex"
         >
-          <span class="tab-label font-josefin">{{ translate(project.tabLabelKey) }}</span>
+          <span class="tab-label tab-label-desktop font-josefin">{{ translate(project.tabLabelKey) }}</span>
+          <span class="tab-label tab-label-mobile font-josefin">{{ translate(project.tabLabelMobile) }}</span>
         </button>
       </div>
 
-      <div class="card" role="tabpanel">
-        <div class="card-body">
-          <div class="project-details font-josefin">
-            <div class="block">
-              <div class="about-row">
-                <img
-                  class="info-row-icon"
-                  src="/assets/icons/point.png"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <h3>{{ translate('myProjects.aboutTitle') }}</h3>
-                <span class="duration duration-desktop"
-                  >{{ translate('myProjects.durationLabel') }}
-                  {{ translate(activeProject.durationKey) }}</span
-                >
+        <div class="card" role="tabpanel">
+          <div class="card-body">
+            <div class="project-details font-josefin">
+              <div class="block">
+                <div class="about-row">
+                  <img
+                    class="info-row-icon"
+                    src="/assets/icons/point.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <h3>{{ translate('myProjects.aboutTitle') }}</h3>
+                  <span class="duration duration-desktop"
+                    >{{ translate('myProjects.durationLabel') }}
+                    {{ translate(activeProject.durationKey) }}</span
+                  >
+                </div>
+                <p>{{ translate(activeProject.aboutKey) }}</p>
               </div>
-              <p>{{ translate(activeProject.aboutKey) }}</p>
-            </div>
 
             <div class="block font-josefin">
               <div class="info-row">
@@ -65,7 +66,7 @@
 
           <div class="cover-block font-josefin">
             <div class="tab-label-mobile">
-              <span class="tab-label font-josefin">{{ translate(projects[activeIndex].tabLabelKey) }}</span>
+              <span class="tab-label font-josefin">{{ translate(activeProject.tabLabelKey) }}</span>
             </div>
             <div class="block technologies-block">
               <h3 class="tech-title-desktop">{{ translate('myProjects.technologiesTitle') }}</h3>

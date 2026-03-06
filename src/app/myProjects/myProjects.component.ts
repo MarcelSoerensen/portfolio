@@ -16,6 +16,7 @@ type ProjectCover = {
 type Project = {
   id: string;
   tabLabelKey: string;
+  tabLabelMobile: string;
   titleKey: string;
   liveUrl: string;
   githubUrl: string;
@@ -43,6 +44,7 @@ export class MyProjectsComponent {
     {
       id: 'project-1',
       tabLabelKey: 'myProjects.projects.project1.tabLabel',
+      tabLabelMobile: 'myProjects.projects.project1.tabLabelMobile',
       titleKey: 'myProjects.projects.project1.title',
       liveUrl: 'https://madscientist.marcel-soerensen.com/',
       githubUrl: 'https://github.com/MarcelSoerensen/MadScientist.git',
@@ -62,6 +64,7 @@ export class MyProjectsComponent {
     {
       id: 'project-2',
       tabLabelKey: 'myProjects.projects.project2.tabLabel',
+      tabLabelMobile: 'myProjects.projects.project2.tabLabelMobile',
       titleKey: 'myProjects.projects.project2.title',
       liveUrl: 'https://join.marcel-soerensen.com/',
       githubUrl: 'https://github.com/MarcelSoerensen/Join.git',
@@ -85,6 +88,7 @@ export class MyProjectsComponent {
     {
       id: 'project-3',
       tabLabelKey: 'myProjects.projects.project3.tabLabel',
+      tabLabelMobile: 'myProjects.projects.project3.tabLabelMobile',
       titleKey: 'myProjects.projects.project3.title',
       liveUrl: 'https://pokedex.marcel-soerensen.com/',
       githubUrl: 'https://github.com/MarcelSoerensen/pokedex.git',
@@ -107,6 +111,7 @@ export class MyProjectsComponent {
     {
       id: 'project-4',
       tabLabelKey: 'myProjects.projects.project4.tabLabel',
+      tabLabelMobile: 'myProjects.projects.project4.tabLabelMobile',
       titleKey: 'myProjects.projects.project4.title',
       liveUrl: 'https://join.marcel-soerensen.com',
       githubUrl: 'https://github.com/your-username/portfolio',

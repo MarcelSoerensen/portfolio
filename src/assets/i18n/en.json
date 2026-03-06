@@ -34,6 +34,7 @@
     "projects": {
       "project1": {
         "tabLabel": "Mad Scientist",
+        "tabLabelMobile": "1. Project",
         "title": "Jump & Run Game",
         "duration": "ca. 3 Months",
         "organisationTitle": "How I have organised my work process",
@@ -44,6 +45,7 @@
       },
       "project2": {
         "tabLabel": "Join",
+        "tabLabelMobile": "2. Project",
         "title": "Kanban Board",
         "duration": "ca. 3 Months",
         "organisationTitle": "How we have organised our work process",
@@ -54,6 +56,7 @@
       },
       "project3": {
         "tabLabel": "Pokedex",
+        "tabLabelMobile": "3. Project",
         "title": "Pokemon Card App",
         "duration": "ca. 3 Weeks",
         "organisationTitle": "How I have organised my work process",
@@ -64,6 +67,7 @@
       },
       "project4": {
         "tabLabel": "Ongoing Project",
+        "tabLabelMobile": "4. Project",
         "title": "Coming Soon...",
         "duration": "in progress",
         "organisationTitle": "How we have organised our work process",
