@@ -29,14 +29,15 @@ a {
     align-items: flex-start;
     justify-content: center;
     text-align: center;
-    margin-left: 15%;
-    margin-right: 15%;
-    gap: 32px;
+    margin-left: 13%;
+    margin-right: 13%;
 
     > .my-status {
-      width: 50%;
+      width: 55%;
+      min-width: 55%;
       display: flex;
       flex-direction: row;
+      justify-content: flex-start;
       align-items: center;
       gap: 6px;
 
@@ -81,13 +82,16 @@ a {
     }
 
     > .my-description {
-      width: 50%;
+      width: fit-content;
+      max-width: 45%;
       > p {
         font-size: 18px;
         font-weight: 300;
         margin: 0;
         color: rgba(248, 245, 237, 1);
-        text-align: left;
+        text-align: justify;
+        text-align-last: left;
+        hyphens: auto;
       }
       > .button-container {
         display: flex;
@@ -96,3 +100,36 @@ a {
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .why-me-container {
+    > .why-me-content {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 6%;
+      margin-right: 6%;
+      gap:40px;
+
+      > .my-status {
+        width: 50%;
+        justify-content: flex-start;
+        padding-left: 15%;
+      }
+
+      > .my-description {
+        width: 100%;
+        max-width: 100%;
+
+        > p {
+          text-align-last: center;
+        }
+
+        > .button-container {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+

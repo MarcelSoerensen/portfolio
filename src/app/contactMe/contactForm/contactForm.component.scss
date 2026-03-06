@@ -1,6 +1,6 @@
 .contact-form-fields {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 13%;
+  margin-right: 13%;
   color: rgba(235, 237, 234, 1);
 
   > form {
@@ -212,4 +212,11 @@
 .input-error {
   border-color: rgba(211, 87, 65, 1) !important;
   color: rgba(211, 87, 65, 1) !important;
+}
+
+@media (max-width: 1000px) {
+  .contact-form-fields {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
 }

@@ -1,0 +1,111 @@
+@media (max-width: 1000px) {
+  .card-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .tab-label-mobile {
+    display: inline !important;
+    font-size: 40px;
+    color: rgba(148, 187, 214, 1);
+    font-weight: 600;
+    text-align: left;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom:  0;
+    padding-left: 0;
+  }
+
+  .cover-block {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-details {
+    order: 2;
+  }
+  .project-buttons-desktop {
+    display: none !important;
+  }
+  .project-buttons-mobile {
+    display: flex !important;
+    order: 3;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    align-self: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .tech-title-desktop,
+  .tech-icons-desktop,
+  .tech-icons-mobile {
+    display: none !important;
+  }
+  .tech-duration-mobile {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 32px;
+    margin-left: 0;
+    margin-right: auto;
+    gap: 8px;
+  }
+  .tech-icons-desktop {
+    display: none !important;
+  }
+  .tech-icons-mobile {
+    display: inline !important;
+    margin-bottom: 12px;
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .card-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .cover-block {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-details {
+    order: 2;
+  }
+  .project-buttons-desktop {
+    display: none !important;
+  }
+  .project-buttons-mobile {
+    display: flex !important;
+    order: 3;
+    width: 100%;
+    margin-top: 24px;
+    align-self: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .duration-desktop {
+    display: none !important;
+  }
+  .duration-mobile {
+    display: inline !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (min-width: 1001px) {
+  .project-buttons-desktop {
+    display: flex !important;
+  }
+  .project-buttons-mobile {
+    display: none !important;
+  }
+}

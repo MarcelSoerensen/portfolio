@@ -25,7 +25,6 @@ section {
     justify-content: space-between;
     text-align: center;
     width: 100%;
-    gap: 32px;
 
     > .current-skills {
       width: 409px;
@@ -33,7 +32,7 @@ section {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
-      margin-left: 15%;
+      margin-left: 13%;
       > img {
         width: auto;
         height: 100px;
@@ -49,7 +48,7 @@ section {
       height: 380px;
       width: 380px;
       gap: 6%;
-      margin-right: 15%;
+      margin-right: 13%;
 
       > .currently-learning-background {
         position: absolute;
@@ -115,5 +114,23 @@ section {
         }
       }
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  .skills-container > .skills-content > .currently-learning {
+    margin-right: 6%;
+  }
+  .skills-container > .skills-content > .current-skills {
+    margin-left: 6%;
+  }
+  .skills-button-container {
+    margin-bottom: -2%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .skills-button-container {
+    display: none;
   }
 }

@@ -24,7 +24,7 @@
 .feedback-card {
 	position: relative;
 	flex: 1;
-	min-width: 260px;
+	min-width: 350px;
 	max-width: 400px;
 	width: 100%;
 	aspect-ratio: 1 / 1;
@@ -118,4 +118,17 @@
 
 .feedback-card-link:hover {
 	opacity: 0.8;
+}
+
+@media (max-width: 1260px) {
+	.feedback-cards {
+		justify-content: center !important;
+		gap: 64px;
+	}
+	.feedback-card {
+		flex: 0 0 400px;
+		width: 400px;
+		max-width: 400px;
+		min-width: 350px;
+	}
 }

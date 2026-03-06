@@ -34,9 +34,9 @@
     "projects": {
       "project1": {
         "tabLabel": "Mad Scientist",
-        "title": "Mad Scientist",
+        "title": "Jump & Run Game",
         "duration": "ca. 3 Monate",
-        "organisationTitle": "Wie ich meinen Arbeitsprozess organisiert habe",
+        "organisationTitle": "Organisation meines Arbeitsprozesses",
         "takeawaysTitle": "Was ich gelernt habe",
         "about": "Ein actiongeladenes Jump-&-Run im Setting eines geheimen Energielabors, das gegen feindliche Angriffe verteidigt wird.",
         "organisation": "Ich habe das Projekt in klar abgegrenzte Schritte gegliedert, regelmäßig getestet und refaktoriert und die wachsende Codebasis durch kurze Feedback‑Schleifen sowie eine konsistente Ordner‑ und Klassenstruktur im Griff behalten.",
@@ -46,8 +46,8 @@
         "tabLabel": "Join",
         "title": "Kanban Board",
         "duration": "ca. 3 Monate",
-        "organisationTitle": "Wie wir unseren Arbeitsprozess organisiert haben",
-        "takeawaysTitle": "Was ich gelernt habe",
+        "organisationTitle": "Organisation unseres Arbeitsprozesses",
+        "takeawaysTitle": "Meine Erfahrungen in der Gruppenarbeit",
         "about": "Ein leichtgewichtiges Kanban-Board zur Aufgabenverwaltung mit Spalten, Drag & Drop, schnellen Änderungen und einer Übersicht, die auch bei vielen Cards lesbar bleibt.",
         "organisation": "Wir organisierten unsere Arbeit durch wöchentliche Team-Meetings und ein gemeinsames Kanban-Board, auf dem wir das Projekt in kleine Aufgaben unterteilten, klare Verantwortlichkeiten vergaben und in kurzen Iterationen jede Funktion implementierten, testeten und verfeinerten.",
         "takeaways": "Ich habe gelernt, mich eng mit drei weiteren Entwicklern abzustimmen, gemeinsame Code-Konventionen einzuhalten und präzises, konstruktives Feedback zur Arbeit der anderen zu geben und anzunehmen."
@@ -56,7 +56,7 @@
         "tabLabel": "Pokedex",
         "title": "Pokemon Card App",
         "duration": "ca. 3 Wochen",
-        "organisationTitle": "Wie ich meinen Arbeitsprozess organisiert habe",
+        "organisationTitle": "Organisation meines Arbeitsprozesses",
         "takeawaysTitle": "Was ich gelernt habe",
         "about": "Minimalistische Pokémon-Karten-App, eines meiner ersten Projekte – mit Fokus auf eigenes UI-Design und Anbindung an die öffentliche Pokemon API.",
         "organisation": "Zunächst habe ich die API-Struktur analysiert, dann die Anbindung umgesetzt, die Daten integriert und die UI-Komponenten darauf abgestimmt.",
@@ -66,11 +66,11 @@
         "tabLabel": "Laufendes Projekt",
         "title": "kommt bald...",
         "duration": "laufend",
-        "organisationTitle": "",
-        "takeawaysTitle": "",
-        "about": "",
-        "organisation": "",
-        "takeaways": ""
+        "organisationTitle": "Organisation unseres Arbeitsprozesses",
+        "takeawaysTitle": "Meine Erfahrungen in der Gruppenarbeit",
+        "about": "...",
+        "organisation": "...",
+        "takeaways": "..."
       }
     }
   },

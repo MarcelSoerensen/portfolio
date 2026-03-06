@@ -34,7 +34,7 @@ type Project = {
   standalone: true,
   imports: [CommonModule, ColleagueFeedbackComponent, TranslocoModule],
   templateUrl: './myProjects.component.html',
-  styleUrls: ['./myProjects.component.scss'],
+  styleUrls: ['./myProjects.component.scss', './myProjectsMobile.component.scss'],
 })
 export class MyProjectsComponent {
   activeIndex = 0;
@@ -95,7 +95,9 @@ export class MyProjectsComponent {
       organisationKey: 'myProjects.projects.project3.organisation',
       takeawaysKey: 'myProjects.projects.project3.takeaways',
       technologies: [
-        { name: 'Angular', iconSrc: '/assets/icons/skills/angular.png' },
+        { name: 'HTML', iconSrc: '/assets/icons/skills/html.png' },
+        { name: 'JavaScript', iconSrc: '/assets/icons/skills/javascript.png' },
+        { name: 'CSS', iconSrc: '/assets/icons/skills/css.png' },
       ],
       cover: {
         src: '/assets/cover/pokedex.png',

@@ -17,7 +17,7 @@ section {
   margin-left: auto;
   margin-right: auto;
 
-  .my-projects-content {
+  >.my-projects-content {
     width: 100%;
     box-sizing: border-box;
     padding-left: 6%;
@@ -35,7 +35,8 @@ section {
 
 .tab {
   height: clamp(56px, 8vw, 97px);
-  width: clamp(140px, 18vw, 248px);
+  min-width: clamp(140px, 18vw, 248px);
+  width: auto;
   border: 1px solid rgba(47, 56, 63, 0);
   background: rgba(47, 56, 63, 0);
   color: rgba(148, 187, 214, 1);
@@ -49,6 +50,7 @@ section {
     display: inline-block;
     cursor: pointer;
     transition: all 125ms ease-in-out;
+    white-space: nowrap;
   }
 
   > .tab-label:hover {
@@ -89,7 +91,7 @@ section {
   align-items: flex-start;
 }
 
-.side {
+.cover-block {
   width: 420px;
   display: flex;
   flex-direction: column;
@@ -98,10 +100,10 @@ section {
 }
 
 .cover {
-  width: clamp(260px, 40vw, 455px);
   max-width: 100%;
   aspect-ratio: 455 / 312;
   border-radius: 30px;
+  border: 1px solid rgba(248, 245, 237, 0.1);
   overflow: hidden;
   background: rgba(248, 245, 237, 0.04);
 
@@ -113,21 +115,21 @@ section {
   }
 }
 
-.project-links {
+.project-buttons {
   max-width: 360px;
   display: flex;
   gap: 30px;
   justify-content: center;
 }
 
-.details {
+.project-details {
   display: flex;
   flex-direction: column;
   gap: 32px;
   flex: 1;
 }
 
-.details .block {
+.project-details .block {
   padding-left: 48px;
 }
 
@@ -200,7 +202,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 16px;
   gap: 8px;
   > h3 {
     font-size: 18px;
@@ -216,4 +217,29 @@ section {
     width: 36px;
     height: 36px;
   }
+}
+.tech-duration-mobile {
+  display: none;
+}
+.tech-title-mobile,
+.tech-names-mobile {
+  font-size: 18px;
+  color: rgba(248, 245, 237, 1);
+  font-weight: 300;
+}
+.tech-title-desktop {
+  display: block;
+}
+.tech-icons-mobile {
+  display: none;
+}
+.duration-mobile {
+  display: none;
+}
+.duration-desktop {
+  display: inline;
+}
+.tab-label-mobile {
+  display: none;
+  
 }

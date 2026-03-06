@@ -65,12 +65,12 @@
       "project4": {
         "tabLabel": "Ongoing Project",
         "title": "Coming Soon...",
-        "duration": "",
-        "organisationTitle": "",
-        "takeawaysTitle": "",
-        "about": "",
-        "organisation": "",
-        "takeaways": ""
+        "duration": "in progress",
+        "organisationTitle": "How we have organised our work process",
+        "takeawaysTitle": "My group work experience",
+        "about": "...",
+        "organisation": "...",
+        "takeaways": "..."
       }
     }
   },

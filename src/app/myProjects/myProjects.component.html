@@ -18,7 +18,7 @@
 
       <div class="card" role="tabpanel">
         <div class="card-body">
-          <div class="details font-josefin">
+          <div class="project-details font-josefin">
             <div class="block">
               <div class="about-row">
                 <img
@@ -28,7 +28,7 @@
                   aria-hidden="true"
                 />
                 <h3>{{ translate('myProjects.aboutTitle') }}</h3>
-                <span class="duration"
+                <span class="duration duration-desktop"
                   >{{ translate('myProjects.durationLabel') }}
                   {{ translate(activeProject.durationKey) }}</span
                 >
@@ -63,10 +63,13 @@
             </div>
           </div>
 
-          <div class="side font-josefin">
+          <div class="cover-block font-josefin">
+            <div class="tab-label-mobile">
+              <span class="tab-label font-josefin">{{ translate(projects[activeIndex].tabLabelKey) }}</span>
+            </div>
             <div class="block technologies-block">
-              <h3>{{ translate('myProjects.technologiesTitle') }}</h3>
-              <div class="tech-icons">
+              <h3 class="tech-title-desktop">{{ translate('myProjects.technologiesTitle') }}</h3>
+              <div class="tech-icons tech-icons-desktop">
                 <img
                   *ngFor="let t of activeProject.technologies"
                   class="tech-icon"
@@ -74,6 +77,19 @@
                   [alt]="t.name"
                   [title]="t.name"
                 />
+              </div>
+              <div class="tech-duration-mobile">
+                <div class="">
+                <span class="tech-title-mobile">{{ translate('myProjects.technologiesTitle') }}:</span>
+                <span class="tech-names-mobile">
+                  <ng-container *ngFor="let t of activeProject.technologies; let last = last">
+                    {{ t.name }}<span *ngIf="!last">, </span>
+                  </ng-container>
+                </span>
+                </div>
+                <span class="duration duration-mobile">
+                  {{ translate('myProjects.durationLabel') }} {{ translate(activeProject.durationKey) }}
+                </span>
               </div>
             </div>
 
@@ -84,7 +100,7 @@
               />
             </div>
 
-            <div class="project-links" aria-label="Project links">
+            <div class="project-buttons project-buttons-desktop" aria-label="Project links">
               <a
                 class="base-button base-button-filled"
                 [class.disabled]="!activeProject.liveUrl"
@@ -102,6 +118,25 @@
                 rel="noopener noreferrer"
                 >{{ translate('myProjects.github') }}</a>
             </div>
+          </div>
+
+          <div class="project-buttons project-buttons-mobile" aria-label="Project links">
+            <a
+              class="base-button base-button-filled"
+              [class.disabled]="!activeProject.liveUrl"
+              [attr.aria-disabled]="!activeProject.liveUrl"
+              [attr.href]="activeProject.liveUrl || null"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ translate('myProjects.liveTest') }}</a>
+            <a
+              class="base-button base-button-outline"
+              [class.disabled]="!activeProject.githubUrl"
+              [attr.aria-disabled]="!activeProject.githubUrl"
+              [attr.href]="activeProject.githubUrl || null"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ translate('myProjects.github') }}</a>
           </div>
         </div>
         
