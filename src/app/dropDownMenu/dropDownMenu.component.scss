@@ -4,12 +4,12 @@
   right: 16px;
   width: 353px;
   height: 376px;
-  z-index: 1999;
+  z-index: 2999;
   display: flex;
   align-items: center;
   justify-content: center;
   background: transparent;
-  filter: drop-shadow(0 8px 16px rgba(40,46,51,0.4));
+  filter: drop-shadow(0 8px 16px rgba(40, 46, 51, 0.4));
 }
 
 .dropdown-bg-img {
@@ -17,7 +17,7 @@
   object-fit: cover;
   pointer-events: none;
   user-select: none;
-  filter: drop-shadow(0 4px 16px rgba(40,46,51,0.2));
+  filter: drop-shadow(0 4px 16px rgba(40, 46, 51, 0.2));
 }
 
 .dropdown-language.active::before {
@@ -86,11 +86,11 @@
   transition: color 125ms ease-in-out;
   font-weight: 300;
 }
- 
+
 @media (max-width: 1000px) {
   .mobile-hero-logo-bg {
     position: fixed;
-    top: 16px;
+    top: 4px;
     left: 16px;
     z-index: 2000;
     background: rgba(41, 45, 51, 0.8);
@@ -100,7 +100,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 16px rgba(40,46,51,0.18);
+    box-shadow: 0 4px 16px rgba(40, 46, 51, 0.18);
   }
   .mobile-hero-logo {
     display: flex;
@@ -109,7 +109,7 @@
     justify-content: flex-end;
     margin-bottom: 0;
     cursor: pointer;
-    width:80%;
+    width: 80%;
     height: 80%;
     text-decoration: none;
     .img-container {
@@ -200,7 +200,6 @@
       opacity: 1;
     }
   }
-  
 }
 
 @media (min-width: 1000px) {
