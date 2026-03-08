@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { LandingPageComponent } from './landingPage/landingPage.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { DropDownMenuComponent } from './dropDownMenu/dropDownMenu.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { FooterComponent } from './footer/footer.component';
     RouterOutlet,
     LandingPageComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    DropDownMenuComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
