@@ -1,14 +1,81 @@
-<a class="mobile-hero-logo" href="#topSection">
-	<div class="img-container">
-		<img src="/assets/icons/logo_vector.svg" alt="" />
-		<div class="curly-braces-logo">
-			<img src="/assets/icons/left_curly_brace.svg" alt="" />
-			<img src="/assets/icons/right_curly_brace.svg" alt="" />
-		</div>
-	</div>
-	<h4 class="font-anta">M.Sörensen</h4>
-	<h5 class="font-josefin">developer</h5>
-</a>
-<button class="mobile-menu-btn" aria-label="Menü">
-	<img class="menu-icon-img" src="/assets/icons/mobile/menu_default.png" alt="Menü öffnen" />
+<div class="mobile-hero-logo-bg">
+  <a class="mobile-hero-logo" href="#topSection">
+    <div class="img-container">
+      <img src="/assets/icons/logo_vector.svg" alt="" />
+      <div class="curly-braces-logo">
+        <img src="/assets/icons/left_curly_brace.svg" alt="" />
+        <img src="/assets/icons/right_curly_brace.svg" alt="" />
+      </div>
+    </div>
+    <h4 class="font-anta">M.Sörensen</h4>
+    <h5 class="font-josefin">developer</h5>
+  </a>
+</div>
+<button class="mobile-menu-btn" aria-label="Menü" (click)="toggleMenu()" [class.active]="menuOpen">
+  <img
+    class="menu-icon-img menu-icon-img--default"
+    [src]="menuOpen ? '/assets/icons/mobile/menu_burger_x.png' : '/assets/icons/mobile/menu_default.png'"
+    alt="Menü Symbol"
+  />
+  <img
+    class="menu-icon-img menu-icon-img--hover"
+    [src]="menuOpen ? '/assets/icons/mobile/menu_burger_x.png' : '/assets/icons/mobile/menu_burger.png'"
+    alt="Menü Symbol (hover)"
+  />
 </button>
+
+<div *ngIf="menuOpen" class="dropdown-bg" (click)="closeMenu()">
+  <img
+    class="dropdown-bg-img"
+    src="/assets/backgrounds/mobile/bg_ellipse_mobile.png"
+    alt="Dropdown Hintergrund"
+  />
+  <nav
+    class="dropdown-nav"
+    (click)="$event.stopPropagation()"
+    *transloco="let translate"
+  >
+    <a
+      class="dropdown-link font-josefin"
+      href="#whyMeSection"
+      [class.active]="activeSection === 'whyme'"
+      (click)="setActiveSection('whyme')"
+      >{{ translate("navbar.whyMe") }}</a
+    >
+    <a
+      class="dropdown-link font-josefin"
+      href="#skillsSection"
+      [class.active]="activeSection === 'skills'"
+      (click)="setActiveSection('skills')"
+      >{{ translate("navbar.skills") }}</a
+    >
+    <a
+      class="dropdown-link font-josefin"
+      href="#myProjectsSection"
+      [class.active]="activeSection === 'projects'"
+      (click)="setActiveSection('projects')"
+      >{{ translate("navbar.projects") }}</a
+    >
+    <a
+      class="dropdown-link font-josefin"
+      href="#contactSection"
+      [class.active]="activeSection === 'contact'"
+      (click)="setActiveSection('contact')"
+      >{{ translate("navbar.contact") }}</a
+    >
+    <div class="dropdown-languages">
+      <span
+        class="dropdown-language font-josefin"
+        [class.active]="selectedLanguage === 'de'"
+        (click)="setLanguage('de'); $event.stopPropagation()"
+        >DE</span
+      >
+      <span
+        class="dropdown-language font-josefin"
+        [class.active]="selectedLanguage === 'en'"
+        (click)="setLanguage('en'); $event.stopPropagation()"
+        >EN</span
+      >
+    </div>
+  </nav>
+</div>
