@@ -1,0 +1,97 @@
+@media (max-width: 1000px) {
+  .skills-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .current-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(16px, 5vw, 32px);
+    margin-left: 0;
+    width: 90%;
+    max-width: clamp(250px, 80vw, 409px);
+    max-height: clamp(250px, 80vw, 404px);
+
+    > img {
+      height: clamp(70px, 20vw, 100px) !important;
+    }
+  }
+
+  .currently-learning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    gap: 32px;
+    width: 100%;
+    margin-right: 0;
+
+    > .currently-learning-title {
+      margin-bottom: 12px;
+      width: 100%;
+      font-weight: 400;
+      color: rgba(156, 186, 211, 1);
+    }
+
+    > .currently-learning-content {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0;
+      > .currently-learning-description {
+        width: 50%;
+        text-align: left;
+        font-size: 15px;
+        margin-right: 8px;
+        order: 1;
+      }
+    }
+  }
+
+  .currently-learning-symbols {
+    order: 2;
+    height: clamp(120px, 20vw, 150px);
+    width: clamp(120px, 20vw, 150px);
+  }
+
+  .skills-button-container {
+    margin-top: 24px;
+    margin-bottom: -2%;
+  }
+
+  .currently-learning-background {
+    display: none;
+  }
+  .currently-learning-symbols {
+    position: relative;
+    align-items: center;
+    gap: clamp(8px, 2vw, 16px) !important;
+  }
+  .currently-learning-symbols::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url("/assets/backgrounds/bg_skill_default.png") center/cover
+      no-repeat;
+    opacity: 1;
+    border-radius: 16px;
+  }
+  .currently-learning-symbols {
+    z-index: 1;
+  }
+  .currently-learning-symbols > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 1000px) {
+  .skills-button-container {
+    display: none;
+  }
+}

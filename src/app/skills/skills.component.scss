@@ -17,142 +17,128 @@ section {
   gap: clamp(20px, 3vw, 50px);
   margin-left: auto;
   margin-right: auto;
+}
 
-  > .skills-content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+.skills-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+}
+
+.current-skills {
+  width: 45%;
+  max-width: 409px;
+  height: 404px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-left: 13%;
+  > img {
+    width: auto;
+    height: 100px;
+  }
+}
+
+.currently-learning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 380px;
+  width: 380px;
+  gap: 6%;
+  margin-right: 13%;
+
+  > p {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+    color: rgba(248, 245, 237, 1);
+    text-align: center;
+    width: 70%;
+  }
+
+  > .currently-learning-title {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 12px 0;
+    color: rgba(248, 245, 237, 1);
     text-align: center;
     width: 100%;
-
-    > .current-skills {
-      width: 45%;
-      max-width: 409px;
-      height: 404px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-left: 13%;
-      > img {
-        width: auto;
-        height: 100px;}
-    }
-
-    > .currently-learning {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      height: 380px;
-      width: 380px;
-      gap: 6%;
-      margin-right: 13%;
-
-      > .currently-learning-background {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: auto;
-        display: block;
-        pointer-events: none;
-        transition: all 300ms ease-in-out;
-      }
-
-      > .currently-learning-background--default {
-        opacity: 1;
-        z-index: 1;
-      }
-
-      > .currently-learning-background--hover {
-        opacity: 0;
-        z-index: 2;
-      }
-
-      &:hover {
-        > .currently-learning-background--default {
-          opacity: 0;
-        }
-
-        > .currently-learning-background--hover {
-          opacity: 1;
-        }
-      }
-
-      > :not(.currently-learning-background) {
-        position: relative;
-        z-index: 3;
-      }
-
-      > p {
-        font-size: 18px;
-        font-weight: 300;
-        margin: 0;
-        color: rgba(248, 245, 237, 1);
-        text-align: center;
-        width: 70%;
-      }
-      > .currently-learning-symbols {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 16px;
-        > .currently-learning-symbol {
-          > img {
-            width: auto;
-            height: 32px;
-          }
-          > p {
-            margin: 0;
-            color: rgba(248, 245, 237, 1);
-            font-size: 14px;
-            font-weight: 300;
-            text-align: center;
-          }
-        }
-      }
-    }
+    z-index: 3;
+    position: relative;
   }
-}
 
-@media (max-width: 1000px) {
-  .skills-container > .skills-content {
+  > .currently-learning-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: column-reverse;
+    gap: 16px;
+    width: 80%;
+    z-index: 3;
+    position: relative;
 
-  }
-  .skills-container > .skills-content > .current-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: clamp(16px, 5vw, 32px);
-    margin-left: 0;
-    width: 90%;
-    max-width: clamp(250px, 80vw, 409px);
-    max-height: clamp(250px, 80vw, 404px);
-      
-      > img {
-                height: clamp(70px, 20vw, 100px) !important;
-
+    > .currently-learning-symbols {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      .currently-learning-symbol {
+        > p {
+          margin-top: 4px;
+          font-size: 14px;
+          font-weight: 300;
+          text-align: center;
+        }
+        > img {
+          width: auto;
+          height: 32px;
+        }
       }
-    
-  }
-  .skills-container > .skills-content > .currently-learning {
-    margin-right: 0;
-  }
-  
-  .skills-button-container {
-    margin-top: 24px;
-    margin-bottom: -2%;
+    }
+
+    > .currently-learning-description {
+      font-size: 16px;
+      font-weight: 300;
+      margin: 0;
+      color: rgba(248, 245, 237, 1);
+      text-align: center;
+      width: 100%;
+    }
   }
 }
 
-@media (min-width: 1000px) {
-  .skills-button-container {
-    display: none;
+.currently-learning-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  transition: all 300ms ease-in-out;
+  z-index: 1;
+}
+.currently-learning-background--default {
+  opacity: 1;
+  z-index: 1;
+}
+.currently-learning-background--hover {
+  opacity: 0;
+  z-index: 2;
+}
+
+.currently-learning:hover {
+  > .currently-learning-background--default {
+    opacity: 0;
+  }
+  > .currently-learning-background--hover {
+    opacity: 1;
   }
 }
+

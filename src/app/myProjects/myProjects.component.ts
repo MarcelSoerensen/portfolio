@@ -125,7 +125,7 @@ export class MyProjectsComponent {
         { name: 'TypeScript', iconSrc: '/assets/icons/skills/typescript.png' },
       ],
       cover: {
-        src: '/assets/backgrounds/bg_skill_default.png',
+        src: '',
         alt: 'Cover Project 4',
       },
     },

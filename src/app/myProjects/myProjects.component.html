@@ -95,10 +95,17 @@
             </div>
 
             <div class="cover">
-              <img
-                [src]="activeProject.cover.src"
-                [alt]="activeProject.cover.alt"
-              />
+              <ng-container *ngIf="activeProject.id !== 'project-4'; else whiteCover">
+                <img
+                  [src]="activeProject.cover.src"
+                  [alt]="activeProject.cover.alt"
+                />
+              </ng-container>
+              <ng-template #whiteCover>
+                <div class="cover-white">
+                  <span class="cover-coming-soon font-josefin">Coming soon...</span>
+                </div>
+              </ng-template>
             </div>
 
             <div class="project-buttons project-buttons-desktop" aria-label="Project links">
