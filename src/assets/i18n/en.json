@@ -107,16 +107,20 @@
     "title": "Contact me",
     "intro": "I’m happy to connect about job offers and exciting project opportunities. I work collaboratively, with a high level of accuracy and a clear goal-oriented mindset, and I have a strong eye for clean, aesthetic, user-friendly interfaces. I’m highly motivated and continuously improving — feel free to reach out via email or phone!",
     "mail": "E-mail: contact@marcel-soerensen.com",
-    "phone": "Phone: +49 176 310 55 989"
+    "phone": "Phone: +49 176 310 55 989",
+    "together": "Let us work together!"
   },
 
   "contactForm": {
-    "nameLabel": "Your Name",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Your name",
     "nameRequired": "Your name is required",
     "emailLabel": "Your email",
+    "emailPlaceholder": "Your email",
     "emailRequired": "Your email is required",
     "emailInvalid": "Please enter a valid email",
     "messageLabel": "Your message",
+    "messagePlaceholder": "Your message",
     "messageRequired": "Your message is required",
     "privacyTextLeft": "I've read the ",
     "privacyLink": "Privacy Policy",

@@ -2,24 +2,28 @@
   <div class="contact-container font-josefin">
     <div class="contact-first-row">
       <div class="freespace"></div>
-      <h1 class="font-anta">{{ translate('contactMe.title') }}</h1>
-      <a class="arrow-up" aria-label="Scroll up" href="#topSection">
-        <img
-          class="arrow-up-img arrow-up-img--default"
-          src="assets/icons/actions/arrow_up.png"
-          alt="Arrow up"
-        />
-        <img
-          class="arrow-up-img arrow-up-img--hover"
-          src="assets/icons/actions/arrow_up_hover.png"
-          alt="Arrow up hover"
-        />
-      </a>
+      <h1 class="font-anta">{{ translate("contactMe.title") }}</h1>
+      
+      <div class="arrow-up--desktop">
+        <a class="arrow-up" aria-label="Scroll up" href="#topSection">
+          <img
+            class="arrow-up-img arrow-up-img--default"
+            src="assets/icons/actions/arrow_up.png"
+            alt="Arrow up"
+          />
+          <img
+            class="arrow-up-img arrow-up-img--hover"
+            src="assets/icons/actions/arrow_up_hover.png"
+            alt="Arrow up hover"
+          />
+        </a>
+      </div>
+
     </div>
     <div class="contact-intro">
       <div class="contact-intro-text">
         <p>
-          {{ translate('contactMe.intro') }}
+          {{ translate("contactMe.intro") }}
         </p>
       </div>
       <div class="contact-methods">
@@ -38,7 +42,7 @@
               />
             </span>
             <span class="contact-method-text">
-              {{ translate('contactMe.mail') }}
+              {{ translate("contactMe.mail") }}
             </span>
           </a>
         </div>
@@ -57,13 +61,29 @@
               />
             </span>
             <span class="contact-method-text">
-              {{ translate('contactMe.phone') }}
+              {{ translate("contactMe.phone") }}
             </span>
           </a>
         </div>
       </div>
     </div>
 
+    <span class="work-together">{{ translate("contactMe.together") }}</span>
+
     <app-contact-form></app-contact-form>
+    <div class="arrow-up--mobile">
+      <a class="arrow-up" aria-label="Scroll up" href="#topSection">
+        <img
+          class="arrow-up-img arrow-up-img--default"
+          src="assets/icons/actions/arrow_up.png"
+          alt="Arrow up"
+        />
+        <img
+          class="arrow-up-img arrow-up-img--hover"
+          src="assets/icons/actions/arrow_up_hover.png"
+          alt="Arrow up hover"
+        />
+      </a>
+    </div>
   </div>
 </section>

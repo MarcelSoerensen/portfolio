@@ -105,3 +105,39 @@ a {
     }
   }
 }
+
+@media (max-width: 800px) {
+  footer {
+    height: 220px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    > .profile-logo {
+      order: 0;
+    }
+    > .footer-socials {
+      order: 1;
+    }
+    > .footer-left {
+      order: 2;
+      flex-direction: row;
+      gap: 32px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    gap: 24px;
+  }
+
+  .footer-left {
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+}

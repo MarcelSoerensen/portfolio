@@ -72,3 +72,9 @@
     transition: all 200ms ease-in-out;
   }
 }
+
+@media (max-width: 600px) {
+  .profile-logo {
+     scale: 0.8 ;
+    }
+  }

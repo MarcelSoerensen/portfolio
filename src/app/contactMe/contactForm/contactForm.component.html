@@ -23,6 +23,7 @@
             id="name"
             name="name"
             required
+            [placeholder]="translate('contactForm.nameLabel')"
             [class.input-error]="
               !name.valid && (name.touched || contactForm.submitted)
             "
@@ -58,6 +59,7 @@
             id="email"
             name="email"
             required
+            [placeholder]="translate('contactForm.emailPlaceholder')"
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             [class.input-error]="
               !email.valid && (email.touched || contactForm.submitted)
@@ -93,6 +95,7 @@
             id="message"
             name="message"
             required
+            [placeholder]="translate('contactForm.messageLabel')"
             [class.input-error]="
               !message.valid && (message.touched || contactForm.submitted)
             "
