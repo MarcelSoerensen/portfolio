@@ -33,7 +33,7 @@ h5 {
   margin-right: auto;
 }
 
-.hero-image-container {
+.hero-portrait-container {
   margin-top: clamp(160px, 8vw, 120px);
   margin-left: 6%;
   position: relative;
@@ -42,7 +42,7 @@ h5 {
   display: flex;
   align-items: flex-end;
 
-  .portrait-background {
+  > .portrait-background {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -52,37 +52,33 @@ h5 {
     transform-origin: center;
     transition: all 300ms ease-in-out;
   }
-
   .portrait-background--default {
     opacity: 1;
     z-index: 1;
   }
-
   .portrait-background--hover {
     opacity: 0;
     z-index: 2;
   }
-
   &:hover {
     .portrait-background--default {
       opacity: 0;
     }
-
     .portrait-background--hover {
       opacity: 1;
     }
   }
-}
 
-.portrait-image {
-  width: 95%;
-  height: auto;
-  display: block;
-  z-index: 3;
-  position: relative;
-  top: -80px;
-  filter: brightness(1.2);
-  filter: drop-shadow(8px 32px 16px rgba(40, 46, 51, 0.5));
+  > .portrait-image {
+    width: 95%;
+    height: auto;
+    display: block;
+    z-index: 3;
+    position: relative;
+    top: -80px;
+    filter: brightness(1.2);
+    filter: drop-shadow(8px 32px 16px rgba(40, 46, 51, 0.5));
+  }
 }
 
 .hero-intro-container {
@@ -93,14 +89,13 @@ h5 {
   margin-right: 6%;
   > div {
     margin-top: 2rem;
-
-    > h1 {
+    h1 {
       margin: 0 0 12px 0;
       font-weight: 400;
       font-size: clamp(2.2rem, 6vw, 5.5rem);
       text-align: center;
     }
-    > h2 {
+    h2 {
       font-weight: 300;
       font-size: clamp(1.2rem, 3vw, 2.5rem);
       text-align: center;
@@ -116,61 +111,68 @@ h5 {
   .hero-free-space {
     width: 30px;
   }
-  .hero-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 0;
+}
 
-    .img-container {
+.hero-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0;
+
+  > .img-container {
+    position: relative;
+    display: inline-block;
+    img {
       position: relative;
-      display: inline-block;
-      > img {
-        position: relative;
-        z-index: 1;
-        height: 38px;
-        width: 58px;
-        object-fit: contain;
-        transition: transform 200ms ease-in-out;
-        &:hover {
-          transform: scaleX(1.2);
-        }
-      }
-
-      .curly-braces-logo {
-        position: absolute;
-        top: -2px;
-        bottom: 0;
-        left: 50%;
-        width: 60%;
-        transform: translateX(-50%);
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        pointer-events: none;
+      z-index: 1;
+      height: 38px;
+      width: 58px;
+      object-fit: contain;
+      transition: transform 200ms ease-in-out;
+      &:hover {
+        transform: scaleX(1.2);
       }
     }
 
-    > h4 {
-      font-weight: smaller;
-      font-size: 1.15em;
-      scale: scaleY(2);
-    }
-    > h5 {
-      font-weight: 100;
-      font-size: 1.2em;
-      color: rgba(148, 187, 214, 1);
+    > .curly-braces-logo {
+      position: absolute;
+      top: -2px;
+      bottom: 0;
+      left: 50%;
+      width: 60%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none;
+      img {
+        height: 40%;
+        width: auto;
+      }
     }
   }
-  .hero-socials {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: clamp(8px, 1vw, 20px);
+
+  > h4 {
+    font-weight: smaller;
+    font-size: 1.15em;
+    scale: scaleY(2);
   }
+
+  > h5 {
+    font-weight: 100;
+    font-size: 1.2em;
+    color: rgba(148, 187, 214, 1);
+  }
+}
+
+.hero-socials {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(8px, 1vw, 20px);
 }
 
 .social-icon {
@@ -189,12 +191,10 @@ h5 {
     transition: opacity 125ms ease;
     display: block;
   }
-
-  > .social-icon-img--default {
+  .social-icon-img--default {
     opacity: 1;
   }
-
-  > .social-icon-img--hover {
+  .social-icon-img--hover {
     opacity: 0;
   }
 
@@ -202,18 +202,15 @@ h5 {
     .social-icon-img--default {
       opacity: 0;
     }
-
-    > .social-icon-img--hover {
+    .social-icon-img--hover {
       opacity: 1;
     }
   }
-
   &:active {
     .social-icon-img--default {
       opacity: 1;
     }
-
-    > .social-icon-img--hover {
+    .social-icon-img--hover {
       opacity: 0;
     }
   }
@@ -234,15 +231,12 @@ h5 {
     object-fit: contain;
     transition: opacity 150ms ease-in-out;
   }
-
-  > .arrow-down-img--default {
+  .arrow-down-img--default {
     opacity: 1;
   }
-
-  > .arrow-down-img--hover {
+  .arrow-down-img--hover {
     opacity: 0;
   }
-
   &:hover {
     .arrow-down-img--default {
       opacity: 0;
@@ -252,12 +246,10 @@ h5 {
       opacity: 1;
     }
   }
-
   &:active {
     .arrow-down-img--default {
       opacity: 1;
     }
-
     .arrow-down-img--hover {
       opacity: 0;
     }
@@ -266,64 +258,4 @@ h5 {
 
 .portrait-image-mobile {
   display: none;
-}
-
-@media (max-width: 1000px) {
-  .portrait-image,
-  .portrait-background {
-    display: none !important;
-  }
-
-  .portrait-image-mobile {
-    display: block !important;
-    width: 100%;
-    height: auto;
-    z-index: 3;
-    position: relative;
-    top: -50px;
-    filter: brightness(1.2);
-    filter: drop-shadow(8px 32px 16px rgba(40, 46, 51, 0.5));
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero-container {
-    position: static !important;
-    flex-direction: column !important;
-    justify-content: flex-end !important;
-    min-height: 90vh !important;
-    height: auto !important;
-    gap: 0 !important;
-    > .hero-image-container {
-      margin-top: clamp(120px, 8vw, 300px);
-      margin-left: 0;
-      width: clamp(260px, 75vw, 85vw);
-      max-width: 400px;
-    }
-  }
-
-  .hero-intro-container {
-    justify-content: space-between;
-    margin-right: 0;
-    gap: clamp(0px, 5vh, 1000px);
-    margin-top: -32px;
-    > div {
-      margin-top: 0;
-      width: 100%;
-      > h1 {
-        margin: 0 0 8px 0;
-        font-size: clamp(2.3rem, 8vw, 6rem);
-      }
-      > h2 {
-        font-size: clamp(1.1rem, 4vw, 3.5rem);
-      }
-    }
-    > .arrow-down {
-      width: 38px;
-      height: 89px;
-    }
-  }
-
-  .hero-intro-first-row {
-    display: none !important;
-  }
 }

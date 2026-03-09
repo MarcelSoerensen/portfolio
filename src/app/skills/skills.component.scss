@@ -27,7 +27,8 @@ section {
     width: 100%;
 
     > .current-skills {
-      width: 409px;
+      width: 45%;
+      max-width: 409px;
       height: 404px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -35,8 +36,7 @@ section {
       margin-left: 13%;
       > img {
         width: auto;
-        height: 100px;
-      }
+        height: 100px;}
     }
 
     > .currently-learning {
@@ -118,13 +118,35 @@ section {
 }
 
 @media (max-width: 1000px) {
-  .skills-container > .skills-content > .currently-learning {
-    margin-right: 6%;
+  .skills-container > .skills-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
   }
   .skills-container > .skills-content > .current-skills {
-    margin-left: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(16px, 5vw, 32px);
+    margin-left: 0;
+    width: 90%;
+    max-width: clamp(250px, 80vw, 409px);
+    max-height: clamp(250px, 80vw, 404px);
+      
+      > img {
+                height: clamp(70px, 20vw, 100px) !important;
+
+      }
+    
   }
+  .skills-container > .skills-content > .currently-learning {
+    margin-right: 0;
+  }
+  
   .skills-button-container {
+    margin-top: 24px;
     margin-bottom: -2%;
   }
 }

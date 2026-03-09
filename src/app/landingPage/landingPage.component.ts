@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
     CommonModule,
   ],
   templateUrl: './landingPage.component.html',
-  styleUrls: ['./landingPage.component.scss'],
+  styleUrls: ['./landingPage.component.scss', './landingPageMobile.component.scss'],
 })
 export class LandingPageComponent {}
