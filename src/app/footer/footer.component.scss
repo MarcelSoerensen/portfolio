@@ -53,11 +53,14 @@ a {
       margin: 0;
     }
   }
+}
+.footer-socials--desktop {
+  display: flex;
+  gap: 16px;
+}
 
-  > .footer-socials {
-    display: flex;
-    gap: 16px;
-  }
+.footer-socials--mobile {
+  display: none;
 }
 
 .social-icon {
@@ -128,6 +131,15 @@ a {
       flex-direction: row;
       gap: 32px;
     }
+  }
+
+  .footer-socials--desktop {
+    display: none;
+  }
+
+  .footer-socials--mobile {
+    display: flex;
+    gap: 16px;
   }
 }
 
