@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ProfileLogoComponent } from '../profileLogo/profileLogo.component';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { ActiveLanguageService } from '../shared/active-language.service';
-import { ActiveSectionService } from '../shared/active-section.service';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -22,40 +22,29 @@ export class NavbarComponent implements OnDestroy {
 
   constructor(
     private translocoService: TranslocoService,
-    private activeSectionService: ActiveSectionService,
     private activeLanguageService: ActiveLanguageService,
-    private router: Router
+    private router: Router,
+    private navigationService: NavigationService
   ) {
     this.langSub = this.activeLanguageService.language$.subscribe(lang => {
       this.selectedLanguage = lang;
       this.translocoService.setActiveLang(lang);
     });
-    this.sectionSub = this.activeSectionService.activeSection$.subscribe(section => {
+    this.sectionSub = this.navigationService.activeSection$.subscribe(section => {
       this.activeSection = section;
     });
-  }
-
-  navigateToSection(section: string, anchor: string) {
-    if (this.router.url.includes('legal-notice') || this.router.url.includes('privacy-police')) {
-      this.router.navigate(['/']).then(() => {
-        setTimeout(() => {
-          document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      });
-    } else {
-      document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
-    }
-    this.setActiveSection(section);
-  }
-
-  setActiveSection(section: string) {
-    this.activeSectionService.setActiveSection(section);
   }
 
   setLanguage(language: string) {
     this.activeLanguageService.setLanguage(language);
   }
-
+  setActiveSection(section: string) {
+    this.navigationService.setActiveSection(section);
+  }
+  navigateToSection(section: string) {
+    this.navigationService.navigateToSection(section);
+  }
+  
   ngOnDestroy(): void {
     this.langSub?.unsubscribe();
     this.sectionSub?.unsubscribe();

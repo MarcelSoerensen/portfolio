@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { ActiveLanguageService } from '../shared/active-language.service';
-import { ActiveSectionService } from '../shared/active-section.service';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-dropDownMenu',
@@ -21,14 +21,14 @@ export class DropDownMenuComponent implements OnDestroy {
 
   constructor(
     private translocoService: TranslocoService,
-    private activeSectionService: ActiveSectionService,
-    private activeLanguageService: ActiveLanguageService
+    private activeLanguageService: ActiveLanguageService,
+    private navigationService: NavigationService
   ) {
     this.langSub = this.activeLanguageService.language$.subscribe(lang => {
       this.selectedLanguage = lang;
       this.translocoService.setActiveLang(lang);
     });
-    this.sectionSub = this.activeSectionService.activeSection$.subscribe(section => {
+    this.sectionSub = this.navigationService.activeSection$.subscribe(section => {
       this.activeSection = section;
     });
   }
@@ -43,7 +43,10 @@ export class DropDownMenuComponent implements OnDestroy {
     this.activeLanguageService.setLanguage(lang);
   }
   setActiveSection(section: string) {
-    this.activeSectionService.setActiveSection(section);
+    this.navigationService.setActiveSection(section);
+  }
+  navigateToSection(section: string) {
+    this.navigationService.navigateToSection(section);
   }
   ngOnDestroy(): void {
     this.langSub?.unsubscribe();

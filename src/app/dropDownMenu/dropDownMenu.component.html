@@ -39,28 +39,28 @@
       class="dropdown-link font-josefin"
       href="#whyMeSection"
       [class.active]="activeSection === 'whyme'"
-      (click)="setActiveSection('whyme')"
+      (click)="setActiveSection('whyme'); navigateToSection('whyme'); closeMenu()"
       >{{ translate("navbar.whyMe") }}</a
     >
     <a
       class="dropdown-link font-josefin"
       href="#skillsSection"
       [class.active]="activeSection === 'skills'"
-      (click)="setActiveSection('skills')"
+      (click)="setActiveSection('skills'); navigateToSection('skills'); closeMenu()"
       >{{ translate("navbar.skills") }}</a
     >
     <a
       class="dropdown-link font-josefin"
       href="#myProjectsSection"
       [class.active]="activeSection === 'projects'"
-      (click)="setActiveSection('projects')"
+      (click)="setActiveSection('projects'); navigateToSection('projects'); closeMenu()"
       >{{ translate("navbar.projects") }}</a
     >
     <a
       class="dropdown-link font-josefin"
       href="#contactSection"
       [class.active]="activeSection === 'contact'"
-      (click)="setActiveSection('contact')"
+      (click)="setActiveSection('contact'); navigateToSection('contact'); closeMenu()"
       >{{ translate("navbar.contact") }}</a
     >
     <div class="dropdown-languages">
