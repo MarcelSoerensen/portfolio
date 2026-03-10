@@ -45,13 +45,6 @@
     outline: none;
     cursor: pointer;
     transition: border-color 0.2s;
-   &.input-error::placeholder {
-     color: rgba(211, 87, 65, 1);
-     opacity: 1;
-   }
-    &::placeholder {
-      color: rgba(235, 237, 234, 0.7);
-    }
   }
 
   > .input-icon-wrapper > input,

@@ -25,7 +25,12 @@
   }
   input::placeholder,
   textarea::placeholder {
+    color: rgba(235, 237, 234, 0.7);
     opacity: 1;
-    color: #94bbd6;
+  }
+
+  input.input-error::placeholder,
+  textarea.input-error::placeholder {
+    color: rgba(211, 87, 65, 1);
   }
 }
