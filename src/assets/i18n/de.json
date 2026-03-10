@@ -186,6 +186,7 @@
     "objectionContact": "Marcel Sörensen, Schloßallee 45, 13156 Berlin,",
     "questionsTitle": "Fragen zum Datenschutz",
     "questionsText": "Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail an den oben genannten Verantwortlichen.",
-    "footer": "Diese Datenschutzerklärung wurde mit Hilfe der activeMind AG erstellt."
+    "footer": "Diese Datenschutzerklärung wurde mit Hilfe der activeMind AG erstellt.",
+    "languageStorageNote": "Hinweis: Ihre gewählte Spracheinstellung wird lokal im Browser gespeichert (LocalStorage), um die Nutzererfahrung zu verbessern. Diese Information wird nicht an Dritte übermittelt."
   }
 }

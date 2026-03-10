@@ -35,10 +35,19 @@
   z-index: -1;
   pointer-events: none;
 }
-.dropdown-link.active,
-.dropdown-link.active:hover,
-.dropdown-link.active:active {
+.dropdown-link {
+  color: rgba(40, 46, 51, 1);
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 125ms ease-in-out;
+  font-weight: 300;
+}
+
+.dropdown-link:hover,
+.dropdown-link:active,
+.dropdown-link.active {
   color: rgba(248, 245, 237, 1);
+  transform: scale(0.95);
 }
 .dropdown-languages {
   display: flex;

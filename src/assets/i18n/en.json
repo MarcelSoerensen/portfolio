@@ -186,6 +186,7 @@
     "objectionContact": "Marcel Sörensen, Schloßallee 45, 13156 Berlin,",
     "questionsTitle": "Questions about data protection",
     "questionsText": "If you have any questions about data protection, please send us an email to the responsible person mentioned above.",
-    "footer": "This privacy policy was created with the help of activeMind AG."
+    "footer": "This privacy policy was created with the help of activeMind AG.",
+    "languageStorageNote": "Note: Your selected language preference is stored locally in your browser (LocalStorage) to improve user experience. This information is not shared with third parties."
   }
 }
