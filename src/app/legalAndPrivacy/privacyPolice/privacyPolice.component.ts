@@ -14,7 +14,7 @@ export class PrivacyPoliceComponent implements OnDestroy {
 
   constructor(private transloco: TranslocoService, private cdr: ChangeDetectorRef) {
     this.langSub = this.transloco.langChanges$.subscribe(() => {
-      this.cdr.detectChanges();
+      setTimeout(() => this.cdr.detectChanges());
     });
   }
 

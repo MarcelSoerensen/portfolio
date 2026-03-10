@@ -1,4 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { ProfileLogoComponent } from '../profileLogo/profileLogo.component';
@@ -22,7 +23,8 @@ export class NavbarComponent implements OnDestroy {
   constructor(
     private translocoService: TranslocoService,
     private activeSectionService: ActiveSectionService,
-    private activeLanguageService: ActiveLanguageService
+    private activeLanguageService: ActiveLanguageService,
+    private router: Router
   ) {
     this.langSub = this.activeLanguageService.language$.subscribe(lang => {
       this.selectedLanguage = lang;
@@ -31,6 +33,19 @@ export class NavbarComponent implements OnDestroy {
     this.sectionSub = this.activeSectionService.activeSection$.subscribe(section => {
       this.activeSection = section;
     });
+  }
+
+  navigateToSection(section: string, anchor: string) {
+    if (this.router.url.includes('legal-notice') || this.router.url.includes('privacy-police')) {
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => {
+          document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      });
+    } else {
+      document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
+    }
+    this.setActiveSection(section);
   }
 
   setActiveSection(section: string) {

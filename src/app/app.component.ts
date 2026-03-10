@@ -23,13 +23,14 @@ import { DropDownMenuComponent } from './dropDownMenu/dropDownMenu.component';
 })
 export class AppComponent {
   title = 'portfolio';
-  hideLandingAndNavbar = false;
+  hideLandingPage = false;
 
   constructor(private router: Router) {
-    this.router.events.subscribe(event => {
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const url = event.urlAfterRedirects;
-        this.hideLandingAndNavbar = url.includes('legal-notice') || url.includes('privacy-police');
+        this.hideLandingPage =
+          url.includes('legal-notice') || url.includes('privacy-police');
       }
     });
   }

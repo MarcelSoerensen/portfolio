@@ -6,28 +6,28 @@
         <a
           class="nav-link font-josefin"
           [ngClass]="{ active: activeSection === 'whyme' }"
-          (click)="setActiveSection('whyme')"
+          (click)="navigateToSection('whyme', 'whyMeSection')"
           href="#whyMeSection"
           >{{ translate("navbar.whyMe") }}</a
         >
         <a
           class="nav-link font-josefin"
           [ngClass]="{ active: activeSection === 'skills' }"
-          (click)="setActiveSection('skills')"
+          (click)="navigateToSection('skills', 'skillsSection')"
           href="#skillsSection"
           >{{ translate("navbar.skills") }}</a
         >
         <a
           class="nav-link font-josefin"
           [ngClass]="{ active: activeSection === 'projects' }"
-          (click)="setActiveSection('projects')"
+          (click)="navigateToSection('projects', 'myProjectsSection')"
           href="#myProjectsSection"
           >{{ translate("navbar.projects") }}</a
         >
         <a
           class="nav-link font-josefin"
           [ngClass]="{ active: activeSection === 'contact' }"
-          (click)="setActiveSection('contact')"
+          (click)="navigateToSection('contact', 'contactSection')"
           href="#contactSection"
           >{{ translate("navbar.contact") }}</a
         >

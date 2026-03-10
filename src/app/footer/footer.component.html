@@ -1,101 +1,101 @@
-<footer *transloco="let translate">
-  <div class="footer-container">
-    <div class="footer-content">
-      <div class="footer-left font-josefin">
-        <div>
-        <a href="/legal-notice#legalNoticeSection">{{ translate("footer.legalNotice") }}</a>
-        &nbsp;|&nbsp;
-        <a href="/privacy-police#privacyPoliceSection">{{ translate("footer.privacyPolicy") }}</a>
+<footer class="footer" *transloco="let translate">
+  <div class="footer__container">
+    <div class="footer__content">
+      <div class="footer__left font-josefin">
+        <div class="footer__links">
+          <a class="footer__link" href="/legal-notice#legalNoticeSection">{{ translate("footer.legalNotice") }}</a>
+          &nbsp;|&nbsp;
+          <a class="footer__link" href="/privacy-police#privacyPoliceSection">{{ translate("footer.privacyPolicy") }}</a>
         </div>
-        <p>&copy; Marcel Sörensen 2026</p>
+        <p class="footer__copyright">&copy; Marcel Sörensen 2026</p>
       </div>
 
-      <app-profile-logo class="profile-logo"></app-profile-logo>
+      <app-profile-logo class="footer__logo"></app-profile-logo>
 
-      <div class="footer-socials--desktop">
-        <a class="social-icon mail" href="#contactSection">
+      <div class="social social--desktop">
+        <a class="social__item social__item--mail" href="#contactSection">
           <img
-            class="social-icon-img social-icon-img--default"
+            class="social__img social__img--default"
             src="assets/icons/social/mail_dark.svg"
             alt="Mail"
           />
           <img
-            class="social-icon-img social-icon-img--hover"
+            class="social__img social__img--hover"
             src="assets/icons/social/mail_white.svg"
             alt="Mail Hover"
           />
         </a>
-        <a class="social-icon github" href="https://github.com/MarcelSoerensen" target="_blank" rel="noopener noreferrer">
+        <a class="social__item social__item--github" href="https://github.com/MarcelSoerensen" target="_blank" rel="noopener noreferrer">
           <img
-            class="social-icon-img social-icon-img--default"
+            class="social__img social__img--default"
             src="assets/icons/social/github_dark.svg"
             alt="GitHub"
           />
           <img
-            class="social-icon-img social-icon-img--hover"
+            class="social__img social__img--hover"
             src="assets/icons/social/github_white.svg"
             alt="GitHub Hover"
           />
         </a>
         <a
-          class="social-icon linkedin"
+          class="social__item social__item--linkedin"
           href="https://www.linkedin.com/in/marcel-s%C3%B6rensen-08b31836b/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
           <img
-            class="social-icon-img social-icon-img--default"
+            class="social__img social__img--default"
             src="assets/icons/social/linkedin_dark.svg"
             alt="LinkedIn"
           />
           <img
-            class="social-icon-img social-icon-img--hover"
+            class="social__img social__img--hover"
             src="assets/icons/social/linkedin_white.svg"
             alt="LinkedIn Hover"
           />
         </a>
       </div>
 
-      <div class="footer-socials--mobile">
-        <a class="social-icon mail" href="#contactSection">
+      <div class="social social--mobile">
+        <a class="social__item social__item--mail" href="#contactSection">
           <img
-            class="social-icon-img social-icon-img--default"
+            class="social__img social__img--default"
             src="assets/icons/social/mail_mobile.svg"
             alt="Mail"
           />
           <img
-            class="social-icon-img social-icon-img--hover"
+            class="social__img social__img--hover"
             src="assets/icons/social/mail_dark.svg"
             alt="Mail Hover"
           />
         </a>
-        <a class="social-icon github" href="https://github.com/MarcelSoerensen" target="_blank" rel="noopener noreferrer">
+        <a class="social__item social__item--github" href="https://github.com/MarcelSoerensen" target="_blank" rel="noopener noreferrer">
           <img
-            class="social-icon-img social-icon-img--default"
+            class="social__img social__img--default"
             src="assets/icons/social/github_mobile.svg"
             alt="GitHub"
           />
           <img
-            class="social-icon-img social-icon-img--hover"
+            class="social__img social__img--hover"
             src="assets/icons/social/github_dark.svg"
             alt="GitHub Hover"
           />
         </a>
         <a
-          class="social-icon linkedin"
+          class="social__item social__item--linkedin"
           href="https://www.linkedin.com/in/marcel-s%C3%B6rensen-08b31836b/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
           <img
-            class="social-icon-img social-icon-img--default"
+            class="social__img social__img--default"
             src="assets/icons/social/linkedin_mobile.svg"
             alt="LinkedIn"
           />
           <img
-            class="social-icon-img social-icon-img--hover"
+            class="social__img social__img--hover"
             src="assets/icons/social/linkedin_dark.svg"
             alt="LinkedIn Hover"
           />
