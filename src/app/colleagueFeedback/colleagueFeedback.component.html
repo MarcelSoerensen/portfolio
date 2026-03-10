@@ -1,7 +1,17 @@
 <div class="colleagues-feedback" *transloco="let translate">
-  <h2 class="font-josefin">{{ translate('colleagueFeedback.title') }}</h2>
+  <span class="colleagues-title">
+    <h2 class="colleagues-title1 font-josefin">
+      {{ translate("colleagueFeedback.title") }}
+    </h2>
+    <h2 class="colleagues-title2 font-josefin">
+      {{ translate("colleagueFeedback.title2") }}
+    </h2>
+  </span>
 
-  <div class="feedback-cards" [attr.aria-label]="translate('colleagueFeedback.ariaLabel')">
+  <div
+    class="feedback-cards"
+    [attr.aria-label]="translate('colleagueFeedback.ariaLabel')"
+  >
     <div class="feedback-card" *ngFor="let feedback of colleagueFeedbacks">
       <img
         class="feedback-card-background feedback-card-background--default"
@@ -19,16 +29,14 @@
       <div class="feedback-card-content font-josefin">
         <div class="feedback-card-name">{{ translate(feedback.nameKey) }}</div>
         <div class="feedback-card-project">
-          {{ translate('colleagueFeedback.projectLabel') }}
-          <span class="feedback-card-project-value">{{ translate(feedback.projectKey) }}</span>
+          <span class="feedback-card-project-value">{{
+            translate(feedback.projectKey)
+          }}</span>
         </div>
-        <div class="feedback-card-quote">“{{ translate(feedback.quoteKey) }}”</div>
-        <a
-          class="feedback-card-link"
-          [href]="feedback.linkedinUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          >{{ translate('colleagueFeedback.linkedinLabel') }}</a>
+        <div class="feedback-card-quote">
+          “{{ translate(feedback.quoteKey) }}”
+        </div>
+        
       </div>
     </div>
   </div>

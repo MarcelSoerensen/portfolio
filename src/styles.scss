@@ -161,3 +161,9 @@ h1 {
     background: rgba(148, 187, 214, 1);
   }
 }
+
+@media (max-width: 600px) {
+  h1 {
+  font-size: 32px;
+}
+}

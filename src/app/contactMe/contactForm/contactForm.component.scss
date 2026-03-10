@@ -222,38 +222,6 @@
 
 input::placeholder,
 textarea::placeholder {
-  opacity: 1;
+  opacity: 0;
   transition: opacity 0.2s;
-}
-
-@media (max-width: 1000px) {
-  .contact-form-fields {
-    margin-left: 6%;
-    margin-right: 6%;
-  }
-}
-
-@media (max-width: 900px) {
-  .contact-form-first-row {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .contact-form-third-row {
-    gap: 10px;
-  }
-  .contact-form-fourth-row {
-    margin-top: 0;
-  }
-  label {
-    display: none;
-  }
-  form {
-    gap: 20px !important;
-  }
-  input::placeholder,
-  textarea::placeholder {
-    opacity: 0;
-    color: #94bbd6;
-  }
 }

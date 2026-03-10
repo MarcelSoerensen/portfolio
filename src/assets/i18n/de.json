@@ -80,7 +80,8 @@
   },
 
   "colleagueFeedback": {
-    "title": "Teamplayer gesucht? Das sagen meine Kollegen über mich",
+    "title": "Teamplayer gesucht?",
+    "title2": "Das sagen meine Kollegen über mich",
     "ariaLabel": "Feedback von Kollegen",
     "projectLabel": "Projekt",
     "linkedinLabel": "LinkedIn",

@@ -1,5 +1,5 @@
-<app-landingPage></app-landingPage>
-<app-navbar></app-navbar>
+<app-landingPage [ngClass]="{'d-none': hideLandingAndNavbar}"></app-landingPage>
+<app-navbar [ngClass]="{'d-none': hideLandingAndNavbar}"></app-navbar>
 <app-dropDownMenu></app-dropDownMenu>
 <router-outlet></router-outlet>
 

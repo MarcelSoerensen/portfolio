@@ -48,3 +48,9 @@ a {
     color: rgba(156, 186, 211, 1);
   }
 }
+
+@media (max-width: 1000px) {
+  .legal-content {
+    padding-top: 50px;
+  }
+}

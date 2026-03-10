@@ -35,11 +35,13 @@ a {
     align-items: flex-start;
     justify-content: center;
     gap: 8px;
+    margin-top: 2%;
 
     > div a {
       font-size: 18px;
       font-weight: 400;
       transition: all 125ms ease-in-out;
+      margin: 0;
       &:hover {
         color: rgba(248, 245, 237, 1);
       }
@@ -141,6 +143,11 @@ a {
     display: flex;
     gap: 16px;
   }
+  p,a {
+    color: rgba(61, 75, 84, 1);
+    font-weight: 300 !important;
+    font-size: 18px !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -150,6 +157,7 @@ a {
 
   .footer-left {
     flex-direction: column !important;
-    gap: 4px !important;
+    align-items: center !important;
+    gap: 10px !important;
   }
 }

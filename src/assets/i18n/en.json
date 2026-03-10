@@ -80,7 +80,8 @@
   },
 
   "colleagueFeedback": {
-    "title": "Need a team player? Here’s what my colleagues said about me",
+    "title": "Need a team player?",
+    "title2": "Here’s what my colleagues said about me",
     "ariaLabel": "Colleague feedback",
     "projectLabel": "Project",
     "linkedinLabel": "LinkedIn",

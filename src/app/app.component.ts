@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { LandingPageComponent } from './landingPage/landingPage.component';
@@ -22,4 +23,14 @@ import { DropDownMenuComponent } from './dropDownMenu/dropDownMenu.component';
 })
 export class AppComponent {
   title = 'portfolio';
+  hideLandingAndNavbar = false;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        const url = event.urlAfterRedirects;
+        this.hideLandingAndNavbar = url.includes('legal-notice') || url.includes('privacy-police');
+      }
+    });
+  }
 }

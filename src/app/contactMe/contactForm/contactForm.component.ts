@@ -12,7 +12,7 @@ import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
   standalone: true,
   imports: [CommonModule, FormsModule, TranslocoModule, PrivacyOverlayComponent],
   templateUrl: './contactForm.component.html',
-  styleUrls: ['./contactForm.component.scss', './mailStatusBox.scss'],
+  styleUrls: ['./contactForm.component.scss', './mailStatusBox.scss', './contactFormMobile.component.scss'],
 })
 export class ContactFormComponent {
     mailStatus: 'success' | 'error' | null = null;
