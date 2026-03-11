@@ -9,7 +9,7 @@ import { NavigationComponent } from '../navigation/navigation.component';
 import { LanguageToggleComponent } from '../languageToggle/languageToggle.component';
 
 @Component({
-  selector: 'app-dropDownMenu',
+  selector: 'app-drop-down-menu',
   standalone: true,
   imports: [
     NgIf,
@@ -24,7 +24,7 @@ import { LanguageToggleComponent } from '../languageToggle/languageToggle.compon
 export class DropDownMenuComponent implements OnDestroy {
   menuOpen = false;
   isFadingOut = false;
-  menuIconSrc = '/assets/icons/mobile/menu_default.png';
+  menuIconSrc = '/assets/icons/mobile/menu_default.svg';
   selectedLanguage = this.activeLanguageService.getLanguage();
   activeSection = '';
   private langSub?: Subscription;
@@ -51,20 +51,20 @@ export class DropDownMenuComponent implements OnDestroy {
     if (this.menuOpen) {
       this.animateMenuIcon(
         [
-          '/assets/icons/mobile/menu_x_default.png',
-          '/assets/icons/mobile/menu_x_slide.png',
-          '/assets/icons/mobile/menu_slide.png',
-          '/assets/icons/mobile/menu_default.png',
+          '/assets/icons/mobile/menu_x_default.svg',
+          '/assets/icons/mobile/menu_x_slide.svg',
+          '/assets/icons/mobile/menu_slide.svg',
+          '/assets/icons/mobile/menu_default.svg',
         ],
         false,
       );
     } else {
       this.animateMenuIcon(
         [
-          '/assets/icons/mobile/menu_default.png',
-          '/assets/icons/mobile/menu_slide.png',
-          '/assets/icons/mobile/menu_x_slide.png',
-          '/assets/icons/mobile/menu_x_default.png',
+          '/assets/icons/mobile/menu_default.svg',
+          '/assets/icons/mobile/menu_slide.svg',
+          '/assets/icons/mobile/menu_x_slide.svg',
+          '/assets/icons/mobile/menu_x_default.svg',
         ],
         true,
       );
@@ -88,16 +88,23 @@ export class DropDownMenuComponent implements OnDestroy {
     this.iconAnimationTimeouts.forEach((t) => clearTimeout(t));
     this.iconAnimationTimeouts = [];
   }
+
   closeMenu() {
     this.menuOpen = false;
     this.isFadingOut = false;
-    this.menuIconSrc = '/assets/icons/mobile/menu_default.png';
+    this.menuIconSrc = '/assets/icons/mobile/menu_default.svg';
     this.clearIconAnimation();
   }
 
   onNavLinkClicked() {
     if (!this.isFadingOut) {
       this.isFadingOut = true;
+      this.animateMenuIcon([
+        '/assets/icons/mobile/menu_x_default.svg',
+        '/assets/icons/mobile/menu_x_slide.svg',
+        '/assets/icons/mobile/menu_slide.svg',
+        '/assets/icons/mobile/menu_default.svg',
+      ], false);
       setTimeout(() => {
         this.closeMenu();
       }, 300);
