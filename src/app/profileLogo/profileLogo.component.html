@@ -1,11 +1,11 @@
 <a href="#topSection" class="profile-logo">
   <div class="img-container">
-    <img src="assets/icons/logo_vector_dark.svg" alt="" />
+    <img [src]="logoSrc" alt="" [ngStyle]="imgColor ? {'filter': 'drop-shadow(0 0 0 ' + imgColor + ')', 'WebkitFilter': 'drop-shadow(0 0 0 ' + imgColor + ')'} : null" />
     <div class="curly-braces-logo">
       <img src="assets/icons/left_curly_brace.svg" alt="" />
       <img src="assets/icons/right_curly_brace.svg" alt="" />
     </div>
   </div>
   <h4 class="font-anta">M.Sörensen</h4>
-  <h5 class="font-josefin">developer</h5>
+  <h5 class="font-josefin" [ngStyle]="h5Color ? {'color': h5Color} : null">developer</h5>
 </a>

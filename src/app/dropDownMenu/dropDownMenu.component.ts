@@ -4,11 +4,12 @@ import { NgIf } from '@angular/common';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { ActiveLanguageService } from '../shared/active-language.service';
 import { NavigationService } from '../navigation.service';
+import { ProfileLogoComponent } from '../profileLogo/profileLogo.component';
 
 @Component({
   selector: 'app-dropDownMenu',
   standalone: true,
-  imports: [NgIf, TranslocoModule],
+  imports: [NgIf, TranslocoModule, ProfileLogoComponent],
   templateUrl: './dropDownMenu.component.html',
   styleUrls: ['./dropDownMenu.component.scss']
 })

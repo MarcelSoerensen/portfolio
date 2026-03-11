@@ -1,81 +1,73 @@
-<div class="mobile-hero-logo-bg">
-  <a class="mobile-hero-logo" href="#topSection">
-    <div class="img-container">
-      <img src="/assets/icons/logo_vector.svg" alt="" />
-      <div class="curly-braces-logo">
-        <img src="/assets/icons/left_curly_brace.svg" alt="" />
-        <img src="/assets/icons/right_curly_brace.svg" alt="" />
-      </div>
-    </div>
-    <h4 class="font-anta">M.Sörensen</h4>
-    <h5 class="font-josefin">developer</h5>
-  </a>
-</div>
-<button class="mobile-menu-btn" aria-label="Menü" (click)="toggleMenu()" [class.active]="menuOpen">
-  <img
-    class="menu-icon-img menu-icon-img--default"
-    [src]="menuOpen ? '/assets/icons/mobile/menu_x_default.png' : '/assets/icons/mobile/menu_default.png'"
-    alt="Menü Symbol"
-  />
-  <img
-    class="menu-icon-img menu-icon-img--hover"
-    [src]="menuOpen ? '/assets/icons/mobile/menu_x_hover.png' : '/assets/icons/mobile/menu_hover.png'"
-    alt="Menü Symbol (hover)"
-  />
-</button>
+<div class="dropdown">
+  <div class="dropdown__logo-bg">
+    <app-profile-logo [h5Color]="'rgb(148, 187, 214)'" [imgColor]="'rgb(148, 187, 214)'" [logoSrc]="'assets/icons/logo_vector.svg'"></app-profile-logo>
+  </div>
+  <button class="dropdown__menu-btn" aria-label="Menü" (click)="toggleMenu()" [class.dropdown__menu-btn--active]="menuOpen">
+    <img
+      class="dropdown__menu-icon dropdown__menu-icon--default"
+      [src]="menuOpen ? '/assets/icons/mobile/menu_x_default.png' : '/assets/icons/mobile/menu_default.png'"
+      alt="Menü Symbol"
+    />
+    <img
+      class="dropdown__menu-icon dropdown__menu-icon--hover"
+      [src]="menuOpen ? '/assets/icons/mobile/menu_x_hover.png' : '/assets/icons/mobile/menu_hover.png'"
+      alt="Menü Symbol (hover)"
+    />
+  </button>
 
-<div *ngIf="menuOpen" class="dropdown-bg" (click)="closeMenu()">
-  <img
-    class="dropdown-bg-img"
-    src="/assets/backgrounds/mobile/bg_ellipse_mobile.png"
-    alt="Dropdown Hintergrund"
-  />
-  <nav
-    class="dropdown-nav"
-    (click)="$event.stopPropagation()"
-    *transloco="let translate"
-  >
-    <a
-      class="dropdown-link font-josefin"
-      href="#whyMeSection"
-      [class.active]="activeSection === 'whyme'"
-      (click)="setActiveSection('whyme'); navigateToSection('whyme'); closeMenu()"
-      >{{ translate("navbar.whyMe") }}</a
+  <div *ngIf="menuOpen" class="dropdown__bg" (click)="closeMenu()">
+    <img
+      class="dropdown__bg-img"
+      src="/assets/backgrounds/mobile/bg_ellipse_mobile.png"
+      alt="Dropdown Hintergrund"
+    />
+    <nav
+      class="dropdown__nav"
+      (click)="$event.stopPropagation()"
+      *transloco="let translate"
     >
-    <a
-      class="dropdown-link font-josefin"
-      href="#skillsSection"
-      [class.active]="activeSection === 'skills'"
-      (click)="setActiveSection('skills'); navigateToSection('skills'); closeMenu()"
-      >{{ translate("navbar.skills") }}</a
-    >
-    <a
-      class="dropdown-link font-josefin"
-      href="#myProjectsSection"
-      [class.active]="activeSection === 'projects'"
-      (click)="setActiveSection('projects'); navigateToSection('projects'); closeMenu()"
-      >{{ translate("navbar.projects") }}</a
-    >
-    <a
-      class="dropdown-link font-josefin"
-      href="#contactSection"
-      [class.active]="activeSection === 'contact'"
-      (click)="setActiveSection('contact'); navigateToSection('contact'); closeMenu()"
-      >{{ translate("navbar.contact") }}</a
-    >
-    <div class="dropdown-languages">
-      <span
-        class="dropdown-language font-josefin"
-        [class.active]="selectedLanguage === 'de'"
-        (click)="setLanguage('de'); $event.stopPropagation()"
-        >DE</span
+      <a
+        class="dropdown__link font-josefin"
+        href="#whyMeSection"
+        [class.dropdown__link--active]="activeSection === 'whyme'"
+        (click)="setActiveSection('whyme'); navigateToSection('whyme'); closeMenu()"
+        >{{ translate("navbar.whyMe") }}</a
       >
-      <span
-        class="dropdown-language font-josefin"
-        [class.active]="selectedLanguage === 'en'"
-        (click)="setLanguage('en'); $event.stopPropagation()"
-        >EN</span
+      <a
+        class="dropdown__link font-josefin"
+        href="#skillsSection"
+        [class.dropdown__link--active]="activeSection === 'skills'"
+        (click)="setActiveSection('skills'); navigateToSection('skills'); closeMenu()"
+        >{{ translate("navbar.skills") }}</a
       >
-    </div>
-  </nav>
+      <a
+        class="dropdown__link font-josefin"
+        href="#myProjectsSection"
+        [class.dropdown__link--active]="activeSection === 'projects'"
+        (click)="setActiveSection('projects'); navigateToSection('projects'); closeMenu()"
+        >{{ translate("navbar.projects") }}</a
+      >
+      <a
+        class="dropdown__link font-josefin"
+        href="#contactSection"
+        [class.dropdown__link--active]="activeSection === 'contact'"
+        (click)="setActiveSection('contact'); navigateToSection('contact'); closeMenu()"
+        >{{ translate("navbar.contact") }}</a
+      >
+      <div class="dropdown-languages">
+        <span
+          class="dropdown-language font-josefin"
+          [class.active]="selectedLanguage === 'de'"
+          (click)="setLanguage('de'); $event.stopPropagation()"
+          >DE</span
+        >
+        <span
+          class="dropdown-language font-josefin"
+          [class.active]="selectedLanguage === 'en'"
+          (click)="setLanguage('en'); $event.stopPropagation()"
+          >EN</span
+        >
+      </div>
+    </nav>
+  </div>
 </div>
