@@ -87,8 +87,8 @@
     "linkedinLabel": "LinkedIn",
     "items": {
       "feedback1": {
-        "name": "Name des Kollegen",
-        "project": "Team-Chat App",
+        "name": "Team Mitglied",
+        "project": "Gruppenprojekt",
         "quote": "Marcel ist extrem zuverlässig, kommuniziert klar und liefert UI schnell, ohne Qualität zu verlieren. Ein super Teammate bei Reviews und Debugging."
       },
       "feedback2": {
@@ -97,7 +97,7 @@
         "quote": "Die Zusammenarbeit mit Marcel ist angenehm und professionell. Er findet schnell Lösungen und bringt eine ruhige, freundliche Art ins Team. Sehr zu empfehlen."
       },
       "feedback3": {
-        "name": "Name des Kollegen",
+        "name": "Team Mitglied",
         "project": "Gruppenprojekt",
         "quote": "Marcel ist proaktiv und sehr detailorientiert. Er erkennt Edge Cases früh und verbessert die UX mit smarten, einfachen Lösungen."
       }

@@ -1,13 +1,14 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 
 switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"): 
-        header("Access-Control-Allow-Origin: *");
-        header("Access-Control-Allow-Methods: POST");
-        header("Access-Control-Allow-Headers: content-type");
+        header('Content-Type: application/json');
+        http_response_code(200);
         exit;
         case("POST"): 
-            header("Access-Control-Allow-Origin: *");
             
             $json = file_get_contents('php://input');
             $params = json_decode($json);
@@ -27,7 +28,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
             $headers[] = "From: noreply@mywebsite.com";
 
-            mail($recipient, $subject, $message, implode("\r\n", $headers));
+            $mailSent = mail($recipient, $subject, $message, implode("\r\n", $headers));
             if ($language === 'en') {
                 $confirmSubject = "Your message has been received";
                 $confirmMessage = "Hello $name,<br><br>Thank you for your message! I will get back to you as soon as possible.<br><br>Best regards<br><br>Marcel Sörensen";
@@ -40,9 +41,18 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $confirmHeaders[] = 'Content-type: text/html; charset=utf-8';
             $confirmHeaders[] = "From: contact@marcel-soerensen.com";
 
-            mail($email, $confirmSubject, $confirmMessage, implode("\r\n", $confirmHeaders));
-            break;
+            $confirmMailSent = mail($email, $confirmSubject, $confirmMessage, implode("\r\n", $confirmHeaders));
+
+            header('Content-Type: application/json');
+            if ($mailSent && $confirmMailSent) {
+                echo json_encode(['success' => true]);
+            } else {
+                http_response_code(500);
+                echo json_encode(['success' => false, 'error' => 'Mailversand fehlgeschlagen']);
+            }
+            exit;
         default:
             header("Allow: POST", true, 405);
             exit;
+echo json_encode(['success' => true]);
     } 

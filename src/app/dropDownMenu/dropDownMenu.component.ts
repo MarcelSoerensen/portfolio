@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
@@ -7,6 +7,7 @@ import { NavigationService } from '../navigation.service';
 import { ProfileLogoComponent } from '../profileLogo/profileLogo.component';
 import { NavigationComponent } from '../navigation/navigation.component';
 import { LanguageToggleComponent } from '../languageToggle/languageToggle.component';
+
 
 @Component({
   selector: 'app-drop-down-menu',
@@ -21,7 +22,7 @@ import { LanguageToggleComponent } from '../languageToggle/languageToggle.compon
   templateUrl: './dropDownMenu.component.html',
   styleUrls: ['./dropDownMenu.component.scss'],
 })
-export class DropDownMenuComponent implements OnDestroy {
+export class DropDownMenuComponent implements OnInit, OnDestroy {
   menuOpen = false;
   isFadingOut = false;
   menuIconSrc = '/assets/icons/mobile/menu_default.svg';
@@ -35,6 +36,7 @@ export class DropDownMenuComponent implements OnDestroy {
     private translocoService: TranslocoService,
     private activeLanguageService: ActiveLanguageService,
     private navigationService: NavigationService,
+    private elRef: ElementRef,
   ) {
     this.langSub = this.activeLanguageService.language$.subscribe((lang) => {
       this.selectedLanguage = lang;
@@ -46,6 +48,23 @@ export class DropDownMenuComponent implements OnDestroy {
       },
     );
   }
+
+  ngOnInit(): void {
+    document.addEventListener('mousedown', this.handleDocumentClick);
+  }
+
+  ngOnDestroy(): void {
+    this.langSub?.unsubscribe();
+    this.sectionSub?.unsubscribe();
+    this.clearIconAnimation();
+    document.removeEventListener('mousedown', this.handleDocumentClick);
+  }
+
+  handleDocumentClick = (event: MouseEvent) => {
+    if (this.menuOpen && this.elRef && !this.elRef.nativeElement.contains(event.target)) {
+      this.closeMenu();
+    }
+  };
 
   toggleMenu() {
     if (this.menuOpen) {
@@ -73,13 +92,14 @@ export class DropDownMenuComponent implements OnDestroy {
 
   animateMenuIcon(frames: string[], open: boolean) {
     this.clearIconAnimation();
+    const interval = 20;
     frames.forEach((src, i) => {
       const timeout = setTimeout(() => {
         this.menuIconSrc = src;
         if (i === frames.length - 1) {
           this.menuOpen = open;
         }
-      }, i * 60);
+      }, i * interval);
       this.iconAnimationTimeouts.push(timeout);
     });
   }
@@ -118,10 +138,5 @@ export class DropDownMenuComponent implements OnDestroy {
   }
   navigateToSection(section: string) {
     this.navigationService.navigateToSection(section);
-  }
-  ngOnDestroy(): void {
-    this.langSub?.unsubscribe();
-    this.sectionSub?.unsubscribe();
-    this.clearIconAnimation();
   }
 }

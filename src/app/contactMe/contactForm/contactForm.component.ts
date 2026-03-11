@@ -57,7 +57,7 @@ export class ContactFormComponent {
     }
     this.privacyError = false;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
