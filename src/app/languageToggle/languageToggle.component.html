@@ -1,0 +1,14 @@
+<div class="languages" [ngClass]="small ? 'languages--small' : ''">
+  <span
+    class="languages__item font-josefin"
+    [ngClass]="{ active: selectedLanguage === 'de' }"
+    (click)="setLanguage('de')"
+    >DE</span
+  >
+  <span
+    class="languages__item font-josefin"
+    [ngClass]="{ active: selectedLanguage === 'en' }"
+    (click)="setLanguage('en')"
+    >EN</span
+  >
+</div>

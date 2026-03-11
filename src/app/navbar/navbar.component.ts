@@ -1,52 +1,39 @@
-import { Component, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NavigationComponent } from '../navigation/navigation.component';
+import { TranslocoModule } from '@jsverse/transloco';
 import { ProfileLogoComponent } from '../profileLogo/profileLogo.component';
-import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
+import { LanguageToggleComponent } from '../languageToggle/languageToggle.component';
 import { ActiveLanguageService } from '../shared/active-language.service';
-import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, ProfileLogoComponent, TranslocoModule],
+  imports: [
+    CommonModule,
+    NavigationComponent,
+    TranslocoModule,
+    ProfileLogoComponent,
+    LanguageToggleComponent,
+  ],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnDestroy {
-  activeSection = '';
-  selectedLanguage = this.activeLanguageService.getLanguage();
-  private langSub?: Subscription;
-  private sectionSub?: Subscription;
+export class NavbarComponent {
+  selectedLanguage = 'de';
+  private langSub;
 
-  constructor(
-    private translocoService: TranslocoService,
-    private activeLanguageService: ActiveLanguageService,
-    private router: Router,
-    private navigationService: NavigationService
-  ) {
-    this.langSub = this.activeLanguageService.language$.subscribe(lang => {
+  constructor(private activeLanguageService: ActiveLanguageService) {
+    this.langSub = this.activeLanguageService.language$.subscribe((lang) => {
       this.selectedLanguage = lang;
-      this.translocoService.setActiveLang(lang);
-    });
-    this.sectionSub = this.navigationService.activeSection$.subscribe(section => {
-      this.activeSection = section;
     });
   }
 
-  setLanguage(language: string) {
-    this.activeLanguageService.setLanguage(language);
+  setLanguage(lang: string) {
+    this.activeLanguageService.setLanguage(lang);
   }
-  setActiveSection(section: string) {
-    this.navigationService.setActiveSection(section);
-  }
-  navigateToSection(section: string) {
-    this.navigationService.navigateToSection(section);
-  }
-  
-  ngOnDestroy(): void {
+
+  ngOnDestroy() {
     this.langSub?.unsubscribe();
-    this.sectionSub?.unsubscribe();
   }
 }

@@ -1,73 +1,40 @@
 <div class="dropdown">
   <div class="dropdown__logo-bg">
-    <app-profile-logo [h5Color]="'rgb(148, 187, 214)'" [imgColor]="'rgb(148, 187, 214)'" [logoSrc]="'assets/icons/logo_vector.svg'"></app-profile-logo>
+    <app-profile-logo
+      [logoSrc]="'assets/icons/logo_vector.svg'"
+      [light]="true"
+    ></app-profile-logo>
   </div>
-  <button class="dropdown__menu-btn" aria-label="Menü" (click)="toggleMenu()" [class.dropdown__menu-btn--active]="menuOpen">
-    <img
-      class="dropdown__menu-icon dropdown__menu-icon--default"
-      [src]="menuOpen ? '/assets/icons/mobile/menu_x_default.png' : '/assets/icons/mobile/menu_default.png'"
-      alt="Menü Symbol"
-    />
-    <img
-      class="dropdown__menu-icon dropdown__menu-icon--hover"
-      [src]="menuOpen ? '/assets/icons/mobile/menu_x_hover.png' : '/assets/icons/mobile/menu_hover.png'"
-      alt="Menü Symbol (hover)"
-    />
+  <button
+    class="dropdown__menu-btn"
+    aria-label="Menü"
+    (click)="toggleMenu()"
+    [class.dropdown__menu-btn--active]="menuOpen"
+  >
+    <img class="dropdown__menu-icon" [src]="menuIconSrc" alt="Menü Symbol" />
   </button>
 
-  <div *ngIf="menuOpen" class="dropdown__bg" (click)="closeMenu()">
+  <div
+    *ngIf="menuOpen"
+    class="dropdown__bg"
+    [class.dropdown__bg--fade-out]="isFadingOut"
+    (click)="closeMenu()"
+  >
     <img
       class="dropdown__bg-img"
       src="/assets/backgrounds/mobile/bg_ellipse_mobile.png"
       alt="Dropdown Hintergrund"
     />
-    <nav
-      class="dropdown__nav"
-      (click)="$event.stopPropagation()"
-      *transloco="let translate"
-    >
-      <a
-        class="dropdown__link font-josefin"
-        href="#whyMeSection"
-        [class.dropdown__link--active]="activeSection === 'whyme'"
-        (click)="setActiveSection('whyme'); navigateToSection('whyme'); closeMenu()"
-        >{{ translate("navbar.whyMe") }}</a
-      >
-      <a
-        class="dropdown__link font-josefin"
-        href="#skillsSection"
-        [class.dropdown__link--active]="activeSection === 'skills'"
-        (click)="setActiveSection('skills'); navigateToSection('skills'); closeMenu()"
-        >{{ translate("navbar.skills") }}</a
-      >
-      <a
-        class="dropdown__link font-josefin"
-        href="#myProjectsSection"
-        [class.dropdown__link--active]="activeSection === 'projects'"
-        (click)="setActiveSection('projects'); navigateToSection('projects'); closeMenu()"
-        >{{ translate("navbar.projects") }}</a
-      >
-      <a
-        class="dropdown__link font-josefin"
-        href="#contactSection"
-        [class.dropdown__link--active]="activeSection === 'contact'"
-        (click)="setActiveSection('contact'); navigateToSection('contact'); closeMenu()"
-        >{{ translate("navbar.contact") }}</a
-      >
-      <div class="dropdown-languages">
-        <span
-          class="dropdown-language font-josefin"
-          [class.active]="selectedLanguage === 'de'"
-          (click)="setLanguage('de'); $event.stopPropagation()"
-          >DE</span
-        >
-        <span
-          class="dropdown-language font-josefin"
-          [class.active]="selectedLanguage === 'en'"
-          (click)="setLanguage('en'); $event.stopPropagation()"
-          >EN</span
-        >
-      </div>
-    </nav>
+    <div class="dropdown__nav" (click)="$event.stopPropagation()">
+      <app-navigation
+        [column]="true"
+        (linkClicked)="onNavLinkClicked()"
+      ></app-navigation>
+      <app-language-toggle
+        [selectedLanguage]="selectedLanguage"
+        [setLanguage]="setLanguage.bind(this)"
+        [small]="true"
+      ></app-language-toggle>
+    </div>
   </div>
 </div>

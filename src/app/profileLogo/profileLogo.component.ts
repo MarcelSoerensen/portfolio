@@ -9,8 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./profileLogo.component.scss']
 })
 export class ProfileLogoComponent {
-  @Input() h5Color: string | undefined;
-  @Input() imgColor: string | undefined;
   @Input() logoSrc: string = 'assets/icons/logo_vector_dark.svg';
+  @Input() light: boolean = false;
 
 }
