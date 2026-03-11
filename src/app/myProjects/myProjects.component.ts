@@ -55,9 +55,9 @@ export class MyProjectsComponent {
       organisationKey: 'myProjects.projects.project1.organisation',
       takeawaysKey: 'myProjects.projects.project1.takeaways',
       technologies: [
-        { name: 'HTML', iconSrc: '/assets/icons/skills/html.png' },
-        { name: 'JavaScript', iconSrc: '/assets/icons/skills/javascript.png' },
-        { name: 'SCSS', iconSrc: '/assets/icons/skills/css.png' },
+        { name: 'HTML', iconSrc: '/assets/icons/skills/html.svg' },
+        { name: 'JavaScript', iconSrc: '/assets/icons/skills/javascript.svg' },
+        { name: 'SCSS', iconSrc: '/assets/icons/skills/css.svg' },
       ],
       cover: { src: '/assets/cover/mad_scientist.png', alt: 'Cover Project 1' },
     },
@@ -75,10 +75,10 @@ export class MyProjectsComponent {
       organisationKey: 'myProjects.projects.project2.organisation',
       takeawaysKey: 'myProjects.projects.project2.takeaways',
       technologies: [
-        { name: 'HTML', iconSrc: '/assets/icons/skills/html.png' },
-        { name: 'JavaScript', iconSrc: '/assets/icons/skills/javascript.png' },
-        { name: 'CSS', iconSrc: '/assets/icons/skills/css.png' },
-        { name: 'Firebase', iconSrc: '/assets/icons/skills/firebase.png' },
+        { name: 'HTML', iconSrc: '/assets/icons/skills/html.svg' },
+        { name: 'JavaScript', iconSrc: '/assets/icons/skills/javascript.svg' },
+        { name: 'CSS', iconSrc: '/assets/icons/skills/css.svg' },
+        { name: 'Firebase', iconSrc: '/assets/icons/skills/firebase.svg' },
       ],
       cover: {
         src: '/assets/cover/join.png',
@@ -99,9 +99,9 @@ export class MyProjectsComponent {
       organisationKey: 'myProjects.projects.project3.organisation',
       takeawaysKey: 'myProjects.projects.project3.takeaways',
       technologies: [
-        { name: 'HTML', iconSrc: '/assets/icons/skills/html.png' },
-        { name: 'JavaScript', iconSrc: '/assets/icons/skills/javascript.png' },
-        { name: 'CSS', iconSrc: '/assets/icons/skills/css.png' },
+        { name: 'HTML', iconSrc: '/assets/icons/skills/html.svg' },
+        { name: 'JavaScript', iconSrc: '/assets/icons/skills/javascript.svg' },
+        { name: 'CSS', iconSrc: '/assets/icons/skills/css.svg' },
       ],
       cover: {
         src: '/assets/cover/pokedex.png',
@@ -122,7 +122,7 @@ export class MyProjectsComponent {
       organisationKey: 'myProjects.projects.project4.organisation',
       takeawaysKey: 'myProjects.projects.project4.takeaways',
       technologies: [
-        { name: 'TypeScript', iconSrc: '/assets/icons/skills/typescript.png' },
+        { name: 'TypeScript', iconSrc: '/assets/icons/skills/typescript.svg' },
       ],
       cover: {
         src: '',

@@ -26,20 +26,43 @@ section {
   justify-content: space-between;
   text-align: center;
   width: 100%;
+  gap: 32px;
 }
 
 .current-skills {
   width: 45%;
-  max-width: 409px;
+  max-width: 300px;
   height: 404px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  margin-top: 2%;
   margin-left: 13%;
+  gap: clamp(10px, 3vw, 40px);
   > img {
     width: auto;
     height: 100px;
   }
+  >.current-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: clamp(15px, 13vw, 60px);
+    gap: 16px;
+    >img {
+      max-width: auto;
+      height: 100%;
+    }
+    > p {
+      font-size: 16px;
+      font-weight: 300;
+      margin: 0;
+      word-wrap: break-word;
+      color: rgba(148, 187, 214, 1);
+    }
+  
+  }
+  
 }
 
 .currently-learning {

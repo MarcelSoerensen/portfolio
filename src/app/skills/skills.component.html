@@ -3,27 +3,21 @@
     <h1 class="font-anta">{{ translate('skills.title') }}</h1>
     <div class="skills-content">
       <div class="current-skills">
-        <img src="/assets/icons/skills/angular_skill.png" alt="" />
-        <img src="/assets/icons/skills/typescript_skill.png" alt="" />
-        <img src="/assets/icons/skills/javascript_skill.png" alt="" />
-        <img src="/assets/icons/skills/html_skill.png" alt="" />
-        <img src="/assets/icons/skills/css_skill.png" alt="" />
-        <img src="/assets/icons/skills/api_skill.png" alt="" />
-        <img src="/assets/icons/skills/firebase_skill.png" alt="" />
-        <img src="/assets/icons/skills/git_skill.png" alt="" />
-        <img src="/assets/icons/skills/materialdesign_skill.png" alt="" />
-        <img src="/assets/icons/skills/scrum_skill.png" alt="" />
+          <div class="current-skill font-josefin"*ngFor="let skill of skills">
+           <img [src]="skill.icon" [alt]="skill.label" />
+           <p>{{ skill.label }}</p>
+          </div>
       </div>
       <div class="currently-learning font-josefin">
         <img
           class="currently-learning-background currently-learning-background--default"
-          src="/assets/backgrounds/bg_skill_default.png"
+          src="/assets/backgrounds/bg_skill_default.svg"
           alt=""
           aria-hidden="true"
         />
         <img
           class="currently-learning-background currently-learning-background--hover"
-          src="/assets/backgrounds/bg_skill_hover.png"
+          src="/assets/backgrounds/bg_skill_hover.svg"
           alt=""
           aria-hidden="true"
         />
@@ -32,11 +26,11 @@
           <p class="currently-learning-description">{{ translate('skills.description') }}</p>
           <div class="currently-learning-symbols">
             <div class="currently-learning-symbol font-josefin">
-              <img src="/assets/icons/skills/python.png" alt="" />
+              <img src="/assets/icons/skills/python.svg" alt="" />
               <p>Python</p>
             </div>
             <div class="currently-learning-symbol font-josefin">
-              <img src="/assets/icons/skills/django.png" alt="" />
+              <img src="/assets/icons/skills/django.svg" alt="" />
               <p>Django</p>
             </div>
           </div>

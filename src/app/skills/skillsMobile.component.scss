@@ -10,15 +10,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: clamp(16px, 5vw, 32px);
+    gap: clamp(25px, 5vw, 32px);
     margin-left: 0;
     width: 90%;
-    max-width: clamp(250px, 80vw, 409px);
-    max-height: clamp(250px, 80vw, 404px);
-
-    > img {
-      height: clamp(70px, 20vw, 100px) !important;
-    }
+    max-width: clamp(270px, 70vw, 409px);
+    max-height: clamp(200px, 80vw, 404px); 
   }
 
   .currently-learning {
@@ -77,7 +73,7 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-    background: url("/assets/backgrounds/bg_skill_default.png") center/cover
+    background: url("/assets/backgrounds/bg_skill_default.svg") center/cover
       no-repeat;
     opacity: 1;
     border-radius: 16px;
@@ -88,6 +84,14 @@
   .currently-learning-symbols > * {
     position: relative;
     z-index: 2;
+  }
+}
+
+@media (max-width: 540px) {
+.current-skill {
+    >p {
+      display: none;
+    }
   }
 }
 
