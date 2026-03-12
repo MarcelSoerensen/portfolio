@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { PageEffectsService } from '../../shared/PageEffectsService';
+import { ContactFormStateService } from './contact-form-state.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -39,7 +40,10 @@ export class ContactFormComponent {
     private router: Router,
     private route: ActivatedRoute,
     private pageEffects: PageEffectsService,
-  ) {}
+    private formState: ContactFormStateService,
+  ) {
+    this.contactData = this.formState.getFormData();
+  }
 
   navigateToPrivacy() {
     this.pageEffects.navigateAndSmoothScroll(
@@ -58,12 +62,11 @@ export class ContactFormComponent {
     message: string;
     privacyChecked: boolean;
     language?: string;
-  } = {
-    name: '',
-    email: '',
-    message: '',
-    privacyChecked: false,
-  };
+  } = this.formState.getFormData();
+  // Bei jeder Änderung im Formular speichern
+  onInputChange() {
+    this.formState.setFormData(this.contactData);
+  }
 
   privacyError = false;
 
@@ -81,6 +84,7 @@ export class ContactFormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
+    this.formState.setFormData(this.contactData);
     this.contactData.language = this.translocoService.getActiveLang();
     if (!this.contactData.privacyChecked) {
       this.privacyError = true;

@@ -22,6 +22,7 @@
           <input
             #name="ngModel"
             [(ngModel)]="contactData.name"
+            (ngModelChange)="onInputChange()"
             type="text"
             id="name"
             name="name"
@@ -58,6 +59,7 @@
           <input
             #email="ngModel"
             [(ngModel)]="contactData.email"
+            (ngModelChange)="onInputChange()"
             type="email"
             id="email"
             name="email"
@@ -95,6 +97,7 @@
           <textarea
             #message="ngModel"
             [(ngModel)]="contactData.message"
+            (ngModelChange)="onInputChange()"
             id="message"
             name="message"
             required
@@ -126,6 +129,7 @@
       >
         <input
           [(ngModel)]="contactData.privacyChecked"
+          (ngModelChange)="onInputChange()"
           name="privacyChecked"
           type="checkbox"
           class="privacy-checkbox-input"
