@@ -92,7 +92,7 @@ export class DropDownMenuComponent implements OnInit, OnDestroy {
 
   animateMenuIcon(frames: string[], open: boolean) {
     this.clearIconAnimation();
-    const interval = 70;
+    const interval = 75;
     frames.forEach((src, i) => {
       const timeout = setTimeout(() => {
         this.menuIconSrc = src.replace(/^\/?assets\//, 'assets/');
