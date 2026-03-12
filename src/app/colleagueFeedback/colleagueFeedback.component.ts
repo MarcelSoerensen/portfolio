@@ -1,4 +1,4 @@
-import { AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
@@ -23,12 +23,16 @@ export class ColleagueFeedbackComponent implements AfterViewInit {
   @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
   showLeftScrollIndicator = false;
   showRightScrollIndicator = false;
+  constructor(private cd: ChangeDetectorRef) {}
+
   ngAfterViewInit() {
-    this.updateScrollIndicator();
-    if (this.scrollContainer) {
-      this.scrollContainer.nativeElement.addEventListener('scroll', () => this.updateScrollIndicator());
-      window.addEventListener('resize', () => this.updateScrollIndicator());
-    }
+    setTimeout(() => {
+      this.updateScrollIndicator();
+      if (this.scrollContainer) {
+        this.scrollContainer.nativeElement.addEventListener('scroll', () => this.updateScrollIndicator());
+        window.addEventListener('resize', () => this.updateScrollIndicator());
+      }
+    });
   }
 
   updateScrollIndicator() {

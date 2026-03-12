@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationService } from '../shared/navigation.service';
-import { ActiveLanguageService } from '../shared/active-language.service';
+import { ActiveLanguageService } from '../shared/activeLanguage.service';
 import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({

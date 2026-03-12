@@ -4,7 +4,7 @@ import { NavigationComponent } from '../navigation/navigation.component';
 import { TranslocoModule } from '@jsverse/transloco';
 import { ProfileLogoComponent } from '../profileLogo/profileLogo.component';
 import { LanguageToggleComponent } from '../languageToggle/languageToggle.component';
-import { ActiveLanguageService } from '../shared/active-language.service';
+import { ActiveLanguageService } from '../shared/activeLanguage.service';
 
 @Component({
   selector: 'app-navbar',

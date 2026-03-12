@@ -1,3 +1,5 @@
+@import '../styles/arrowButtons.scss';
+
 section {
   width: 100%;
   margin: 0;
@@ -24,36 +26,6 @@ section {
   margin-right: 6%;
   > .freespace {
     width: clamp(24px, 3.5vw, 38px);
-  }
-}
-
-.arrow-up--mobile {
-  display: none;
-}
-
-.arrow-up {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: clamp(24px, 3.5vw, 38px);
-  height: clamp(40px, 10vw, 89px);
-  cursor: pointer;
-  border: 1px solid rgba(148, 187, 214, 1);
-  border-radius: 50px;
-  transition: opacity 150ms ease-in-out;
-  &:hover {
-    background-color: rgba(64, 70, 74, 1);
-  }
-  &:active {
-    background-color: rgba(64, 70, 74, 0.3);
-  }
-  > .arrow-up-img {
-    position: absolute;
-    width: 70%;
-    height: 50%;
-    object-fit: contain;
-    
   }
 }
 
@@ -150,18 +122,6 @@ section {
   .contact-intro {
     margin-left: 6%;
     margin-right: 6%;
-  }
-  .arrow-up {
-    width: 38px;
-    height: 89px !important;
-  }
-  .arrow-up--desktop {
-    display: none;
-  }
-  .arrow-up--mobile {
-    display: flex;
-    justify-content: center;
-    width: 100%;
   }
 }
 

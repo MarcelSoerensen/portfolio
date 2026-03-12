@@ -25,7 +25,7 @@
       <app-profile-logo class="footer__logo"></app-profile-logo>
 
       <div class="social social--desktop">
-        <a class="social__item social__item--mail" href="#contactSection">
+        <a class="social__item social__item--mail" (click)="goToContact()" tabindex="0">
           <img
             class="social__img social__img--default"
             src="assets/icons/social/mail_dark.svg"

@@ -2,7 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
-import { ActiveLanguageService } from '../shared/active-language.service';
+import { ActiveLanguageService } from '../shared/activeLanguage.service';
 import { NavigationService } from '../shared/navigation.service';
 import { ProfileLogoComponent } from '../profileLogo/profileLogo.component';
 import { NavigationComponent } from '../navigation/navigation.component';
@@ -96,7 +96,6 @@ export class DropDownMenuComponent implements OnInit, OnDestroy {
     frames.forEach((src, i) => {
       const timeout = setTimeout(() => {
         this.menuIconSrc = src.replace(/^\/?assets\//, 'assets/');
-        console.log('Set menuIconSrc:', this.menuIconSrc);
         if (i === frames.length - 1) {
           this.menuOpen = open;
         }

@@ -4,7 +4,7 @@ import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
-import { PageEffectsService } from '../../shared/PageEffectsService';
+import { PageEffectsService } from '../../shared/pageEffectsService';
 import { ContactFormStateService } from './contact-form-state.service';
 
 @Component({

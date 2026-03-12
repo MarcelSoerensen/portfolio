@@ -96,22 +96,23 @@
 .contact-form-third-row {
   display: flex;
   align-items: center;
-  gap: 0px;
+  gap: 8px;
   margin-top: 8px;
 }
 
 .contact-form-fourth-row {
   display: flex;
   justify-content: flex-end;
-  margin-top: -32px;
+  margin-top: -32px; 
 }
 
 .privacy-checkbox {
   display: inline-flex;
   align-items: flex-start;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
+  top: -12px;
   cursor: pointer;
   position: relative;
 }
@@ -129,7 +130,6 @@
   object-fit: contain;
   position: absolute;
   left: 0;
-  top: -10px;
   right: 0;
   bottom: 0;
   transition: all 150ms ease-in-out;
