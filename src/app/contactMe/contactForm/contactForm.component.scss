@@ -22,8 +22,8 @@
 
   > label {
     margin-left: 30px;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 300;
     color: rgba(148, 187, 214, 1);
     transition: color 0.2s;
   }
@@ -172,15 +172,18 @@
 .privacy-checkbox.error .privacy-checkbox-img--default {
   opacity: 0;
 }
-.privacy-checkbox.error .privacy-checkbox-img--hover {
-  opacity: 0;
-}
 .privacy-checkbox.error .privacy-checkbox-img--checked {
   opacity: 0;
 }
+.privacy-checkbox.error:hover .privacy-checkbox-img--error {
+  opacity: 0;
+}
+.privacy-checkbox.error:hover .privacy-checkbox-img--hover {
+  opacity: 1;
+}
 
 .privacy-error-label {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .privacy-checkbox-text {
@@ -191,17 +194,22 @@
   gap: 8px;
   margin-top: -3px;
   height: 40px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 300;
   line-height: 1.3;
   color: rgba(235, 237, 234, 1);
   user-select: none;
 }
 
 .privacy-link {
+  background-color: transparent;
+  border: none;
+  padding: 0;
   color: rgb(148, 187, 214);
-  text-decoration: none;
   cursor: pointer;
   transition: color 150ms;
+  font-size: 16px;
+  font-weight: 300;
 
   &:hover {
     color: rgba(148, 187, 214, 0.5);

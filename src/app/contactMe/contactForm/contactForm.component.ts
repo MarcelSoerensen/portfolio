@@ -1,25 +1,56 @@
-
 import { HttpClient } from '@angular/common/http';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
-import { PrivacyOverlayComponent } from '../../legalAndPrivacy/privacyPoliceOverlay/privacyOverlay.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
-
+import { PageEffectsService } from '../../shared/PageEffectsService';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslocoModule, PrivacyOverlayComponent],
+  imports: [CommonModule, FormsModule, TranslocoModule],
   templateUrl: './contactForm.component.html',
-  styleUrls: ['./contactForm.component.scss', './mailStatusBox.scss', './contactFormMobile.component.scss'],
+  styleUrls: [
+    './contactForm.component.scss',
+    './mailStatusBox.scss',
+    './contactFormMobile.component.scss',
+  ],
 })
 export class ContactFormComponent {
-    mailStatus: 'success' | 'error' | null = null;
-    mailStatusText: string = '';
-    mailStatusTimeout: any;
-    privacyOverlayVisible = false;
-  constructor(private http: HttpClient, private translocoService: TranslocoService) {}
+  shouldShowPrivacyError(form: NgForm): boolean {
+    if (!form) return false;
+    const controls = form.controls;
+    if (!controls['name'] || !controls['email'] || !controls['message'])
+      return false;
+    const nameValid = controls['name'].valid;
+    const emailValid = controls['email'].valid;
+    const messageValid = controls['message'].valid;
+    return (
+      nameValid &&
+      emailValid &&
+      messageValid &&
+      !this.contactData.privacyChecked
+    );
+  }
+  constructor(
+    private http: HttpClient,
+    private translocoService: TranslocoService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private pageEffects: PageEffectsService,
+  ) {}
+
+  navigateToPrivacy() {
+    this.pageEffects.navigateAndSmoothScroll(
+      '/privacy-police',
+      'privacyPoliceSection',
+    );
+  }
+  mailStatus: 'success' | 'error' | null = null;
+  mailStatusText: string = '';
+  mailStatusTimeout: any;
+  privacyOverlayVisible = false;
 
   contactData: {
     name: string;
@@ -57,21 +88,38 @@ export class ContactFormComponent {
     }
     this.privacyError = false;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+      this.http
+        .post(
+          this.post.endPoint,
+          this.post.body(this.contactData),
+          this.post.options,
+        )
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
-            this.showMailStatus('success', this.translocoService.translate('contactForm.successMessage') || 'Nachricht erfolgreich gesendet!');
+            this.showMailStatus(
+              'success',
+              this.translocoService.translate('contactForm.successMessage') ||
+                'Nachricht erfolgreich gesendet!',
+            );
           },
           error: (error) => {
             console.error(error);
-            this.showMailStatus('error', this.translocoService.translate('contactForm.errorMessage') || 'Fehler beim Senden!');
+            this.showMailStatus(
+              'error',
+              this.translocoService.translate('contactForm.errorMessage') ||
+                'Fehler beim Senden!',
+            );
           },
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
-      this.showMailStatus('success', this.translocoService.translate('contactForm.successMessage') || 'Nachricht erfolgreich gesendet!');
+      this.showMailStatus(
+        'success',
+        this.translocoService.translate('contactForm.successMessage') ||
+          'Nachricht erfolgreich gesendet!',
+      );
     }
   }
 
@@ -83,4 +131,4 @@ export class ContactFormComponent {
       this.mailStatus = null;
     }, 3000);
   }
-  }
+}

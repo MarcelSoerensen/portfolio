@@ -33,8 +33,10 @@
     font-size: 18px;
     font-weight: 400;
     transition: color 125ms;
+    background-color: transparent;
+    border: none;
     color: rgba(61, 75, 84, 1);
-    text-decoration: none;
+    padding: 0;
     &:hover {
       color: rgba(248, 245, 237, 1);
     }

@@ -3,9 +3,21 @@
     <div class="footer__content">
       <div class="footer__left font-josefin">
         <div class="footer__links">
-          <a class="footer__link" href="/legal-notice#legalNoticeSection">{{ translate("footer.legalNotice") }}</a>
+          <button
+            class="footer__link font-josefin"
+            type="button"
+            (click)="navigateToLegal()"
+          >
+            {{ translate("footer.legalNotice") }}
+          </button>
           &nbsp;|&nbsp;
-          <a class="footer__link" href="/privacy-police#privacyPoliceSection">{{ translate("footer.privacyPolicy") }}</a>
+          <button
+            class="footer__link font-josefin"
+            type="button"
+            (click)="navigateToPrivacy()"
+          >
+            {{ translate("footer.privacyPolicy") }}
+          </button>
         </div>
         <p class="footer__copyright">&copy; Marcel Sörensen 2026</p>
       </div>
@@ -25,7 +37,12 @@
             alt="Mail Hover"
           />
         </a>
-        <a class="social__item social__item--github" href="https://github.com/MarcelSoerensen" target="_blank" rel="noopener noreferrer">
+        <a
+          class="social__item social__item--github"
+          href="https://github.com/MarcelSoerensen"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             class="social__img social__img--default"
             src="assets/icons/social/github_dark.svg"
@@ -70,7 +87,12 @@
             alt="Mail Hover"
           />
         </a>
-        <a class="social__item social__item--github" href="https://github.com/MarcelSoerensen" target="_blank" rel="noopener noreferrer">
+        <a
+          class="social__item social__item--github"
+          href="https://github.com/MarcelSoerensen"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             class="social__img social__img--default"
             src="assets/icons/social/github_mobile.svg"

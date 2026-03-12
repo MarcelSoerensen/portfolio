@@ -1,6 +1,9 @@
 <div class="contact-form-fields" *transloco="let translate">
-  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" style="position: relative;">
-    
+  <form
+    (ngSubmit)="onSubmit(contactForm)"
+    #contactForm="ngForm"
+    style="position: relative"
+  >
     <div class="contact-form-first-row">
       <div class="input-field-layout">
         <label
@@ -88,7 +91,7 @@
               : translate("contactForm.messageLabel")
           }}
         </label>
-        <div class="input-icon-wrapper" style="position: relative;">
+        <div class="input-icon-wrapper" style="position: relative">
           <textarea
             #message="ngModel"
             [(ngModel)]="contactData.message"
@@ -106,7 +109,11 @@
             alt="done"
             [class.visible]="message.valid && contactData.message"
           />
-          <div *ngIf="mailStatus" class="mail-status-box" [ngClass]="mailStatus">
+          <div
+            *ngIf="mailStatus"
+            class="mail-status-box"
+            [ngClass]="mailStatus"
+          >
             <p>{{ mailStatusText }}</p>
           </div>
         </div>
@@ -115,7 +122,7 @@
     <div class="contact-form-third-row">
       <label
         class="privacy-checkbox"
-        [class.error]="privacyError && !contactData.privacyChecked"
+        [class.error]="shouldShowPrivacyError(contactForm)"
       >
         <input
           [(ngModel)]="contactData.privacyChecked"
@@ -145,101 +152,39 @@
             class="privacy-checkbox-img privacy-checkbox-img--error"
             src="assets/icons/controls/checkbox_error.svg"
             alt="Checkbox error"
+            [class.visible]="shouldShowPrivacyError(contactForm)"
           />
         </span>
       </label>
       <div class="privacy-checkbox-text">
         <div>
           <span [innerHTML]="translate('contactForm.privacyTextLeft')"></span>
-          <a href="#" class="privacy-link" (click)="$event.preventDefault(); privacyOverlayVisible = true">
-            {{ translate("contactForm.privacyLink") }}</a>
+          <button
+            class="privacy-link font-josefin"
+            type="button"
+            (click)="navigateToPrivacy()"
+          >
+            {{ translate("footer.privacyPolicy") }}
+          </button>
           <span [innerHTML]="translate('contactForm.privacyTextRight')"></span>
         </div>
-        <label
+        <div
           class="privacy-error-label"
-          [class.input-error]="privacyError && !contactData.privacyChecked"
+          [class.input-error]="shouldShowPrivacyError(contactForm)"
+          *ngIf="shouldShowPrivacyError(contactForm)"
         >
-          {{
-            privacyError && !contactData.privacyChecked
-              ? translate("contactForm.privacyRequired")
-              : ""
-          }}
-        </label>
+          {{ translate("contactForm.privacyRequired") }}
+        </div>
       </div>
     </div>
     <div class="contact-form-fourth-row">
-      <button type="submit" class="base-button base-button-outline" [disabled]="!contactForm.valid">
+      <button
+        type="submit"
+        class="base-button base-button-outline"
+        [disabled]="!contactForm.valid"
+      >
         {{ translate("contactForm.send") }}
       </button>
     </div>
   </form>
 </div>
-
-<app-privacy-overlay [visible]="privacyOverlayVisible" (closed)="privacyOverlayVisible = false">
-  <div class="legal-content font-josefin" *transloco="let translate">
-    <h1>{{ translate('privacyPolice.title') }}</h1>
-    <br />
-    <h2>{{ translate('privacyPolice.responsibleTitle') }}</h2>
-    <ul>
-      <li>Marcel Sörensen</li>
-      <li>Schloßallee 45</li>
-      <li>13156 Berlin</li>
-      <li>
-        E-Mail:
-        <a href="mailto:contact@marcel-soerensen.com">
-          contact&#64;marcel-soerensen.com
-        </a>
-      </li>
-      <li>{{ translate('privacyPolice.phoneLabel') }}
-        <a href="tel:+4917631055989">
-          +49 176 31055989
-        </a>
-      </li>
-    </ul>
-    <br />
-    <h2>{{ translate('privacyPolice.rightsTitle') }}</h2>
-    <ul>
-      <li>{{ translate('privacyPolice.right1') }}</li>
-      <li>{{ translate('privacyPolice.right2') }}</li>
-      <li>{{ translate('privacyPolice.right3') }}</li>
-      <li>{{ translate('privacyPolice.right4') }}</li>
-      <li>{{ translate('privacyPolice.right5') }}</li>
-      <li>{{ translate('privacyPolice.right6') }}</li>
-    </ul>
-    <p>{{ translate('privacyPolice.withdrawal') }}</p>
-    <p>{{ translate('privacyPolice.authority') }}</p>
-    <br />
-    <h2>{{ translate('privacyPolice.processingTitle') }}</h2>
-    <h3>{{ translate('privacyPolice.logfilesTitle') }}</h3>
-    <ul>
-      <li>{{ translate('privacyPolice.logfile1') }}</li>
-      <li>{{ translate('privacyPolice.logfile2') }}</li>
-      <li>{{ translate('privacyPolice.logfile3') }}</li>
-      <li>{{ translate('privacyPolice.logfile4') }}</li>
-    </ul>
-    <p>{{ translate('privacyPolice.logfilesDuration') }}</p>
-    <br />
-    <h3>{{ translate('privacyPolice.contactTitle') }}</h3>
-    <ul>
-      <li>{{ translate('privacyPolice.contact1') }}</li>
-      <li>{{ translate('privacyPolice.contact2') }}</li>
-    </ul>
-    <br />
-    <h2>{{ translate('privacyPolice.objectionTitle') }}</h2>
-    <p>{{ translate('privacyPolice.objectionText') }}</p>
-    <ul>
-      <li>
-        {{ translate('privacyPolice.objectionContact') }}
-        E-Mail:
-        <a href="mailto:contact@marcel-soerensen.com">contact&#64;marcel-soerensen.com</a>
-        {{ translate('privacyPolice.phoneLabel') }}
-        <a href="tel:+4917631055989">+49 176 31055989</a>
-      </li>
-    </ul>
-    <br />
-    <h2>{{ translate('privacyPolice.questionsTitle') }}</h2>
-    <p>{{ translate('privacyPolice.questionsText') }}</p>
-    <br />
-    <p>{{ translate('privacyPolice.footer') }}</p>
-  </div>
-</app-privacy-overlay>

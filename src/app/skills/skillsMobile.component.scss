@@ -58,6 +58,9 @@
   .skills-button-container {
     margin-top: 24px;
     margin-bottom: -2%;
+    >a {
+      text-decoration: none;
+    }
   }
 
   .currently-learning-background {
