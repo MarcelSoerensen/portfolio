@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { ActiveLanguageService } from '../shared/active-language.service';
-import { NavigationService } from '../navigation.service';
+import { NavigationService } from '../shared/navigation.service';
 import { ProfileLogoComponent } from '../profileLogo/profileLogo.component';
 import { NavigationComponent } from '../navigation/navigation.component';
 import { LanguageToggleComponent } from '../languageToggle/languageToggle.component';

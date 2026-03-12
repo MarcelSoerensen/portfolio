@@ -6,7 +6,7 @@ import {
   EventEmitter,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavigationService } from '../navigation.service';
+import { NavigationService } from '../shared/navigation.service';
 import { ActiveLanguageService } from '../shared/active-language.service';
 import { TranslocoModule } from '@jsverse/transloco';
 
