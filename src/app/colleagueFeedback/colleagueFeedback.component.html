@@ -8,11 +8,13 @@
     </h2>
   </span>
 
-  <div
-    class="feedback-cards"
-    [attr.aria-label]="translate('colleagueFeedback.ariaLabel')"
-  >
-    <div class="feedback-card" *ngFor="let feedback of colleagueFeedbacks">
+  <div class="feedback-cards-wrapper" style="position: relative; width: 100%;">
+    <div
+      class="feedback-cards"
+      [attr.aria-label]="translate('colleagueFeedback.ariaLabel')"
+      #scrollContainer
+    >
+      <div class="feedback-card" *ngFor="let feedback of colleagueFeedbacks">
       <img
         class="feedback-card-background feedback-card-background--default"
         [src]="feedback.backgroundDefaultSrc"
@@ -39,5 +41,8 @@
         
       </div>
     </div>
+    </div>
+    <div class="scroll-indicator left" *ngIf="showLeftScrollIndicator"></div>
+    <div class="scroll-indicator right" *ngIf="showRightScrollIndicator"></div>
   </div>
 </div>

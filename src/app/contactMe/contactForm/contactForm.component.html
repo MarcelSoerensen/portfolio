@@ -167,7 +167,7 @@
       </div>
     </div>
     <div class="contact-form-fourth-row">
-      <button type="submit" class="base-button base-button-outline">
+      <button type="submit" class="base-button base-button-outline" [disabled]="!contactForm.valid">
         {{ translate("contactForm.send") }}
       </button>
     </div>

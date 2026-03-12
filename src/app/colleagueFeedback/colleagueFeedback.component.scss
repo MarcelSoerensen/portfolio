@@ -27,6 +27,7 @@ h2 {
 }
 
 .feedback-cards {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -136,6 +137,60 @@ h2 {
   opacity: 0.8;
 }
 
+.scroll-indicator.left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 35px;
+  height: 25%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  pointer-events: none;
+  background: rgba(148, 187, 214, 0.5);
+  z-index: 10;
+}
+
+.scroll-indicator.left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid rgba(148, 187, 214, 0.9);
+}
+
+.scroll-indicator.right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 35px;
+  height: 25%;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  pointer-events: none;
+  background: rgba(148, 187, 214, 0.5);
+  z-index: 10;
+}
+
+.scroll-indicator.right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid rgba(148, 187, 214, 0.9);
+}
+
 @media (max-width: 1000px) {
   .colleagues-title1 {
     margin-top: 72px;
@@ -148,9 +203,9 @@ h2 {
     margin-top: 0px;
     margin-bottom: 40px;
     color: rgba(235, 237, 234, 1);
-	font-size: 20px;
+    font-size: 20px;
   }
-  
+
   .colleagues-title {
     flex-direction: column;
     gap: 0px;

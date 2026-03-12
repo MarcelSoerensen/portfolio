@@ -59,7 +59,7 @@ export class MyProjectsComponent {
         { name: 'JavaScript', iconSrc: '/assets/icons/skills/javascript.svg' },
         { name: 'SCSS', iconSrc: '/assets/icons/skills/css.svg' },
       ],
-      cover: { src: '/assets/cover/mad_scientist.png', alt: 'Cover Project 1' },
+      cover: { src: '/assets/cover/mad_scientist.webp', alt: 'Cover Project 1' },
     },
     {
       id: 'project-2',
@@ -81,7 +81,7 @@ export class MyProjectsComponent {
         { name: 'Firebase', iconSrc: '/assets/icons/skills/firebase.svg' },
       ],
       cover: {
-        src: '/assets/cover/join.png',
+        src: '/assets/cover/join.webp',
         alt: 'Cover Project 2',
       },
     },
@@ -104,7 +104,7 @@ export class MyProjectsComponent {
         { name: 'CSS', iconSrc: '/assets/icons/skills/css.svg' },
       ],
       cover: {
-        src: '/assets/cover/pokedex.png',
+        src: '/assets/cover/pokedex.webp',
         alt: 'Cover Project 3',
       },
     },
