@@ -1,5 +1,5 @@
-@import '../styles/arrowButtons.scss';
-@import '../styles/socials.scss';
+@use '../styles/_arrows.scss';
+@use '../styles/_socials.scss';
 
 section {
   display: block;
@@ -122,14 +122,6 @@ h5 {
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 0;
-}
-
-.hero-socials {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: clamp(8px, 1vw, 20px);
 }
 
 .portrait-image-mobile {

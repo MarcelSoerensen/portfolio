@@ -1,0 +1,134 @@
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: clamp(24px, 3.5vw, 38px);
+  height: clamp(40px, 10vw, 89px);
+  cursor: pointer;
+  border: 1px solid rgba(148, 187, 214, 1);
+  border-radius: 50px;
+  transition: opacity 150ms ease-in-out;
+
+  &:hover {
+    background-color: rgba(64, 70, 74, 1);
+  }
+  &:active {
+    background-color: rgba(64, 70, 74, 0.3);
+  }
+  
+  &__img {
+    position: absolute;
+    width: 70%;
+    height: 50%;
+    object-fit: contain;
+  }
+  &--down {
+    margin-top: clamp(0px, 12vw, 200px);
+    bottom: 5vw;
+    animation: arrow-down-bounce 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation-delay: 0s;
+    will-change: transform, background-color;
+  }
+  &--up {
+    animation: arrow-up-bounce 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation-delay: 0s;
+    will-change: transform, background-color;
+  }
+}
+
+@keyframes arrow-down-bounce {
+  0% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+  8% {
+    transform: translateY(12px);
+    background-color: transparent;
+  }
+  16% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+  25% {
+    transform: translateY(12px);
+    background-color: rgba(64, 70, 74, 1);
+  }
+  33% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+  41% {
+    transform: translateY(12px);
+    background-color: transparent;
+  }
+  49% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+  100% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+}
+
+@keyframes arrow-up-bounce {
+  0% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+  8% {
+    transform: translateY(-12px);
+    background-color: transparent;
+  }
+  16% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+  25% {
+    transform: translateY(-12px);
+    background-color: rgba(64, 70, 74, 1);
+  }
+  33% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+  41% {
+    transform: translateY(-12px);
+    background-color: transparent;
+  }
+  49% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+  100% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
+}
+
+.arrow-up--mobile {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .contact-first-row {
+    justify-content: center;
+  }
+  .contact-intro {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  .arrow {
+    width: 38px !important;
+    height: 89px !important;
+  }
+  .arrow-up--desktop {
+    display: none;
+  }
+  .arrow-up--mobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
