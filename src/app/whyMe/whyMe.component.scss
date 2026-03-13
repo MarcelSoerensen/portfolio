@@ -112,6 +112,10 @@ a {
 }
 
 @media (max-width: 1000px) {
+section {
+  scroll-margin-top: 0px !important;
+}
+
   .why-me-container {
     > .why-me-content {
       flex-direction: column;
