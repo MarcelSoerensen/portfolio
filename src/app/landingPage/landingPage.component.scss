@@ -36,6 +36,12 @@ h5 {
   margin-right: auto;
 }
 
+app-profile-logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
 .hero-portrait-container {
   margin-top: clamp(160px, 8vw, 120px);
   margin-left: 6%;

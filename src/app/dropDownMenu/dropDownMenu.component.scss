@@ -39,21 +39,6 @@
     user-select: none;
     filter: drop-shadow(0 4px 16px rgba(40, 46, 51, 0.2));
   }
-  &__logo-bg {
-    position: fixed;
-    top: 4px;
-    left: 16px;
-    z-index: 2000;
-    background: rgba(41, 45, 51, 0.8);
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 16px rgba(40, 46, 51, 0.18);
-  }
-
   &__menu-btn {
     display: block;
     position: fixed;

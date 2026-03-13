@@ -37,7 +37,7 @@ section {
   grid-template-columns: repeat(4, 1fr);
   margin-top: 2%;
   margin-left: 13%;
-  gap: clamp(10px, 3vw, 40px);
+  gap: clamp(10px, 1vw, 40px);
   > img {
     width: auto;
     height: 100px;
