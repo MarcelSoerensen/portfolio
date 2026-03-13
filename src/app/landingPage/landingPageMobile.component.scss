@@ -2,15 +2,14 @@
   .hero-container {
     position: static !important;
     flex-direction: column !important;
-    justify-content: flex-end !important;
+    justify-content: flex-start !important;
     min-height: 90vh !important;
-    height: auto !important;
     gap: 0 !important;
     > .hero-portrait-container {
-      margin-top: clamp(120px, 8vw, 300px);
+      margin-top: 20vh;
       margin-left: 0;
-      width: clamp(260px, 75vw, 85vw);
       max-width: 400px;
+      min-width: 265px;
     }
   }
 
@@ -27,7 +26,6 @@
     position: relative;
     top: -50px;
     filter: brightness(1.2);
-    filter: drop-shadow(8px 32px 16px rgba(40, 46, 51, 0.5));
     margin-left: auto;
     margin-right: auto;
   }

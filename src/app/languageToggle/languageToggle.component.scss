@@ -38,7 +38,7 @@
 }
 
 .languages--small .languages__item {
-  font-size: 1.3rem;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
   font-weight: 300;
   color: rgba(40, 46, 51, 1);
   cursor: pointer;

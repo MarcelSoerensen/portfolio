@@ -44,7 +44,7 @@
   align-items: center;
   gap: 16px;
   > a {
-    font-size: 1.8rem;
+    font-size: clamp(1.7rem, 6vw, 2.5rem);
     font-weight: 300;
     &:hover {
       transform: scale(0.94);
