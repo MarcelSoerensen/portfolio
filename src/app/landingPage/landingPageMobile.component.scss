@@ -13,6 +13,13 @@
     }
   }
 
+  app-profile-logo {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
   .portrait-image,
   .portrait-background {
     display: none !important;
