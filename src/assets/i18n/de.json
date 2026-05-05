@@ -69,12 +69,23 @@
         "tabLabel": "PollApp",
         "tabLabelMobile": "4. Projekt",
         "title": "PollApp",
-        "duration": "ca. 2 Wochen",
+        "duration": "ca. 3 Wochen",
         "organisationTitle": "Organisation meines Arbeitsprozesses",
         "takeawaysTitle": "Was ich gelernt habe",
         "about": "Eine moderne Umfrage-App, in der Nutzer Surveys erstellen, veröffentlichen und Ergebnisse übersichtlich auswerten können.",
         "organisation": "Ich habe das Projekt in klare Etappen gegliedert, Funktionen schrittweise umgesetzt und regelmäßig getestet und refaktoriert, um eine stabile, wartbare Codebasis sicherzustellen.",
         "takeaways": "Ich habe meine Kenntnisse in Angular, TypeScript und SCSS vertieft und gelernt, eine vollständige Webanwendung mit strukturierter Architektur, reaktiven Formularen und Datenanbindung eigenständig umzusetzen."
+      },
+      "project5": {
+        "tabLabel": "Memory",
+        "tabLabelMobile": "5. Projekt",
+        "title": "Memory",
+        "duration": "ca. 1 Woche",
+        "organisationTitle": "Organisation meines Arbeitsprozesses",
+        "takeawaysTitle": "Was ich gelernt habe",
+        "about": "Eine moderne Memory-App mit mehreren Themes und anpassbaren Spieloptionen, bei der ein flüssiges Spielerlebnis, klare Navigation und eine saubere Oberfläche im Mittelpunkt standen.",
+        "organisation": "Ich habe das Projekt in überschaubare Entwicklungsschritte aufgeteilt, Features nacheinander umgesetzt und jede Erweiterung direkt getestet und verbessert. Durch diesen klaren Ablauf aus Entwickeln, Prüfen und Refactoring blieb der Code auch mit wachsendem Umfang gut wartbar.",
+        "takeaways": "Ich habe meine Kenntnisse in Angular, TypeScript, HTML und SCSS weiter vertieft und gelernt, Komponenten strukturiert und wiederverwendbar aufzubauen. Zusätzlich habe ich praktische Erfahrung mit State-Handling, Routing, themenbasiertem Styling und systematischer Fehlersuche in einem größeren Frontend-Projekt gesammelt."
       }
     }
   },

@@ -19,6 +19,7 @@ export class SkillsComponent {
     { icon: '/assets/icons/skills/css.svg', label: 'CSS' },
     { icon: '/assets/icons/skills/api.svg', label: 'API' },
     { icon: '/assets/icons/skills/firebase.svg', label: 'Firebase' },
+    { icon: '/assets/icons/skills/supabase.svg', label: 'Supabase' },
     { icon: '/assets/icons/skills/git.svg', label: 'Git' },
     { icon: '/assets/icons/skills/materialdesign.svg', label: 'Material Design' },
     { icon: '/assets/icons/skills/scrum.svg', label: 'Scrum' }

@@ -69,12 +69,23 @@
         "tabLabel": "PollApp",
         "tabLabelMobile": "4. Project",
         "title": "PollApp",
-        "duration": "ca. 2 Weeks",
+        "duration": "ca. 3 Weeks",
         "organisationTitle": "How I have organised my work process",
         "takeawaysTitle": "What I have learnt",
         "about": "A modern poll app where users can create surveys, publish them and evaluate results clearly.",
         "organisation": "I structured the project into clear phases, implemented features step by step, and tested and refactored regularly to ensure a stable, maintainable codebase.",
         "takeaways": "I deepened my skills in Angular, TypeScript and SCSS and learned to build a complete web application with structured architecture, reactive forms and data binding independently."
+      },
+      "project5": {
+        "tabLabel": "Memory",
+        "tabLabelMobile": "5. Project",
+        "title": "Memory",
+        "duration": "ca. 1 Week",
+        "organisationTitle": "How I have organised my work process",
+        "takeawaysTitle": "What I have learnt",
+        "about": "A modern memory app with multiple themes and customizable game options, focused on smooth gameplay, clear navigation, and a clean interface.",
+        "organisation": "I split the project into manageable development steps, implemented features one after another, and tested and improved each extension right away. This clear workflow of building, checking, and refactoring kept the code maintainable even as the project grew.",
+        "takeaways": "I further deepened my skills in Angular, TypeScript, HTML, and SCSS and learned to build components in a structured, reusable way. In addition, I gained practical experience with state handling, routing, theme-based styling, and systematic debugging in a larger frontend project."
       }
     }
   },

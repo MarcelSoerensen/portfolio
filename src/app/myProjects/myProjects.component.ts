@@ -133,6 +133,30 @@ export class MyProjectsComponent {
         alt: 'Cover PollApp',
       },
     },
+    {
+      id: 'project-5',
+      tabLabelKey: 'myProjects.projects.project5.tabLabel',
+      tabLabelMobile: 'myProjects.projects.project5.tabLabelMobile',
+      titleKey: 'myProjects.projects.project5.title',
+      liveUrl: 'https://memory-app.marcel-soerensen.com/',
+      githubUrl: 'https://github.com/MarcelSoerensen/memory-app.git',
+      durationKey: 'myProjects.projects.project5.duration',
+      aboutKey: 'myProjects.projects.project5.about',
+      organisationTitleKey: 'myProjects.projects.project5.organisationTitle',
+      takeawaysTitleKey: 'myProjects.projects.project5.takeawaysTitle',
+      organisationKey: 'myProjects.projects.project5.organisation',
+      takeawaysKey: 'myProjects.projects.project5.takeaways',
+      technologies: [
+        { name: 'Angular', iconSrc: '/assets/icons/skills/angular.svg' },
+        { name: 'TypeScript', iconSrc: '/assets/icons/skills/typescript.svg' },
+        { name: 'HTML', iconSrc: '/assets/icons/skills/html.svg' },
+        { name: 'SCSS', iconSrc: '/assets/icons/skills/css.svg' },
+      ],
+      cover: {
+        src: '/assets/cover/memory-app.webp',
+        alt: 'Cover Memory',
+      },
+    },
   ];
 
   get activeProject(): Project {
