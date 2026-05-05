@@ -95,7 +95,7 @@
             </div>
 
             <div class="cover">
-              <ng-container *ngIf="activeProject.id !== 'project-4'; else whiteCover">
+              <ng-container *ngIf="activeProject.cover.src; else whiteCover">
                 <img
                   [src]="activeProject.cover.src"
                   [alt]="activeProject.cover.alt"

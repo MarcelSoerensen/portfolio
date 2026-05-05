@@ -66,15 +66,15 @@
         "takeaways": "Clean integration of an external API, implementation of a search feature and mapping the data into reusable components, plus using Bootstrap and more refined CSS for clear, consistent, responsive designs."
       },
       "project4": {
-        "tabLabel": "Ongoing Project",
+        "tabLabel": "PollApp",
         "tabLabelMobile": "4. Project",
-        "title": "Coming Soon...",
-        "duration": "in progress",
-        "organisationTitle": "How we have organised our work process",
-        "takeawaysTitle": "My group work experience",
-        "about": "...",
-        "organisation": "...",
-        "takeaways": "..."
+        "title": "PollApp",
+        "duration": "ca. 2 Weeks",
+        "organisationTitle": "How I have organised my work process",
+        "takeawaysTitle": "What I have learnt",
+        "about": "A modern poll app where users can create surveys, publish them and evaluate results clearly.",
+        "organisation": "I structured the project into clear phases, implemented features step by step, and tested and refactored regularly to ensure a stable, maintainable codebase.",
+        "takeaways": "I deepened my skills in Angular, TypeScript and SCSS and learned to build a complete web application with structured architecture, reactive forms and data binding independently."
       }
     }
   },

@@ -113,8 +113,8 @@ export class MyProjectsComponent {
       tabLabelKey: 'myProjects.projects.project4.tabLabel',
       tabLabelMobile: 'myProjects.projects.project4.tabLabelMobile',
       titleKey: 'myProjects.projects.project4.title',
-      liveUrl: 'https://marcel-soerensen.com',
-      githubUrl: 'https://github.com/MarcelSoerensen/portfolio',
+      liveUrl: 'https://pollapp.marcel-soerensen.com/',
+      githubUrl: 'https://github.com/MarcelSoerensen/poll-app.git',
       durationKey: 'myProjects.projects.project4.duration',
       aboutKey: 'myProjects.projects.project4.about',
       organisationTitleKey: 'myProjects.projects.project4.organisationTitle',
@@ -122,11 +122,15 @@ export class MyProjectsComponent {
       organisationKey: 'myProjects.projects.project4.organisation',
       takeawaysKey: 'myProjects.projects.project4.takeaways',
       technologies: [
+        { name: 'Angular', iconSrc: '/assets/icons/skills/angular.svg' },
+        { name: 'Supabase', iconSrc: '/assets/icons/skills/supabase.svg' },
         { name: 'TypeScript', iconSrc: '/assets/icons/skills/typescript.svg' },
+        { name: 'HTML', iconSrc: '/assets/icons/skills/html.svg' },
+        { name: 'SCSS', iconSrc: '/assets/icons/skills/css.svg' },
       ],
       cover: {
-        src: '',
-        alt: 'Cover Project 4',
+        src: '/assets/cover/poll_app.webp',
+        alt: 'Cover PollApp',
       },
     },
   ];
